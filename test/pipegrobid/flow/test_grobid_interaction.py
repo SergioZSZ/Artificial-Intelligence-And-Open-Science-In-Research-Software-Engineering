@@ -85,7 +85,7 @@ def test_write_xml_response_code_200(tmp_path):
 
     write_xml(response, str(tmp_path), 0)
 
-    created_file = tmp_path / "paper1.tei.xml"
+    created_file = tmp_path / "paper01.tei.xml"
 
     assert created_file.exists()
     assert created_file.is_file()
@@ -106,7 +106,7 @@ def test_write_xml_validate_xml(tmp_path):
 
     write_xml(response, str(tmp_path), 2)
 
-    created_file = tmp_path / "paper3.tei.xml"
+    created_file = tmp_path / "paper03.tei.xml"
 
     assert created_file.exists()
     assert created_file.read_text(encoding="utf-8") == xml_content

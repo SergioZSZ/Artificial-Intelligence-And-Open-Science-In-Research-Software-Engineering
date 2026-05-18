@@ -1,0 +1,39 @@
+{
+  "paper": {
+    "local_id": "paper15",
+    "title": "Structural barriers of the discrete Hasimoto map applied to protein backbone geometry",
+    "abstract": "Determining the three-dimensional structure of a protein from its amino-acid sequence remains a fundamental problem in biophysics. The discrete Frenet geometry of the C α backbone can be mapped, via a Hasimoto-type transform, onto a complex scalar field ψ = κ e i ∑ τ satisfying a discrete nonlinear Schrödinger equation (DNLS), whose soliton solutions reproduce observed secondary-structure motifs. Whether this mapping, which provides an elegant geometric description of folded states, can be extended to a predictive framework for protein folding remains an open question. We derive an exact closed-form decomposition of the DNLS effective potential V eff = V re + iV im in terms of curvature ratios and torsion angles, validating the result to machine precision across 856 non-redundant proteins. Our analysis identifies three structural barriers to forward prediction: (i) V im encodes chirality via the odd symmetry of sin τ, accounting for ∼31% of the total information and implying a 2 N degeneracy if neglected; (ii) V re is determined primarily (∼95%) by local geometry, rendering it effectively sequence-agnostic; and (iii) self-consistent field iterations fail to recover native structures (mean RMSD = 13.1 Å) even with hydrogen-bond terms, yielding torsion correlations indistinguishable from zero. Constructively, we demonstrate that the residual of the DNLS dispersion relation serves as a geometric order parameter for α-helices (ROC AUC = 0.72), defining them as regions of maximal integrability. These findings establish that the Hasimoto map functions as a kinematic identity rather than a dynamical governing equation, presenting fundamental obstacles to its use as a predictive framework for protein folding.",
+    "published_date": "2026-02-16",
+    "doi": null
+  },
+  "people": [
+    {
+      "name": "Yiquan Wang",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Yan-Hong Qin",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    }
+  ],
+  "organizations": [
+    {
+      "name": "Xinjiang University",
+      "type": "acknowledged_organization"
+    }
+  ],
+  "projects": [],
+  "countries": [],
+  "topics": [],
+  "acknowledgements": [
+    {
+      "text": "ACKNOWLEDGMENTS We thank Prof. Yan-Hong Qin (Xinjiang University) for inspiration and foundational guidance that motivated this work.",
+      "needs_llm_extraction": true
+    }
+  ],
+  "authors_mentions": []
+}

@@ -128,6 +128,7 @@ def parse_people(bibl):
         people.append({
             "name": author_name,
             "author_order": index,
+            "type": "author",
             "orcid": None
         })
 

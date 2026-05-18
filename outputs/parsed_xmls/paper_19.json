@@ -10,15 +10,18 @@
     {
       "name": "C J Palpal-Latoc",
       "author_order": 1,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Ian Vega",
       "author_order": 2,
+      "type": "author",
       "orcid": null
     }
   ],
   "organizations": [],
+  "projects": [],
   "countries": [],
   "topics": [],
   "acknowledgements": [

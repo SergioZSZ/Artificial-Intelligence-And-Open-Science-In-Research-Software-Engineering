@@ -10,30 +10,36 @@
     {
       "name": "Joshua Brendan Melander",
       "author_order": 1,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Zaki Alaoui",
       "author_order": 2,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Shenghua Liu",
       "author_order": 3,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Surya Ganguli",
       "author_order": 4,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Stephen A Baccus",
       "author_order": 5,
+      "type": "author",
       "orcid": null
     }
   ],
   "organizations": [],
+  "projects": [],
   "countries": [],
   "topics": [],
   "acknowledgements": [

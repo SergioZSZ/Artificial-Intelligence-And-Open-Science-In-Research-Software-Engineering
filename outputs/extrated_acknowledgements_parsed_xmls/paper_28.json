@@ -1,0 +1,204 @@
+{
+  "paper": {
+    "local_id": "paper28",
+    "title": "A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention",
+    "abstract": "Machine-learning interatomic potentials (MLIPs) have advanced rapidly, with many top models relying on strong physics-based inductive biases. However, as models scale to larger systems like biomolecules and electrolytes, they struggle to accurately capture long-range (LR) interactions, leading current approaches to rely on explicit physics-based terms or components. In this work, we propose AllScAIP, a straightforward, attention-based, and energy-conserving MLIP model that scales to O(100 million) training samples. It addresses the long-range challenge using an all-to-all node attention component that is data-driven. Extensive ablations reveal that in low-data/small-model regimes, inductive biases improve sample efficiency. However, as data and model size scale, these benefits diminish or even reverse, while all-to-all attention remains critical for capturing LR interactions. Our model achieves state-of-the-art energy/force accuracy on molecular systems, as well as a number of physics-based evaluations (OMol25), while being competitive on materials (OMat24) and catalysts (OC20). Furthermore, it enables stable, long-timescale MD simulations that accurately recover experimental observables, including density and heat of vaporization predictions.",
+    "published_date": "2026-03-09",
+    "doi": null
+  },
+  "people": [
+    {
+      "name": "Eric Qu",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Brandon M Wood",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Aditi S Krishnapriyan",
+      "author_order": 3,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Zachary W Ulissi",
+      "author_order": 4,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Fair At Meta",
+      "author_order": 5,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "U C Berkeley",
+      "author_order": 6,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Lbnl",
+      "author_order": 7,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Ishan Amin",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Tobias Kreiman",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Sam Blau",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Ryan Liu",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Ritwik Gupta",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Sanjeev Raja",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Nithin Chalapathi",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Yue Jian",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Yiheng Du",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Michael Psenka",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Boyu Qie",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Kai Nelson",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Rasmus Hoegh",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "C. Lawrence Zitnick",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Misko Dzamba",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Meng Gao",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Muhammed Shuaibi",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Daniel S. Levine",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Luis Barroso-Luque",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    }
+  ],
+  "organizations": [
+    {
+      "name": "Research Corporation for Science Advancement",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "Arnold and Mabel Beckman Foundation",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "UC Berkeley",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "LBNL",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "FAIR Chemistry group",
+      "type": "acknowledged_organization"
+    }
+  ],
+  "projects": [
+    {
+      "identifier": "Scialog grant #SA-AUT-2024-015b",
+      "type": "acknowledged_project"
+    }
+  ],
+  "countries": [],
+  "topics": [],
+  "acknowledgements": [
+    {
+      "text": "Acknowledgements This work was partially supported by Scialog grant #SA-AUT-2024-015b from Research Corporation for Science Advancement and Arnold and Mabel Beckman Foundation. We thank Ishan Amin for the initial idea and discussion around the LAE encoding. We thank Tobias Kreiman, Sam Blau, Ryan Liu, Ritwik Gupta, Sanjeev Raja, Nithin Chalapathi, Yue Jian, Yiheng Du, Michael Psenka, Boyu Qie, Kai Nelson, Rasmus Hoegh from UC Berkeley / LBNL for the helpful discussions. We thank C. Lawrence Zitnick, Misko Dzamba, Meng Gao, Muhammed Shuaibi, Daniel S. Levine, Luis Barroso-Luque and others from the FAIR Chemistry group for helpful discussions and comments.",
+      "needs_llm_extraction": true
+    }
+  ],
+  "authors_mentions": []
+}

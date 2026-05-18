@@ -10,20 +10,24 @@
     {
       "name": "Hasan Amin",
       "author_order": 1,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Ming Yin",
       "author_order": 2,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Rajiv Khanna",
       "author_order": 3,
+      "type": "author",
       "orcid": null
     }
   ],
   "organizations": [],
+  "projects": [],
   "countries": [],
   "topics": [],
   "acknowledgements": [

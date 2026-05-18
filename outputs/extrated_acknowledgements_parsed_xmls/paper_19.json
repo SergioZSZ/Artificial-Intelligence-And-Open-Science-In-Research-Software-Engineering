@@ -1,0 +1,54 @@
+{
+  "paper": {
+    "local_id": "paper19",
+    "title": "Quasilocalization under coupled mutation-selection dynamics",
+    "abstract": "When mutations are rampant, quasispecies theory or Eigen's model predicts that the fittest type in a population may not dominate. Beyond a critical mutation rate, the population may even be delocalized completely from the peak of the fitness landscape and the fittest is ironically lost. Extensive efforts have been made to understand this exceptional scenario. But in general, there is no simple prescription that predicts the eventual degree of localization for arbitrary fitness landscapes and mutation rates. Here, we derive a simple and general relation linking the quasispecies' Hill numbers, which are diversity metrics in ecology, and the ratio of an effective fitness variance to the mean mutation rate squared. This ratio, which we call the localization factor, emerges from mean approximations of decomposed surprisal or stochastic entropy change rates. On the side of application, the relation we obtained here defines a combination of Hill numbers that may complement other complexity or diversity measures for real viral quasispecies. Its advantage being that there is an underlying biological interpretation under Eigen's model.",
+    "published_date": "2026-02-17",
+    "doi": null
+  },
+  "people": [
+    {
+      "name": "C J Palpal-Latoc",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Ian Vega",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "F. Tablizo",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    }
+  ],
+  "organizations": [
+    {
+      "name": "Philippine Genome Center",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "Department of Health -Epidemiology Bureau",
+      "type": "acknowledged_organization"
+    }
+  ],
+  "projects": [],
+  "countries": [],
+  "topics": [],
+  "acknowledgements": [
+    {
+      "text": "ACKNOWLEDGMENTS CJP thanks F. Tablizo for encouraging feedback and useful discussions. CJP was supported in part by grants to the Philippine Genome Center from the Department of Health -Epidemiology Bureau for the national SARS-CoV-2 biosurveillance initiative.",
+      "needs_llm_extraction": true
+    }
+  ],
+  "authors_mentions": [
+    {
+      "author_name": "C J Palpal-Latoc",
+      "mention": "CJP"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "paper": {
+    "local_id": "paper26",
+    "title": "Hierarchical Industrial Demand Forecasting with Temporal and Uncertainty Explanations",
+    "abstract": "Hierarchical time-series forecasting is essential for demand prediction across various industries. While machine learning models have obtained significant accuracy and scalability on such forecasting tasks, the interpretability of their predictions, informed by application, is still largely unexplored. To bridge this gap, we introduce a novel interpretability method for large hierarchical probabilistic time-series forecasting, adapting generic interpretability techniques while addressing challenges associated with hierarchical structures and uncertainty. Our approach offers valuable interpretative insights in response to real-world industrial supply chain scenarios, including 1) the significance of various time-series within the hierarchy and external variables at specific time points, 2) the impact of different variables on forecast uncertainty, and 3) explanations for forecast changes in response to modifications in the training dataset. To evaluate the explainability method, we generate semi-synthetic datasets based on realworld scenarios of explaining hierarchical demands for over ten thousand products at a large chemical company. The experiments showed that our explainability method successfully explained state-of-the-art industrial forecasting methods with significantly higher explainability accuracy, both in point and probabilistic forecasts, across a wide range of benchmarks with good scalability. Furthermore, we provide multiple real-world case studies that show the efficacy of our approach in identifying important patterns and explanations that help various stakeholders better understand the forecasts. Additionally, our method facilitates the identification of key drivers behind forecasted demand, enabling more informed decision-making and strategic planning. By offering a transparent view of the forecasting process, our approach helps build trust and confidence among users, ultimately leading to better adoption and utilization of hierarchical forecasting models in practice.",
+    "published_date": null,
+    "doi": null
+  },
+  "people": [
+    {
+      "name": "Harshavardhan Kamarthi",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Shangqing Xu",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Xinjie Tong",
+      "author_order": 3,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Xingyu Zhou",
+      "author_order": 4,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "James Peters",
+      "author_order": 5,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Joseph Czyzyk",
+      "author_order": 6,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "B Aditya Prakash",
+      "author_order": 7,
+      "type": "author",
+      "orcid": null
+    }
+  ],
+  "organizations": [
+    {
+      "name": "The Dow Chemical Company",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "NSF",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "NIH",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "CDC",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "Meta",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "Dolby",
+      "type": "acknowledged_organization"
+    }
+  ],
+  "projects": [
+    {
+      "identifier": "Expeditions CCF-1918770",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "CAREER IIS-2028586",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "Medium IIS-1955883",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "Medium IIS-2403240",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "Medium IIS-2106961",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "1R01HL184139",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "CDC MInD program",
+      "type": "acknowledged_project"
+    }
+  ],
+  "countries": [],
+  "topics": [],
+  "acknowledgements": [
+    {
+      "text": "VII. ACKNOWLEDGEMENTS This paper was supported in part by The Dow Chemical Company, the NSF (Expeditions CCF-1918770, CAREER IIS-2028586, Medium IIS-1955883, Medium IIS-2403240, Medium IIS-2106961), NIH (1R01HL184139), CDC MInD program, Meta, and Dolby faculty gifts.",
+      "needs_llm_extraction": true
+    }
+  ],
+  "authors_mentions": []
+}

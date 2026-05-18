@@ -10,20 +10,24 @@
     {
       "name": "Nicola Dietler",
       "author_order": 1,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Cyril Malbranke",
       "author_order": 2,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Anne-Florence Bitbol",
       "author_order": 3,
+      "type": "author",
       "orcid": null
     }
   ],
   "organizations": [],
+  "projects": [],
   "countries": [],
   "topics": [],
   "acknowledgements": [

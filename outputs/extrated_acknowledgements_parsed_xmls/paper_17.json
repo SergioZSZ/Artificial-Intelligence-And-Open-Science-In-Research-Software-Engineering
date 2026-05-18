@@ -1,0 +1,75 @@
+{
+  "paper": {
+    "local_id": "paper17",
+    "title": "INFECTION MODELS ON DENSE DYNAMIC RANDOM GRAPHS",
+    "abstract": "We consider Susceptible-Infected-Recovered (SIR) models on dense dynamic random graphs, in which the joint dynamics of vertices and edges are co-evolutionary, i.e., they influence each other bidirectionally. In particular, edges appear and disappear over time depending on the states of the two connected vertices, on how long they have been infected, and on the total density of susceptible and infected vertices. Our main results establish functional laws of large numbers for the densities of susceptible, infected, and recovered vertices, jointly with the underlying evolving random graphs in the graphon space. Our results are supported by simulations, which characterize the limiting size of the epidemics, i.e., the limiting density of susceptible vertices, and how the peak of the epidemics depends on the rate of the evolution of the underlying graph. The proofs of our main results rely on the careful construction of a mimicking process, obtained by approximating the two-way feedback interaction between vertex and edge dynamics with a mean-field type interaction, acting only as one-way feedback, that remains sufficiently close to the original co-evolutionary process. To treat the more general setting in which edge dynamics are affected by the proportions of susceptible and infected individuals, we introduce a methodological extension of existing techniques. We thus show that our model exhibits multiple epidemic peaks -a phenomenon observed in real-world epidemics -which can emerge in models that incorporate mutual feedback between vertex and edge dynamics.",
+    "published_date": "2026-02-16",
+    "doi": null
+  },
+  "people": [
+    {
+      "name": "Simone Baldassarri",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Peter Braunsteins",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Michel Mandjes",
+      "author_order": 3,
+      "type": "author",
+      "orcid": null
+    }
+  ],
+  "organizations": [
+    {
+      "name": "European Union",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "NWO",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "Gruppo Nazionale per l'Analisi Matematica, la Probabilità e le loro Applicazioni (GNAMPA-INdAM)",
+      "type": "acknowledged_organization"
+    }
+  ],
+  "projects": [
+    {
+      "identifier": "Horizon 2020",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "Marie Skłodowska-Curie grant agreement no. 101034253",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "NWO Gravitation project NETWORKS",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "grant no. 024.002.003",
+      "type": "acknowledged_project"
+    }
+  ],
+  "countries": [],
+  "topics": [],
+  "acknowledgements": [
+    {
+      "text": "Acknowledgment. The work in this paper was supported by the European Union's Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement no. 101034253, and by the NWO Gravitation project NETWORKS under grant no. 024.002.003. SB was further supported through \"Gruppo Nazionale per l'Analisi Matematica, la Probabilità e le loro Applicazioni\" (GNAMPA-INdAM). Date: February 17, 2026.",
+      "needs_llm_extraction": true
+    }
+  ],
+  "authors_mentions": [
+    {
+      "author_name": "Simone Baldassarri",
+      "mention": "SB"
+    }
+  ]
+}

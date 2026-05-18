@@ -10,40 +10,48 @@
     {
       "name": "Xuan Li",
       "author_order": 1,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Zhanke Zhou",
       "author_order": 2,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Zongze Li",
       "author_order": 3,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Jiangchao Yao",
       "author_order": 4,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Yu Rong",
       "author_order": 5,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Lu Zhang",
       "author_order": 6,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Bo Han",
       "author_order": 7,
+      "type": "author",
       "orcid": null
     }
   ],
   "organizations": [],
+  "projects": [],
   "countries": [],
   "topics": [],
   "acknowledgements": [

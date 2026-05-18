@@ -1,0 +1,45 @@
+{
+  "paper": {
+    "local_id": "paper22",
+    "title": "Stock Market Prediction Using Node Transformer Architecture Integrated with BERT Sentiment Analysis",
+    "abstract": "Stock market prediction presents considerable challenges for investors, financial institutions, and policymakers operating in complex market environments characterized by noise, non-stationarity, and behavioral dynamics. Traditional forecasting methods, including fundamental analysis and technical indicators, often fail to capture the intricate patterns and cross-sectional dependencies inherent in financial markets. This paper presents an integrated framework combining a node transformer architecture with Bidirectional Encoder Representations from Transformers (BERT) based sentiment analysis for stock price forecasting. The proposed model represents the stock market as a graph structure where individual stocks form nodes and edges capture relationships including sectoral affiliations, correlated price movements, and supply chain connections. A fine-tuned BERT model extracts sentiment information from social media posts and combines it with quantitative market features through attention-based fusion mechanisms. The node transformer processes historical market data while capturing both temporal evolution and cross-sectional dependencies among stocks. Experiments conducted on 20 S&P 500 stocks spanning January 1982 to March 2025 demonstrate that the integrated model achieves a mean absolute percentage error (MAPE) of 0.80% for one-day-ahead predictions, compared to 1.20% for ARIMA and 1.00% for LSTM. The inclusion of sentiment analysis reduces prediction error by 10% overall and 25% during earnings announcements, while the graph-based architecture contributes an additional 15% improvement by capturing inter-stock dependencies. Directional accuracy reaches 65% for one-day forecasts. Statistical validation through paired t-tests confirms the significance of these improvements (p < 0.05 for all comparisons). The model demonstrates robustness during highvolatility periods, maintaining MAPE below 1.5% where baseline models exceed 2%.",
+    "published_date": "2026-03-06",
+    "doi": null
+  },
+  "people": [
+    {
+      "name": "Mohammad Al Ridhawi",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Haj Ali",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Hussein Al Osman",
+      "author_order": 3,
+      "type": "author",
+      "orcid": null
+    }
+  ],
+  "organizations": [],
+  "projects": [],
+  "countries": [],
+  "topics": [],
+  "acknowledgements": [
+    {
+      "text": "ACKNOWLEDGMENT The author is grateful to Dr. Hussein Al Osman, whose mentorship and thoughtful feedback shaped the direction of this work from its earliest stages. His expertise in both the technical and conceptual aspects of this research proved invaluable.",
+      "needs_llm_extraction": true
+    }
+  ],
+  "authors_mentions": [
+    {
+      "author_name": "Hussein Al Osman",
+      "mention": "Dr. Hussein Al Osman"
+    }
+  ]
+}

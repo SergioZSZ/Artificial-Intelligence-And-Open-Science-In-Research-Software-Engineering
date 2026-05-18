@@ -10,195 +10,234 @@
     {
       "name": "Natalie Shapira",
       "author_order": 1,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Chris Wendler",
       "author_order": 2,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Avery Yen",
       "author_order": 3,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Gabriele Sarti",
       "author_order": 4,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Koyena Pal",
       "author_order": 5,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Olivia Floody",
       "author_order": 6,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Adam Belfki",
       "author_order": 7,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Alex Loftus",
       "author_order": 8,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Aditya Ratan Jannali",
       "author_order": 9,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Nikhil Prakash",
       "author_order": 10,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Jasmine Cui",
       "author_order": 11,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Giordano Rogers",
       "author_order": 12,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Jannik Brinkmann",
       "author_order": 13,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Can Rager",
       "author_order": 14,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Amir Zur",
       "author_order": 15,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Michael Ripa",
       "author_order": 16,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Aruna Sankaranarayanan",
       "author_order": 17,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "David Atkinson",
       "author_order": 18,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Rohit Gandikota",
       "author_order": 19,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Jaden Fiotto-Kaufman",
       "author_order": 20,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Eunjeong Hwang",
       "author_order": 21,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Hadas Orgad",
       "author_order": 22,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "P Sam Sahil",
       "author_order": 23,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Negev Taglicht",
       "author_order": 24,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Tomer Shabtay",
       "author_order": 25,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Atai Ambus",
       "author_order": 26,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Nitay Alon",
       "author_order": 27,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Shiri Oron",
       "author_order": 28,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Ayelet Gordon-Tapiero",
       "author_order": 29,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Yotam Kaplan",
       "author_order": 30,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Vered Shwartz",
       "author_order": 31,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Tamar Rott",
       "author_order": 32,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Christoph Riedl",
       "author_order": 33,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Reuth Mirsky",
       "author_order": 34,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Maarten Sap",
       "author_order": 35,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "David Manheim",
       "author_order": 36,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Tomer Ullman",
       "author_order": 37,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "David Bau",
       "author_order": 38,
+      "type": "author",
       "orcid": null
     }
   ],
   "organizations": [],
+  "projects": [],
   "countries": [],
   "topics": [],
   "acknowledgements": [

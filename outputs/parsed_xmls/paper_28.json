@@ -10,40 +10,48 @@
     {
       "name": "Eric Qu",
       "author_order": 1,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Brandon M Wood",
       "author_order": 2,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Aditi S Krishnapriyan",
       "author_order": 3,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Zachary W Ulissi",
       "author_order": 4,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Fair At Meta",
       "author_order": 5,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "U C Berkeley",
       "author_order": 6,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Lbnl",
       "author_order": 7,
+      "type": "author",
       "orcid": null
     }
   ],
   "organizations": [],
+  "projects": [],
   "countries": [],
   "topics": [],
   "acknowledgements": [

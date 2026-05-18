@@ -1,0 +1,48 @@
+{
+  "paper": {
+    "local_id": "paper09",
+    "title": "Beyond Mimicry: Toward Lifelong Adaptability in Imitation Learning Blue Sky Ideas Track",
+    "abstract": "Imitation learning stands at a crossroads: despite decades of progress, current imitation learning agents remain sophisticated memorisation machines, excelling at replay but failing when contexts shift or goals evolve. This paper argues that this failure is not technical but foundational: imitation learning has been optimised for the wrong objective. We propose a research agenda that redefines success from perfect replay to compositional adaptability. Such adaptability hinges on learning behavioural primitives once and recombining them through novel contexts without retraining. We establish metrics for compositional generalisation, propose hybrid architectures, and outline interdisciplinary research directions drawing on cognitive science and cultural evolution. Agents that embed adaptability at the core of imitation learning thus have an essential capability for operating in an open-ended world.",
+    "published_date": null,
+    "doi": null
+  },
+  "people": [
+    {
+      "name": "Felipe Meneguzzi",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Odinaldo Rodrigues",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    }
+  ],
+  "organizations": [
+    {
+      "name": "UK Research and Innovation",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "UKRI Centre for Doctoral Training in Safe and Trusted Artificial Intelligence",
+      "type": "acknowledged_organization"
+    }
+  ],
+  "projects": [
+    {
+      "identifier": "EP/S023356/1",
+      "type": "acknowledged_project"
+    }
+  ],
+  "countries": [],
+  "topics": [],
+  "acknowledgements": [
+    {
+      "text": "ACKNOWLEDGMENTS This work was supported by UK Research and Innovation [grant number EP/S023356/1], in the UKRI Centre for Doctoral Training in Safe and Trusted Artificial Intelligence (www.safeandtrustedai.org).",
+      "needs_llm_extraction": true
+    }
+  ],
+  "authors_mentions": []
+}

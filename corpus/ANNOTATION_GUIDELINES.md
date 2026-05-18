@@ -1,7 +1,7 @@
 # Annotation Guidelines for NER on Acknowledgements
 
 **Version**: 1.1
-**Last updated**: November 2026
+**Last updated**: May 2026
 **Project**: G4_OPENSCIENCE — Knowledge Graph for Research Publications
 **Repository**: https://github.com/SergioZSZ/OS-IA-Pipegrobid
 
@@ -310,5 +310,5 @@ with multiple funding sources, named programs, and research collaborations.
 
 | Version | Date | Changes |
 |---|---|---|
-| 1.0 | November 2026 | Initial annotation with mixed PROJ interpretation |
-| 1.1 | November 2026 | Strict PROJ definition adopted (alphanumeric codes only). Framework programmes moved to ORG. Literal text principle formalized. |
+| 1.0 | May 2026 | Initial annotation with mixed PROJ interpretation |
+| 1.1 | May 2026 | Strict PROJ definition adopted (alphanumeric codes only). Framework programmes moved to ORG. Literal text principle formalized. |

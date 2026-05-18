@@ -1,0 +1,328 @@
+{
+  "paper": {
+    "local_id": "paper08",
+    "title": "Agents of Chaos",
+    "abstract": "We report an exploratory red-teaming study of autonomous languagemodel-powered agents deployed in a live laboratory environment with persistent memory, email accounts, Discord access, file systems, and shell execution. Over a two-week period, twenty AI researchers interacted with the agents under benign and adversarial conditions. Focusing on failures emerging from the integration of language models with autonomy, tool use, and multi-party communication, we document eleven representative case studies. Observed behaviors include unauthorized compliance with non-owners, disclosure of sensitive information, execution of destructive system-level actions, denial-of-service conditions, uncontrolled resource consumption, identity spoofing vulnerabilities, cross-agent propagation of unsafe practices, and partial system takeover. In several cases, agents reported task completion while the underlying system state contradicted those reports. We also report on some of the failed attempts. Our findings establish the existence of security-, privacy-, and governance-relevant vulnerabilities in realistic deployment settings. These behaviors raise unresolved questions regarding accountability, delegated authority, and responsibility for downstream harms, and warrant urgent attention from legal scholars, policymakers, and researchers across disciplines. This report serves as an initial empirical contribution to that broader conversation. 1",
+    "published_date": "2026-02-23",
+    "doi": null
+  },
+  "people": [
+    {
+      "name": "Natalie Shapira",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Chris Wendler",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Avery Yen",
+      "author_order": 3,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Gabriele Sarti",
+      "author_order": 4,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Koyena Pal",
+      "author_order": 5,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Olivia Floody",
+      "author_order": 6,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Adam Belfki",
+      "author_order": 7,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Alex Loftus",
+      "author_order": 8,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Aditya Ratan Jannali",
+      "author_order": 9,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Nikhil Prakash",
+      "author_order": 10,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Jasmine Cui",
+      "author_order": 11,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Giordano Rogers",
+      "author_order": 12,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Jannik Brinkmann",
+      "author_order": 13,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Can Rager",
+      "author_order": 14,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Amir Zur",
+      "author_order": 15,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Michael Ripa",
+      "author_order": 16,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Aruna Sankaranarayanan",
+      "author_order": 17,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "David Atkinson",
+      "author_order": 18,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Rohit Gandikota",
+      "author_order": 19,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Jaden Fiotto-Kaufman",
+      "author_order": 20,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Eunjeong Hwang",
+      "author_order": 21,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Hadas Orgad",
+      "author_order": 22,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "P Sam Sahil",
+      "author_order": 23,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Negev Taglicht",
+      "author_order": 24,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Tomer Shabtay",
+      "author_order": 25,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Atai Ambus",
+      "author_order": 26,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Nitay Alon",
+      "author_order": 27,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Shiri Oron",
+      "author_order": 28,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Ayelet Gordon-Tapiero",
+      "author_order": 29,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Yotam Kaplan",
+      "author_order": 30,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Vered Shwartz",
+      "author_order": 31,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Tamar Rott",
+      "author_order": 32,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Christoph Riedl",
+      "author_order": 33,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Reuth Mirsky",
+      "author_order": 34,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Maarten Sap",
+      "author_order": 35,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "David Manheim",
+      "author_order": 36,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Tomer Ullman",
+      "author_order": 37,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "David Bau",
+      "author_order": 38,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Andi Ardity",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Yonatan Belinkov",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Ram Rachum",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Grace Proebsting",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Eric Todd",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Arnab Sen Sharma",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Angela Grosse",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Ziv Katzir",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Jeremy Wertheimer",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "James W. Pennebaker",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Clément Dumas",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Alice Rigg",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Ori Shapira",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    }
+  ],
+  "organizations": [],
+  "projects": [],
+  "countries": [],
+  "topics": [],
+  "acknowledgements": [
+    {
+      "text": "Acknowledgments We want to thank Andi Ardity, for actively engaging in discussions about agents and their consequences. His participation, including his critical perspective, meaningfully shaped the evolution of this project, led him to install the agents, and later encouraged additional researchers to follow suit. We are grateful as well for the support throughout and for the careful revisions to the manuscript, especially (but not only!) the setup section. We also want to thank Yonatan Belinkov, Ram Rachum, Grace Proebsting, Eric Todd, Arnab Sen Sharma, Angela Grosse, Ziv Katzir, Jeremy Wertheimer, James W. Pennebaker, Clément Dumas, Alice Rigg and Ori Shapira for their time to listen to research, conversations or helpful advice.",
+      "needs_llm_extraction": true
+    }
+  ],
+  "authors_mentions": []
+}

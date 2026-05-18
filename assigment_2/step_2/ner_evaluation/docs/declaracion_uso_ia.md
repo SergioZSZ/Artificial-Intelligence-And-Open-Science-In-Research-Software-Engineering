@@ -109,8 +109,12 @@ accedidos vía API.
 > ejecución por modelo.
 
 ---
+## 5. Uso de IA en la generación de scripts
 
-## 5. Uso de IA en la redacción de la documentación
+Los scripts del directorio `/scripts` fueron generados con IA generativa, revisados durante su generación por el grupo 4 de OpenScience.
+
+
+## 6. Uso de IA en la redacción de la documentación
 
 Para la redacción del informe narrativo (`reports/ner_evaluation_report.md`),
 de este documento y del `README.md` se ha utilizado un asistente
@@ -133,13 +137,13 @@ Alcance de ese uso, para que quede claro:
 
 ---
 
-## 6. Problemas técnicos encontrados y resueltos
+## 7. Problemas técnicos encontrados y resueltos
 
 Durante la puesta en marcha del entorno se resolvieron tres conflictos de
 dependencias. Se documentan aquí por trazabilidad y porque afectan a la
 reproducibilidad del experimento.
 
-### 6.1. Flair y PyTorch 2.6
+### 7.1. Flair y PyTorch 2.6
 
 PyTorch 2.6 cambió el valor por defecto de `torch.load` a
 `weights_only=True`, lo que impedía cargar el modelo de Flair
@@ -150,7 +154,7 @@ inicio del script. Es una solución segura en este caso, dado que el modelo
 procede de un repositorio académico conocido (kalawinka, asociado a la
 publicación arXiv:2307.13377).
 
-### 6.2. SDK de Groq y httpx
+### 7.2. SDK de Groq y httpx
 
 La versión `0.11.0` del SDK `groq` era incompatible con versiones modernas de
 `httpx` (error: `unexpected keyword argument 'proxies'`).
@@ -158,7 +162,7 @@ La versión `0.11.0` del SDK `groq` era incompatible con versiones modernas de
 **Solución**: actualización del SDK con `poetry add "groq@latest"`, que
 instaló la versión `1.2.0`, compatible.
 
-### 6.3. transformers y huggingface-hub
+### 7.3. transformers y huggingface-hub
 
 `huggingface-hub` 1.x es incompatible con `transformers` (que requiere
 `huggingface-hub < 1.0`). Además, una versión antigua (`0.25`) usaba el
@@ -170,7 +174,7 @@ actual (`router.huggingface.co`) y es compatible con `transformers`.
 
 ---
 
-## 7. Reproducibilidad
+## 8. Reproducibilidad
 
 - Las dependencias y sus versiones exactas están fijadas en `pyproject.toml`
   y `poetry.lock`.

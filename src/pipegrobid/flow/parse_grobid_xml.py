@@ -23,6 +23,7 @@ def create_json(
         "paper": paper,
         "people": people,
         "organizations": [],
+        "projects": [],
         "countries": [],
         "topics": [],
         "acknowledgements": acknowledgements

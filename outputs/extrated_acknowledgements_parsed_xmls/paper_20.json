@@ -1,0 +1,155 @@
+{
+  "paper": {
+    "local_id": "paper20",
+    "title": "Household size can explain 40% of the variance in cumulative COVID-19 incidence across Europe",
+    "abstract": "Household size impacts the spread of respiratory infectious diseases: Larger households tend to boost transmission by acquiring external infections more frequently and subsequently transmitting them back into the community. Furthermore, mandatory interventions primarily modulate contagion between households rather than within them. We developed an approach to quantify the role of household size in epidemics by separating within-household from out-household transmission, and found that household size explains 41% of the variability in cumulative COVID-19 incidence across 34 European countries (95% confidence interval: [15%, 46%]). The contribution of households to the overall dynamics can be quantified by a boost factor that increases with the effective household size, implying that countries with larger households require more stringent interventions to achieve the same levels of containment. This suggests that households constitute a structural (dis-)advantage that must be considered when designing and evaluating mitigation strategies.",
+    "published_date": "2026-02-17",
+    "doi": null
+  },
+  "people": [
+    {
+      "name": "Seba Contreras",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Philipp Dönges",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Maciej Filinski",
+      "author_order": 3,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Joel Wagner",
+      "author_order": 4,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Viktor Bezborodov",
+      "author_order": 5,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Marcin Bodych",
+      "author_order": 6,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Barbara Pabjan",
+      "author_order": 7,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Franciszek Rakowski",
+      "author_order": 8,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Jan Pablo Burgard",
+      "author_order": 9,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Tyll Krueger",
+      "author_order": 10,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Viola Priesemann",
+      "author_order": 11,
+      "type": "author",
+      "orcid": null
+    }
+  ],
+  "organizations": [
+    {
+      "name": "Max-Planck-Society",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "German Federal Ministry for Education and Research",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "Deutsche Forschungsgemeinschaft",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "Ministry of Science and Culture of Lower Saxony",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "Volkswagen Foundation",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "Government of Saxony",
+      "type": "acknowledged_organization"
+    }
+  ],
+  "projects": [
+    {
+      "identifier": "RESPINOW project (031L0298G)",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "infoXpand project (031L0300A)",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "EXC 2067/1-390729940",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "CAIMed -Lower Saxony Center for Artificial Intelligence and Causal Methods in Medicine' project (grant no. ZN4257)",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "SaxoCOV grant",
+      "type": "acknowledged_project"
+    }
+  ],
+  "countries": [],
+  "topics": [],
+  "acknowledgements": [
+    {
+      "text": "Acknowledgements We thank the Priesemann group for the exciting discussions and their valuable input. Authors with affiliation \"1\" received support from the Max-Planck-Society. SC, PD, VP, and TK were funded by the German Federal Ministry for Education and Research for the RESPINOW project (031L0298G), and SC, VP, and JW by the infoXpand project (031L0300A). VP was supported by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany's Excellence Strategy -EXC 2067/1-390729940. VP also acknowledges the support of the Ministry of Science and Culture of Lower Saxony through funds from the program zukunft.niedersachsen of the Volkswagen Foundation for the 'CAIMed -Lower Saxony Center for Artificial Intelligence and Causal Methods in Medicine' project (grant no. ZN4257), \"Niedersächsisches Vorab\", and the Niedersachsen-Profil-Professur. TK acknowledges support from the Government of Saxony through the SaxoCOV grant. Grammarly Pro AI has been used for grammar checks.",
+      "needs_llm_extraction": true
+    }
+  ],
+  "authors_mentions": [
+    {
+      "author_name": "Seba Contreras",
+      "mention": "SC"
+    },
+    {
+      "author_name": "Philipp Dönges",
+      "mention": "PD"
+    },
+    {
+      "author_name": "Viola Priesemann",
+      "mention": "VP"
+    },
+    {
+      "author_name": "Tyll Krueger",
+      "mention": "TK"
+    },
+    {
+      "author_name": "Joel Wagner",
+      "mention": "JW"
+    }
+  ]
+}

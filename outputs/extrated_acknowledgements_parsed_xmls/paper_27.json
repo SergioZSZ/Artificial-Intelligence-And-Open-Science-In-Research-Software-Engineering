@@ -1,0 +1,95 @@
+{
+  "paper": {
+    "local_id": "paper27",
+    "title": "CAUSAL INTERPRETATION OF NEURAL NETWORK COMPUTATIONS WITH CONTRIBUTION DECOMPOSITION",
+    "abstract": "Understanding how neural networks transform inputs into outputs is crucial for interpreting and manipulating their behavior. Most existing approaches analyze internal representations by identifying hidden-layer activation patterns correlated with human-interpretable concepts. Here we take a direct approach to examine how hidden neurons act to drive network outputs. We introduce CODEC (Contribution Decomposition), a method that uses sparse autoencoders to decompose network behavior into sparse motifs of hidden-neuron contributions, revealing causal processes that cannot be determined by analyzing activations alone. Applying CODEC to benchmark image-classification networks, we find that contributions grow in sparsity and dimensionality across layers and, unexpectedly, that they progressively decorrelate positive and negative effects on network outputs. We further show that decomposing contributions into sparse modes enables greater control and interpretation of intermediate layers, supporting both causal manipulations of network output and human-interpretable visualizations of distinct image components that combine to drive that output. Finally, by analyzing state-of-the-art models of neural activity in the vertebrate retina, we demonstrate that CODEC uncovers combinatorial actions of model interneurons and identifies the sources of dynamic receptive fields. Overall, CODEC provides a rich and interpretable framework for understanding how nonlinear computations evolve across hierarchical layers, establishing contribution modes as an informative unit of analysis for mechanistic insights into artificial neural networks.",
+    "published_date": "2026-03-06",
+    "doi": null
+  },
+  "people": [
+    {
+      "name": "Joshua Brendan Melander",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Zaki Alaoui",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Shenghua Liu",
+      "author_order": 3,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Surya Ganguli",
+      "author_order": 4,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Stephen A Baccus",
+      "author_order": 5,
+      "type": "author",
+      "orcid": null
+    }
+  ],
+  "organizations": [
+    {
+      "name": "National Eye Institute (NEI)",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "Simons Foundation",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "Stanford Medicine",
+      "type": "acknowledged_organization"
+    }
+  ],
+  "projects": [
+    {
+      "identifier": "R01EY022933",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "R01EY025087",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "P30EY026877",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "Schmidt Sciences Polymath Award",
+      "type": "acknowledged_project"
+    }
+  ],
+  "countries": [],
+  "topics": [],
+  "acknowledgements": [
+    {
+      "text": "ACKNOWLEDGEMENTS This work was supported by grants from the National Eye Institute (NEI): R01EY022933, R01EY025087 and P30EY026877 (SAB). S.G. thanks the Simons Foundation Collaboration on the Physics of Learning and Neural Computation and a Schmidt Sciences Polymath Award for support. Z.A. was supported by the Stanford Medicine Post-Baccalaureate Experience In Research program.",
+      "needs_llm_extraction": true
+    }
+  ],
+  "authors_mentions": [
+    {
+      "author_name": "Stephen A Baccus",
+      "mention": "SAB"
+    },
+    {
+      "author_name": "Surya Ganguli",
+      "mention": "S.G."
+    },
+    {
+      "author_name": "Zaki Alaoui",
+      "mention": "Z.A."
+    }
+  ]
+}

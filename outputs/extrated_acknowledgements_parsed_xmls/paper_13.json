@@ -1,0 +1,63 @@
+{
+  "paper": {
+    "local_id": "paper13",
+    "title": "Out-of-equilibrium selection pressure enhances inference from protein sequence data",
+    "abstract": "Homologous proteins have similar three-dimensional structures and biological functions that shape their sequences. The resulting coevolution-driven correlations underlie methods from Potts models to AlphaFold, which infer protein structure and function from sequences. Using a minimal model, we show that fluctuating selection strength and the onset of new selection pressures improve coevolutionbased inference of structural contacts. Our conclusions extend to realistic synthetic data and to the inference of interaction partners. Out-of-equilibrium noise arising from ubiquitous variations in natural selection thus enhances, rather than hinders, the success of inference from protein sequences.",
+    "published_date": "2026-02-13",
+    "doi": null
+  },
+  "people": [
+    {
+      "name": "Nicola Dietler",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Cyril Malbranke",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Anne-Florence Bitbol",
+      "author_order": 3,
+      "type": "author",
+      "orcid": null
+    }
+  ],
+  "organizations": [
+    {
+      "name": "European Research Council (ERC)",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "European Union",
+      "type": "acknowledged_organization"
+    }
+  ],
+  "projects": [
+    {
+      "identifier": "Horizon 2020",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "grant agreement No. 851173",
+      "type": "acknowledged_project"
+    }
+  ],
+  "countries": [],
+  "topics": [],
+  "acknowledgements": [
+    {
+      "text": "This research was partly funded by the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant agreement No. 851173, to A.-F. B.).",
+      "needs_llm_extraction": true
+    }
+  ],
+  "authors_mentions": [
+    {
+      "author_name": "Anne-Florence Bitbol",
+      "mention": "A.-F. B."
+    }
+  ]
+}

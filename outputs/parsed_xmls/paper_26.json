@@ -10,40 +10,48 @@
     {
       "name": "Harshavardhan Kamarthi",
       "author_order": 1,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Shangqing Xu",
       "author_order": 2,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Xinjie Tong",
       "author_order": 3,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Xingyu Zhou",
       "author_order": 4,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "James Peters",
       "author_order": 5,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Joseph Czyzyk",
       "author_order": 6,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "B Aditya Prakash",
       "author_order": 7,
+      "type": "author",
       "orcid": null
     }
   ],
   "organizations": [],
+  "projects": [],
   "countries": [],
   "topics": [],
   "acknowledgements": [

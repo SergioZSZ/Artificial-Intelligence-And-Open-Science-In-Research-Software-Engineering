@@ -10,25 +10,30 @@
     {
       "name": "Amer Al-Hiyasat",
       "author_order": 1,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Daniel W Swartz",
       "author_order": 2,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Jeff Gore",
       "author_order": 3,
+      "type": "author",
       "orcid": null
     },
     {
       "name": "Mehran Kardar",
       "author_order": 4,
+      "type": "author",
       "orcid": null
     }
   ],
   "organizations": [],
+  "projects": [],
   "countries": [],
   "topics": [],
   "acknowledgements": [

@@ -1,0 +1,106 @@
+{
+  "paper": {
+    "local_id": "paper07",
+    "title": "LATENT INTROSPECTION: MODELS CAN DETECT PRIOR CONCEPT INJECTIONS",
+    "abstract": "We uncover a latent capacity for introspection in a Qwen 32B model, demonstrating that the model can detect when concepts have been injected into its earlier context and identify which concept was injected. While the model denies injection in sampled outputs, logit lens analysis reveals clear detection signals in the residual stream, which are attenuated in the final layers. Furthermore, prompting the model with accurate information about AI introspection mechanisms can dramatically strengthen this effect: the sensitivity to injection increases massively (0.3% → 39.2%) with only a 0.6% increase in false positives. Also, mutual information between nine injected and recovered concepts rises from 0.62 bits to 1.05 bits, ruling out generic noise explanations. Our results demonstrate models can have a surprising capacity for introspection and steering awareness that is easy to overlook, with consequences for latent reasoning and safety.",
+    "published_date": "2026-02-23",
+    "doi": null
+  },
+  "people": [
+    {
+      "name": "Theia Pearson-Vogel",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Martin Vanek",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Raymond Douglas",
+      "author_order": 3,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Jan Kulveit",
+      "author_order": 4,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Janus",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Victor Godet",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Grace Kind",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Max Loeffler",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Antra Tessera",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "Wyatt Walls",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    },
+    {
+      "name": "xlr8harder",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    }
+  ],
+  "organizations": [
+    {
+      "name": "Prime Intellect",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "Czech Science Foundation",
+      "type": "acknowledged_organization"
+    }
+  ],
+  "projects": [
+    {
+      "identifier": "grant No. 26-23955S",
+      "type": "acknowledged_project"
+    }
+  ],
+  "countries": [],
+  "topics": [],
+  "acknowledgements": [
+    {
+      "text": "EXPERIMENTS We present evidence that observed effects reflect meaningful introspective access rather than artifacts. We first establish that injection shifts introspection responses (Section 3.1), then demonstrate specificity relative to control questions (Section 3.2) and through concept identification (Section 3.3). Section 3.4 traces signals through the network via logit lens. Finally, we explore prompt sensitivity (Section 3.5) and replication on larger models (Section 3.6). Unless otherwise noted, we report the mean for all nine tested concepts across (cats, bread, love, fear, death, truth, creativity, programming, music) and ten random seeds for the steering vector training. ACKNOWLEDGMENTS We thank Janus, whose writing on information flow in transformers informed a part of this work. Victor Godet, Janus, Grace Kind, Max Loeffler, Antra Tessera, Wyatt Walls, and xlr8harder reviewed an early version of the results and suggested potential experiments. Prime Intellect provided additional compute. This work was supported by the Czech Science Foundation, grant No. 26-23955S.",
+      "needs_llm_extraction": true
+    },
+    {
+      "text": "ACKNOWLEDGMENTS We thank Janus, whose writing on information flow in transformers informed a part of this work. Victor Godet, Janus, Grace Kind, Max Loeffler, Antra Tessera, Wyatt Walls, and xlr8harder reviewed an early version of the results and suggested potential experiments. Prime Intellect provided additional compute. This work was supported by the Czech Science Foundation, grant No. 26-23955S.",
+      "needs_llm_extraction": true
+    }
+  ],
+  "authors_mentions": []
+}

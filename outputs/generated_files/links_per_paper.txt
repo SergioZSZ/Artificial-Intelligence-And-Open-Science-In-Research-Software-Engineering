@@ -1,39 +1,13 @@
 paper01:
 
-  - http://arxiv.org/abs/1710.08991.arXiv:1710.08991[math
-  - http://arxiv.org/abs/2304.01547.arXiv:2304.01547[cs
-  - http://arxiv.org/abs/2110.11943.arXiv:2110.11943
-  - http://arxiv.org/abs/1507.06280.arXiv:1507.06280
-  - http://arxiv.org/abs/1610.09904.arXiv:1610.09904[q-fin
-  - http://arxiv.org/abs/2102.01585.arXiv:2102.01585[cs
-  - http://arxiv.org/abs/2209.03859.arXiv:2209.03859[cs
-  - https://doi.org/10.1137/070699652
-  - http://arxiv.org/abs/2004.08221.arXiv:2004.08221[physics
-  - http://arxiv.org/abs/2304.08630.arXiv:2304.08630[cs
-  - https://arxiv.org/abs/2112.14377
-  - http://arxiv.org/abs/2405.00282.arXiv:2405.00282[math
-  - http://arxiv.org/abs/2004.07994.arXiv:2004.07994[math
-  - http://arxiv.org/abs/1908.09453
-  - http://arxiv.org/abs/1908.09453.arXiv:1908.09453[cs
-  - http://github.com/RobertTLange/gymnax
-  - http://arxiv.org/abs/2110.02552.arXiv:2110.02552
-  - http://arxiv.org/abs/2205.12944.arXiv:2205.12944[cs
-  - https://www.cambridge.org/core/product/identifier/S0269888912000057/type/journal_article
-  - https://arxiv.org/abs/2508.20571
-  - http://arxiv.org/abs/2110.05038.arXiv:2110.05038[cs
-  - http://arxiv.org/abs/2103.00623.arXiv:2103.00623[cs
-  - http://arxiv.org/abs/2007.03458.arXiv:2007.03458
-  - http://arxiv.org/abs/2105.07933.arXiv:2105.07933[cs
-  - https://ojs.aaai.org/index.php/AAAI/article/view/21173
-  - http://arxiv.org/abs/2311.10090.arXiv:2311.10090[cs
-  - https://pubsonline.informs.org/doi/10.1287/moor.2018.0957
-  - http://arxiv.org/abs/2011.09533.arXiv:2011.09533[cs
-  - http://arxiv.org/abs/2403.03552.arXiv:2403.03552[cs
-  - http://arxiv.org/abs/2509.03030.arXiv:2509.03030[cs
-  - https://ieeexplore.ieee.org/document/8030547/
-  - http://arxiv.org/abs/1711.03156.arXiv:1711.03156[cs
-  - http://arxiv.org/abs/2512.18892.arXiv:2512.18892
-  - https://github.com/CWibault/mfax.
+  - https://github.com/john-cardiff/-cyborg-cage-2
+  - https://x.com/karpathy/status/1937902205765607626
+  - https://github.com/langchain-ai/langchain
+  - https://github.com/cage-challenge/cage-challenge-2
+  - https://doi.org/10.5281/zenodo.19908100;
+  - https://github.com/isbogdanov/
+  - https://www.acm.org/code-of-ethics
+  - https://github.com/isbogdanov/agent-design-study.
 -------------------------------------------------------------------------------------------------
 
 paper02:
