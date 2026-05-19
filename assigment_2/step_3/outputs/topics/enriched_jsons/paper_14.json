@@ -1,0 +1,85 @@
+{
+  "paper": {
+    "local_id": "paper14",
+    "title": "Collaboration drives phase transitions towards cooperation in prisoner's dilemma",
+    "abstract": "We present a collaboration ring model-a network of players playing the prisoner's dilemma game and collaborating among the nearest neighbours by forming coalitions. The microscopic stochastic updating of the players' strategies are driven by their innate nature of seeking selfish gains and shared intentionality. Cooperation emerges in such a structured population through non-equilibrium phase transitions driven by propensity of the players to collaborate and by the benefit that a cooperator generates. The robust results are qualitatively independent of number of neighbours and collaborators.",
+    "published_date": "2026-02-12",
+    "doi": null,
+    "keywords": []
+  },
+  "people": [
+    {
+      "name": "Joy Das Bairagya",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Jonathan Newton",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Sagar Chakraborty",
+      "author_order": 3,
+      "type": "author",
+      "orcid": null
+    }
+  ],
+  "organizations": [],
+  "projects": [],
+  "countries": [],
+  "topics": [
+    {
+      "topic_id": 1,
+      "name": "1_dynamics_antimicrobial_household_selection",
+      "probability": 0.5412647136237663,
+      "representative_document": false,
+      "keywords": [
+        {
+          "word": "dynamics",
+          "score": 0.03940654282666327
+        },
+        {
+          "word": "antimicrobial",
+          "score": 0.038181879992889085
+        },
+        {
+          "word": "household",
+          "score": 0.034168896279813496
+        },
+        {
+          "word": "selection",
+          "score": 0.030228786568471028
+        },
+        {
+          "word": "susceptible",
+          "score": 0.03003966795460695
+        },
+        {
+          "word": "size",
+          "score": 0.02928762538269728
+        },
+        {
+          "word": "diversity",
+          "score": 0.028636409994666812
+        },
+        {
+          "word": "bacterial",
+          "score": 0.025774553999381264
+        },
+        {
+          "word": "infected",
+          "score": 0.025774553999381264
+        },
+        {
+          "word": "household size",
+          "score": 0.025774553999381264
+        }
+      ]
+    }
+  ],
+  "acknowledgements": [],
+  "similar_papers": []
+}

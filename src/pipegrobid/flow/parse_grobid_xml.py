@@ -3,7 +3,7 @@ import json
 import xml.etree.ElementTree as et
 from natsort import natsorted
 
-from auxiliar import parse_acknowledgements, parse_paper, parse_people
+from auxiliar import parse_acknowledgements, parse_paper, parse_people, parse_keywords
 
 # Namespace de TEI
 NS = {"tei": "http://www.tei-c.org/ns/1.0"}
@@ -43,7 +43,8 @@ def parse_xml(xml_path: Path, output_file: Path) -> Path:
     bibl = root.find(".//tei:sourceDesc/tei:biblStruct", NS)
 
     paper = parse_paper(root, xml_path)
-
+    paper["keywords"] = parse_keywords(root)
+    
     if bibl is not None:
         people = parse_people(bibl)
     else:

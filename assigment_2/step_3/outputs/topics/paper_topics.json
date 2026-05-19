@@ -1,0 +1,214 @@
+{
+  "paper_topics": [
+    {
+      "paper_id": "paper01",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": true
+    },
+    {
+      "paper_id": "paper02",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper03",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper04",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": true
+    },
+    {
+      "paper_id": "paper05",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper06",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper07",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper08",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper09",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper10",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": true
+    },
+    {
+      "paper_id": "paper11",
+      "topic_id": 2,
+      "topic_name": "2_peptide_protein_instabilities_peptide cyclization",
+      "probability": 0.25587837191050156,
+      "representative_document": true
+    },
+    {
+      "paper_id": "paper12",
+      "topic_id": 2,
+      "topic_name": "2_peptide_protein_instabilities_peptide cyclization",
+      "probability": 1.0,
+      "representative_document": true
+    },
+    {
+      "paper_id": "paper13",
+      "topic_id": 2,
+      "topic_name": "2_peptide_protein_instabilities_peptide cyclization",
+      "probability": 0.329777092064468,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper14",
+      "topic_id": 1,
+      "topic_name": "1_dynamics_antimicrobial_household_selection",
+      "probability": 0.5412647136237663,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper15",
+      "topic_id": 2,
+      "topic_name": "2_peptide_protein_instabilities_peptide cyclization",
+      "probability": 1.0,
+      "representative_document": true
+    },
+    {
+      "paper_id": "paper16",
+      "topic_id": 1,
+      "topic_name": "1_dynamics_antimicrobial_household_selection",
+      "probability": 0.5907782538427951,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper17",
+      "topic_id": 1,
+      "topic_name": "1_dynamics_antimicrobial_household_selection",
+      "probability": 1.0,
+      "representative_document": true
+    },
+    {
+      "paper_id": "paper18",
+      "topic_id": 1,
+      "topic_name": "1_dynamics_antimicrobial_household_selection",
+      "probability": 0.6350322355798358,
+      "representative_document": true
+    },
+    {
+      "paper_id": "paper19",
+      "topic_id": 1,
+      "topic_name": "1_dynamics_antimicrobial_household_selection",
+      "probability": 1.0,
+      "representative_document": true
+    },
+    {
+      "paper_id": "paper20",
+      "topic_id": 1,
+      "topic_name": "1_dynamics_antimicrobial_household_selection",
+      "probability": 0.9176779121216938,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper21",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper22",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper23",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper24",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper25",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper26",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper27",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper28",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper29",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper30",
+      "topic_id": 0,
+      "topic_name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false
+    }
+  ]
+}

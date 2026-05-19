@@ -4,7 +4,8 @@
     "title": "Spatiotemporal noise stabilizes unbounded diversity in strongly-competitive communities",
     "abstract": "Classical ecological models predict that large, diverse communities should be unstable, presenting a central challenge to explaining the stable biodiversity seen in nature. We revisit this long-standing problem by extending the generalized Lotka-Volterra model to include both spatial structure and environmental fluctuations across space and time. We find that neither space nor environmental noise alone can resolve the tension between diversity and stability, but that their combined effects permit arbitrarily many species to stably coexist despite strongly disordered competitive interactions. We analytically characterize the noise-induced transition to coexistence, showing that spatiotemporal noise drives an anomalous scaling of abundance fluctuations, known empirically as Taylor's law. At the community level, this manifests as an effective sublinear self-inhibition that renders the community stable and asymptotically neutral in the high-diversity limit. Spatiotemporal noise thus provides a novel resolution to the diversity-stability paradox and a generic mechanism by which complex communities can persist.",
     "published_date": "2026-02-17",
-    "doi": null
+    "doi": null,
+    "keywords": []
   },
   "people": [
     {

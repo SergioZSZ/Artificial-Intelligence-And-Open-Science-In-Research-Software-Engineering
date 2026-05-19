@@ -4,7 +4,13 @@
     "title": "CONDITIONS FOR BACTERIAL SELECTION AND EXTINCTION DRIVEN BY GROWTH-KILL TRADE-OFF IN CYCLIC ANTIMICROBIAL TREATMENTS",
     "abstract": "Antimicrobial protocols -using substances such as antibiotics or disinfectants -remain the preferred option for preventing the spread of pathogenic bacteria. However, bacteria can develop mechanisms to reduce their antimicrobial susceptibility, which can lead to treatment failure and the selection of resistance or tolerance. In this work, we propose a minimal population dynamics model to study bacterial selection during cyclic antimicrobial application, a commonly used protocol. Selection in bacterial populations with heterogeneous antimicrobial susceptibility is modelled here as a trade-off between survival advantage (reduction in antimicrobial killing) and potential fitness costs (reduction in growth rate) of the less susceptible strains. The proposed model allows us to derive useful expressions for determining the success of cyclic antimicrobial treatments based on two bacterial traits: growth and kill rates. The results obtained here are directly applicable to preventing the selection and spread of resistant and tolerant bacterial strains in real-life protocols.",
     "published_date": "2026-02-17",
-    "doi": null
+    "doi": null,
+    "keywords": [
+      "Selection",
+      "Extinction conditions",
+      "Dynamic treatment",
+      "Antimicrobial resistance"
+    ]
   },
   "people": [
     {

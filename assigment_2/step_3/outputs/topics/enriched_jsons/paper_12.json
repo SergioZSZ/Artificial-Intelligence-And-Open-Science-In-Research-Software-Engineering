@@ -1,0 +1,111 @@
+{
+  "paper": {
+    "local_id": "paper12",
+    "title": "MuCO: Generative Peptide Cyclization Empowered by Multi-stage Conformation Optimization",
+    "abstract": "Modeling peptide cyclization is critical for the virtual screening of candidate peptides with desirable physical and pharmaceutical properties. This task is challenging because a cyclic peptide often exhibits diverse, ring-shaped conformations, which cannot be well captured by deterministic prediction models derived from linear peptide folding. In this study, we propose MuCO (Multi-stage Conformation Optimization), a generative peptide cyclization method that models the distribution of cyclic peptide conformations conditioned on the corresponding linear peptide. In principle, MuCO decouples the peptide cyclization task into three stages: topology-aware backbone design, generative side-chain packing, and physics-aware all-atom optimization, thereby generating and optimizing conformations of cyclic peptides in a coarse-to-fine manner. This multi-stage framework enables an efficient parallel sampling strategy for conformation generation and allows for rapid exploration of diverse, low-energy conformations. Experiments on the large-scale CPSea dataset demonstrate that MuCO significantly outperforms state-of-the-art methods in consistently in physical stability, structural diversity, secondary structure recovery, and computational efficiency, making it a promising computational tool for exploring and designing cyclic peptides.",
+    "published_date": "2026-02-13",
+    "doi": null,
+    "keywords": []
+  },
+  "people": [
+    {
+      "name": "Yitian Wang",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Fanmeng Wang",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Angxiao Yue",
+      "author_order": 3,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Wentao Guo",
+      "author_order": 4,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Yaning Cui",
+      "author_order": 5,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Hongteng Xu",
+      "author_order": 6,
+      "type": "author",
+      "orcid": null
+    }
+  ],
+  "organizations": [],
+  "projects": [],
+  "countries": [],
+  "topics": [
+    {
+      "topic_id": 2,
+      "name": "2_peptide_protein_instabilities_peptide cyclization",
+      "probability": 1.0,
+      "representative_document": true,
+      "keywords": [
+        {
+          "word": "peptide",
+          "score": 0.05120127513800536
+        },
+        {
+          "word": "protein",
+          "score": 0.04581992976538924
+        },
+        {
+          "word": "instabilities",
+          "score": 0.03456325437949816
+        },
+        {
+          "word": "peptide cyclization",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "muco",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "interface",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "passive",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "conformations",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "cyclization",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "field",
+          "score": 0.027650603503598527
+        }
+      ]
+    }
+  ],
+  "acknowledgements": [],
+  "similar_papers": [
+    {
+      "paper_id": "paper15",
+      "similarity_score": 0.5057919025421143,
+      "source_topic_id": 2,
+      "target_topic_id": 2,
+      "same_topic": true
+    }
+  ]
+}

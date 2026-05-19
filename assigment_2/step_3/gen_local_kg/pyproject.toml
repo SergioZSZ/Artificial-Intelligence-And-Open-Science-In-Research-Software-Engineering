@@ -1,0 +1,17 @@
+[project]
+name = "gen-local-kg"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "G4 OpenScience"}
+]
+license = {text = "MIT"}
+requires-python = ">=3.11,<=3.13"
+dependencies = [
+    "rdflib (>=7.6.0,<8.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,143 @@
+[
+  {
+    "topic_id": 0,
+    "name": "0_reasoning_model_models_ai",
+    "count": 20,
+    "keywords": [
+      {
+        "word": "reasoning",
+        "score": 0.0319656244795898
+      },
+      {
+        "word": "model",
+        "score": 0.025039909838376718
+      },
+      {
+        "word": "models",
+        "score": 0.024228572174565817
+      },
+      {
+        "word": "ai",
+        "score": 0.01837611345015368
+      },
+      {
+        "word": "human",
+        "score": 0.017766476059663843
+      },
+      {
+        "word": "performance",
+        "score": 0.017149961456744963
+      },
+      {
+        "word": "learning",
+        "score": 0.01589499856231439
+      },
+      {
+        "word": "based",
+        "score": 0.015739287341013593
+      },
+      {
+        "word": "causal",
+        "score": 0.013286241643272804
+      },
+      {
+        "word": "llm",
+        "score": 0.013286241643272804
+      }
+    ]
+  },
+  {
+    "topic_id": 1,
+    "name": "1_dynamics_antimicrobial_household_selection",
+    "count": 6,
+    "keywords": [
+      {
+        "word": "dynamics",
+        "score": 0.03940654282666327
+      },
+      {
+        "word": "antimicrobial",
+        "score": 0.038181879992889085
+      },
+      {
+        "word": "household",
+        "score": 0.034168896279813496
+      },
+      {
+        "word": "selection",
+        "score": 0.030228786568471028
+      },
+      {
+        "word": "susceptible",
+        "score": 0.03003966795460695
+      },
+      {
+        "word": "size",
+        "score": 0.02928762538269728
+      },
+      {
+        "word": "diversity",
+        "score": 0.028636409994666812
+      },
+      {
+        "word": "bacterial",
+        "score": 0.025774553999381264
+      },
+      {
+        "word": "infected",
+        "score": 0.025774553999381264
+      },
+      {
+        "word": "household size",
+        "score": 0.025774553999381264
+      }
+    ]
+  },
+  {
+    "topic_id": 2,
+    "name": "2_peptide_protein_instabilities_peptide cyclization",
+    "count": 4,
+    "keywords": [
+      {
+        "word": "peptide",
+        "score": 0.05120127513800536
+      },
+      {
+        "word": "protein",
+        "score": 0.04581992976538924
+      },
+      {
+        "word": "instabilities",
+        "score": 0.03456325437949816
+      },
+      {
+        "word": "peptide cyclization",
+        "score": 0.02862452840400626
+      },
+      {
+        "word": "muco",
+        "score": 0.02862452840400626
+      },
+      {
+        "word": "interface",
+        "score": 0.02862452840400626
+      },
+      {
+        "word": "passive",
+        "score": 0.02862452840400626
+      },
+      {
+        "word": "conformations",
+        "score": 0.02862452840400626
+      },
+      {
+        "word": "cyclization",
+        "score": 0.02862452840400626
+      },
+      {
+        "word": "field",
+        "score": 0.027650603503598527
+      }
+    ]
+  }
+]

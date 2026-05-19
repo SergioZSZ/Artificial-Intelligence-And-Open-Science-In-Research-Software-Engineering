@@ -4,7 +4,8 @@
     "title": "The Navigation Paradox in Large-Context Agentic Coding: Graph-Structured Dependency Navigation Outperforms Retrieval in Architecture-Heavy Tasks *",
     "abstract": "Agentic coding assistants powered by Large Language Models (LLMs) are increasingly deployed on repository-level software tasks. As context windows expand toward millions of tokens, a tacit assumption holds that retrieval bottlenecks dissolve -the model can simply ingest the whole codebase. We challenge this assumption by introducing the Navigation Paradox: larger context windows do not eliminate the need for structural navigation; they shift the failure mode from retrieval capacity to navigational salience. When architecturally critical but semantically distant files are absent from the model's attention, errors may occur that additional context budget alone is unlikely to resolve.",
     "published_date": "2026-02",
-    "doi": null
+    "doi": null,
+    "keywords": []
   },
   "people": [
     {

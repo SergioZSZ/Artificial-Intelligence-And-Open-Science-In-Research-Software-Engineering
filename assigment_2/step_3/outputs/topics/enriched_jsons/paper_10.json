@@ -1,0 +1,108 @@
+{
+  "paper": {
+    "local_id": "paper10",
+    "title": "Watson & Holmes: A Naturalistic Benchmark for Comparing Human and LLM Reasoning",
+    "abstract": "Existing benchmarks for AI reasoning provide limited insight into how closely these capabilities resemble human reasoning in naturalistic contexts. We present an adaptation of the Watson & Holmes detective tabletop game as a new benchmark designed to evaluate reasoning performance using incrementally presented narrative evidence, open-ended questions and unconstrained language responses. An automated grading system was developed and validated against human assessors to enable scalable and replicable performance evaluation. Results show a clear improvement in AI model performance over time. Over nine months of 2025, model performance rose from the lower quartile of the human comparison group to approximately the top 5%. Around half of this improvement reflects steady advancement across successive model releases, while the remainder corresponds to a marked step change associated with reasoningoriented model architectures. Systematic differences in the performance of AI models compared to humans, dependent on features of the specific detection puzzle, were mostly absent with the exception of a fall in performance for models when solving longer cases (case lengths being in the range of 1900-4000 words), and an advantage at inductive reasoning for reasoning models at early stages of case solving when evidence was scant. Background This section outlines key perspectives and developments in reasoning and its evaluation. It reviews major theoretical accounts of human and machine reasoning, surveys existing reasoning benchmarks used to assess AI models' reasoning capabilities across domains, examines approaches to autograding open-ended reasoning performance, and concludes with a discussion of current benchmark limitations and gaps. Background on Reasoning Human reasoning has been a central focus of inquiry across philosophy, psychology, mathematics, and artificial intelligence. In these disciplines and in specific domains, researchers have proposed diverse theories to understand how people draw conclusions, solve problems, and make decisions. Philosophical perspectives Philosophical approaches to reasoning typically present idealized accounts of how reasoning should operate to draw conclusions. A standard account is the classification of reasoning modes into deduction, induction and abduction. Deduction and induction were already recognized and distinguished in ancient Greek philosophy, particularly in Aristotle's logic [6] . Much later in the 19th century Charles Sanders Peirce [7] added abduction to this framework. The modes can defined as follows: -Deduction: Reasoning following established canonical logical patterns. -Induction: Inferences based on generalization from previous, ideally repeated, observations. -Abduction: The best possible explanation for the given facts. Psychological perspective From a psychological standpoint, reasoning is concerned with how people actually think and make decisions. In contrast to philosophical accounts of idealized reasoning, psychological theories emphasize that human reasoning is shaped by cognitive processes, heuristics, mental models, and social dynamics rather than being purely logical.",
+    "published_date": null,
+    "doi": null,
+    "keywords": []
+  },
+  "people": [
+    {
+      "name": "Thatchawin Leelawat",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Lewis D Griffin",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    }
+  ],
+  "organizations": [],
+  "projects": [],
+  "countries": [],
+  "topics": [
+    {
+      "topic_id": 0,
+      "name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": true,
+      "keywords": [
+        {
+          "word": "reasoning",
+          "score": 0.0319656244795898
+        },
+        {
+          "word": "model",
+          "score": 0.025039909838376718
+        },
+        {
+          "word": "models",
+          "score": 0.024228572174565817
+        },
+        {
+          "word": "ai",
+          "score": 0.01837611345015368
+        },
+        {
+          "word": "human",
+          "score": 0.017766476059663843
+        },
+        {
+          "word": "performance",
+          "score": 0.017149961456744963
+        },
+        {
+          "word": "learning",
+          "score": 0.01589499856231439
+        },
+        {
+          "word": "based",
+          "score": 0.015739287341013593
+        },
+        {
+          "word": "causal",
+          "score": 0.013286241643272804
+        },
+        {
+          "word": "llm",
+          "score": 0.013286241643272804
+        }
+      ]
+    }
+  ],
+  "acknowledgements": [],
+  "similar_papers": [
+    {
+      "paper_id": "paper02",
+      "similarity_score": 0.568034291267395,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    },
+    {
+      "paper_id": "paper03",
+      "similarity_score": 0.5136633515357971,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    },
+    {
+      "paper_id": "paper04",
+      "similarity_score": 0.5234242081642151,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    },
+    {
+      "paper_id": "paper29",
+      "similarity_score": 0.5383407473564148,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    }
+  ]
+}

@@ -38,6 +38,19 @@
         4. Guardar los resultados en la carpeta de salida correspondiente.
         
 
+## NER y extracción de dichas entidades de los acknowledgements
+- Realizado corpus (golden standar) y estudio sobre transformers y LLMs para obtener el mejor para nuestro proyecto (vencedor: LLM `llama-3.3-70b-versatile`)
+
+- Uso de LLM ``llama-3.3-70b-versatile`` para reconocimiento de entidades en "acknowledgements". El objetivo es extraer:
+
+    - personas mencionadas
+    - organizaciones financiadoras
+    - proyectos
+    - identificadores de grants/awards
+    - posibles relaciones entre proyectos y financiadores
+
+
+
 ## Próximas integraciones
 - Generación de TopicModeling mediante Transformers (BERTopic) Estos resultados se utilizarán para nutrir el KG con:
 
@@ -47,19 +60,6 @@
     - puntuación de pertenencia paper-topic
 
 
-- Uso de LLM para reconocimiento de entidades en "acknowledgements". El objetivo es extraer:
-
-    - personas mencionadas
-    - organizaciones financiadoras
-    - proyectos
-    - identificadores de grants/awards
-    - posibles relaciones entre proyectos y financiadores
-
-    Estos resultados servirán para nutrir relaciones como:
-
-    - `acknowledges`
-    - `fundedByProject`
-    - `funder`
 
 - Creación del KG a partir de:
     - datos estructurados extraídos directamente del XML

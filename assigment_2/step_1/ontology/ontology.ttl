@@ -23,8 +23,7 @@
 
 ###  http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty ;
-                                        rdfs:range xsd:string ;
-                                        rdfs:domain :Paper .
+                                        rdfs:range xsd:string .
 
 
 ###  http://purl.org/dc/terms/license
@@ -55,7 +54,7 @@ xsd:date rdf:type rdfs:Datatype .
 :acknowledges rdf:type owl:ObjectProperty ;
               rdfs:domain owl:Thing ;
               rdfs:range owl:Thing ;
-              rdfs:comment "Relates a paper to a project, organization, or funding entity acknowledged in the publication."^^xsd:string ;
+              rdfs:comment "Relates a paper to a project, organization, or funding entity acknowledged in the publication." ;
               rdfs:label "acknowledges" .
 
 
@@ -63,7 +62,7 @@ xsd:date rdf:type rdfs:Datatype .
 :fundedByProject rdf:type owl:ObjectProperty ;
                  rdfs:domain :Paper ;
                  rdfs:range <https://schema.org/Project> ;
-                 rdfs:comment "Relates a paper, organization, or research activity to the project that funded it."^^xsd:string ;
+                 rdfs:comment "Relates a paper, organization, or research activity to the project that funded it." ;
                  rdfs:label "funded by project" .
 
 
@@ -71,7 +70,7 @@ xsd:date rdf:type rdfs:Datatype .
 :paper rdf:type owl:ObjectProperty ;
        rdfs:domain :PaperTopicSimilarity ;
        rdfs:range :Paper ;
-       rdfs:comment "Relates a paper-topic similarity assertion to the paper being compared with a topic."^^xsd:string ;
+       rdfs:comment "Relates a paper-topic similarity assertion to the paper being compared with a topic." ;
        rdfs:label "paper" .
 
 
@@ -79,7 +78,7 @@ xsd:date rdf:type rdfs:Datatype .
 :paper1 rdf:type owl:ObjectProperty ;
         rdfs:domain :PaperSimilarity ;
         rdfs:range :Paper ;
-        rdfs:comment "Relates a paper similarity assertion to the first paper involved in the comparison."^^xsd:string ;
+        rdfs:comment "Relates a paper similarity assertion to the first paper involved in the comparison." ;
         rdfs:label "paper1" .
 
 
@@ -87,7 +86,7 @@ xsd:date rdf:type rdfs:Datatype .
 :paper2 rdf:type owl:ObjectProperty ;
         rdfs:domain :PaperSimilarity ;
         rdfs:range :Paper ;
-        rdfs:comment "Relates a paper similarity assertion to the second paper involved in the comparison."^^xsd:string ;
+        rdfs:comment "Relates a paper similarity assertion to the second paper involved in the comparison." ;
         rdfs:label "paper2" .
 
 
@@ -95,7 +94,7 @@ xsd:date rdf:type rdfs:Datatype .
 :topic rdf:type owl:ObjectProperty ;
        rdfs:domain :PaperTopicSimilarity ;
        rdfs:range :Topic ;
-       rdfs:comment "Represents a research topic described through a set of keywords or a keyword vector."^^xsd:string ;
+       rdfs:comment "Represents a research topic described through a set of keywords or a keyword vector." ;
        rdfs:label "topic" .
 
 
@@ -103,7 +102,7 @@ xsd:date rdf:type rdfs:Datatype .
 <https://schema.org/affiliation> rdf:type owl:ObjectProperty ;
                                  rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
                                  rdfs:range <https://schema.org/Organization> ;
-                                 rdfs:comment "Relates a person to the organization with which they are affiliated."^^xsd:string ;
+                                 rdfs:comment "Relates a person to the organization with which they are affiliated." ;
                                  rdfs:label "affiliation" .
 
 
@@ -111,7 +110,7 @@ xsd:date rdf:type rdfs:Datatype .
 <https://schema.org/author> rdf:type owl:ObjectProperty ;
                             rdfs:domain :Paper ;
                             rdfs:range <http://xmlns.com/foaf/0.1/Person> ;
-                            rdfs:comment "Relates a paper to the person who authored or contributed to it."^^xsd:string ;
+                            rdfs:comment "Relates a paper to the person who authored or contributed to it." ;
                             rdfs:label "author" .
 
 
@@ -119,7 +118,7 @@ xsd:date rdf:type rdfs:Datatype .
 <https://schema.org/funder> rdf:type owl:ObjectProperty ;
                             rdfs:domain <https://schema.org/Project> ;
                             rdfs:range <https://schema.org/Organization> ;
-                            rdfs:comment "Relates a project, paper, or activity to the organization or entity that provides funding."^^xsd:string ;
+                            rdfs:comment "Relates a project, paper, or activity to the organization or entity that provides funding." ;
                             rdfs:label "funder" .
 
 
@@ -127,7 +126,7 @@ xsd:date rdf:type rdfs:Datatype .
 <https://schema.org/location> rdf:type owl:ObjectProperty ;
                               rdfs:domain <https://schema.org/Organization> ;
                               rdfs:range <https://schema.org/Country> ;
-                              rdfs:comment "Relates an organization, project, or entity to its geographical location."^^xsd:string ;
+                              rdfs:comment "Relates an organization, project, or entity to its geographical location." ;
                               rdfs:label "location" .
 
 
@@ -138,20 +137,21 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://purl.org/dc/elements/1.1/date
 <http://purl.org/dc/elements/1.1/date> rdf:type owl:DatatypeProperty ;
                                        rdfs:domain :Paper ;
-                                       rdfs:range xsd:dateTime ;
-                                       rdfs:comment "Stores the relevant date of a paper, project, or resource."^^xsd:string ;
+                                       rdfs:range xsd:string ;
+                                       rdfs:comment "Stores the relevant date of a paper, project, or resource." ;
                                        rdfs:label "date" .
 
 
 ###  http://purl.org/dc/elements/1.1/title
-<http://purl.org/dc/elements/1.1/title> rdf:type owl:DatatypeProperty .
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain :Paper .
 
 
 ###  https://g4.org/ontology/research-funding#algorihtm
 :algorihtm rdf:type owl:DatatypeProperty ;
            rdfs:domain owl:Thing ;
            rdfs:range xsd:string ;
-           rdfs:comment "Stores the algorithm used to calculate a similarity or classification score."^^xsd:string ;
+           rdfs:comment "Stores the algorithm used to calculate a similarity or classification score." ;
            rdfs:label "algorihtm" .
 
 
@@ -159,7 +159,7 @@ xsd:date rdf:type rdfs:Datatype .
 :fundingAmount rdf:type owl:DatatypeProperty ;
                rdfs:domain <https://schema.org/Project> ;
                rdfs:range xsd:decimal ;
-               rdfs:comment "Stores the amount of funding associated with a project or funding relationship."^^xsd:string ;
+               rdfs:comment "Stores the amount of funding associated with a project or funding relationship." ;
                rdfs:label "funding amount" .
 
 
@@ -167,7 +167,7 @@ xsd:date rdf:type rdfs:Datatype .
 :keywordVector rdf:type owl:DatatypeProperty ;
                rdfs:domain :Topic ;
                rdfs:range xsd:string ;
-               rdfs:comment "Stores the vector or textual representation of keywords that describe a research topic."^^xsd:string ;
+               rdfs:comment "Stores the vector or textual representation of keywords that describe a research topic." ;
                rdfs:label "keyword vector" .
 
 
@@ -175,7 +175,7 @@ xsd:date rdf:type rdfs:Datatype .
 :score rdf:type owl:DatatypeProperty ;
        rdfs:domain owl:Thing ;
        rdfs:range xsd:float ;
-       rdfs:comment "Stores the numerical similarity or membership score associated with a similarity assertion."^^xsd:string ;
+       rdfs:comment "Stores the numerical similarity or membership score associated with a similarity assertion." ;
        rdfs:label "score" .
 
 
@@ -183,7 +183,7 @@ xsd:date rdf:type rdfs:Datatype .
 <https://schema.org/abstract> rdf:type owl:DatatypeProperty ;
                               rdfs:domain :Paper ;
                               rdfs:range xsd:string ;
-                              rdfs:comment "Stores the abstract or summary of a scientific paper."^^xsd:string ;
+                              rdfs:comment "Stores the abstract or summary of a scientific paper." ;
                               rdfs:label "abstract" .
 
 
@@ -191,7 +191,7 @@ xsd:date rdf:type rdfs:Datatype .
 <https://schema.org/description> rdf:type owl:DatatypeProperty ;
                                  rdfs:domain owl:Thing ;
                                  rdfs:range xsd:string ;
-                                 rdfs:comment "Stores a textual description of an entity, project, organization, or resource."^^xsd:string ;
+                                 rdfs:comment "Stores a textual description of an entity, project, organization, or resource." ;
                                  rdfs:label "description" .
 
 
@@ -199,15 +199,15 @@ xsd:date rdf:type rdfs:Datatype .
 <https://schema.org/endDate> rdf:type owl:DatatypeProperty ;
                              rdfs:domain <https://schema.org/Project> ;
                              rdfs:range xsd:date ;
-                             rdfs:comment "Stores the end date of a project, funding period, or temporal activity."^^xsd:string ;
+                             rdfs:comment "Stores the end date of a project, funding period, or temporal activity." ;
                              rdfs:label "end date" .
 
 
 ###  https://schema.org/identifier
 <https://schema.org/identifier> rdf:type owl:DatatypeProperty ;
-                                rdfs:domain :Paper ;
+                                rdfs:domain owl:Thing ;
                                 rdfs:range xsd:string ;
-                                rdfs:comment "Stores an external identifier associated with an entity, such as ORCID, DOI, Wikidata ID, or project ID."^^xsd:string ;
+                                rdfs:comment "Stores an external identifier associated with an entity, such as ORCID, DOI, Wikidata ID, or project ID." ;
                                 rdfs:label "identifier" .
 
 
@@ -215,7 +215,7 @@ xsd:date rdf:type rdfs:Datatype .
 <https://schema.org/keywords> rdf:type owl:DatatypeProperty ;
                               rdfs:domain :Topic ;
                               rdfs:range xsd:string ;
-                              rdfs:comment "Stores the keywords associated with a paper, topic, project, or research entity."^^xsd:string ;
+                              rdfs:comment "Stores the keywords associated with a paper, topic, project, or research entity." ;
                               rdfs:label "keywords" .
 
 
@@ -223,7 +223,7 @@ xsd:date rdf:type rdfs:Datatype .
 <https://schema.org/name> rdf:type owl:DatatypeProperty ;
                           rdfs:domain owl:Thing ;
                           rdfs:range xsd:string ;
-                          rdfs:comment "Stores the name of a person, organization, project, country, topic, or other entity."^^xsd:string ;
+                          rdfs:comment "Stores the name of a person, organization, project, country, topic, or other entity." ;
                           rdfs:label "name" .
 
 
@@ -231,7 +231,7 @@ xsd:date rdf:type rdfs:Datatype .
 <https://schema.org/sameAs> rdf:type owl:DatatypeProperty ;
                             rdfs:domain owl:Thing ;
                             rdfs:range xsd:anyURI ;
-                            rdfs:comment "Links an entity to an equivalent external resource or identifier in another dataset."^^xsd:string ;
+                            rdfs:comment "Links an entity to an equivalent external resource or identifier in another dataset." ;
                             rdfs:label "same as" .
 
 
@@ -239,7 +239,7 @@ xsd:date rdf:type rdfs:Datatype .
 <https://schema.org/startDate> rdf:type owl:DatatypeProperty ;
                                rdfs:domain <https://schema.org/Project> ;
                                rdfs:range xsd:date ;
-                               rdfs:comment "Stores the start date of a project, funding period, or temporal activity."^^xsd:string ;
+                               rdfs:comment "Stores the start date of a project, funding period, or temporal activity." ;
                                rdfs:label "start date" .
 
 
@@ -249,49 +249,49 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://xmlns.com/foaf/0.1/Person
 <http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
-                                   rdfs:comment "Represents a person, usually an author or researcher associated with scientific publications."^^xsd:string ;
+                                   rdfs:comment "Represents a person, usually an author or researcher associated with scientific publications." ;
                                    rdfs:label "Person" .
 
 
 ###  https://g4.org/ontology/research-funding#Paper
 :Paper rdf:type owl:Class ;
-       rdfs:comment "Represents a scientific paper or publication included in the research funding knowledge graph."^^xsd:string ;
+       rdfs:comment "Represents a scientific paper or publication included in the research funding knowledge graph." ;
        rdfs:label "Paper" .
 
 
 ###  https://g4.org/ontology/research-funding#PaperSimilarity
 :PaperSimilarity rdf:type owl:Class ;
-                 rdfs:comment "Represents an n-ary relationship between two papers, including the similarity score and the algorithm used to calculate it."^^xsd:string ;
+                 rdfs:comment "Represents an n-ary relationship between two papers, including the similarity score and the algorithm used to calculate it." ;
                  rdfs:label "Paper Similarity" .
 
 
 ###  https://g4.org/ontology/research-funding#PaperTopicSimilarity
 :PaperTopicSimilarity rdf:type owl:Class ;
-                      rdfs:comment "Represents an n-ary relationship between a paper and a topic, including a similarity or membership score."^^xsd:string ;
+                      rdfs:comment "Represents an n-ary relationship between a paper and a topic, including a similarity or membership score." ;
                       rdfs:label "Paper Topic Similarity" .
 
 
 ###  https://g4.org/ontology/research-funding#Topic
 :Topic rdf:type owl:Class ;
-       rdfs:comment "Represents a research topic described through a set of keywords or a keyword vector."^^xsd:string ;
+       rdfs:comment "Represents a research topic described through a set of keywords or a keyword vector." ;
        rdfs:label "Topic" .
 
 
 ###  https://schema.org/Country
 <https://schema.org/Country> rdf:type owl:Class ;
-                             rdfs:comment "Represents the country associated with an organization, project, author, or funding entity."^^xsd:string ;
+                             rdfs:comment "Represents the country associated with an organization, project, author, or funding entity." ;
                              rdfs:label "Country" .
 
 
 ###  https://schema.org/Organization
 <https://schema.org/Organization> rdf:type owl:Class ;
-                                  rdfs:comment "Represents an institution, university, research center, company, or funding body involved in the research ecosystem."^^xsd:string ;
+                                  rdfs:comment "Represents an institution, university, research center, company, or funding body involved in the research ecosystem." ;
                                   rdfs:label "Organization" .
 
 
 ###  https://schema.org/Project
 <https://schema.org/Project> rdf:type owl:Class ;
-                             rdfs:comment "Represents a research or funding project related to scientific publications."^^xsd:string ;
+                             rdfs:comment "Represents a research or funding project related to scientific publications." ;
                              rdfs:label "Project" .
 
 
@@ -299,7 +299,7 @@ xsd:date rdf:type rdfs:Datatype .
 #    Annotations
 #################################################################
 
-<http://purl.org/dc/elements/1.1/title> rdfs:comment "Stores the title of a paper, project, or other described resource."^^xsd:string ;
+<http://purl.org/dc/elements/1.1/title> rdfs:comment "Stores the title of a paper, project, or other described resource." ;
                                         rdfs:label "title" .
 
 
@@ -318,4 +318,4 @@ xsd:date rdf:type rdfs:Datatype .
 ] .
 
 
-###  Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

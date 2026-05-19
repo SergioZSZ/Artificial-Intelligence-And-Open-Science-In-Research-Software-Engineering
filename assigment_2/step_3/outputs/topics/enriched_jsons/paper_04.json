@@ -1,0 +1,126 @@
+{
+  "paper": {
+    "local_id": "paper04",
+    "title": "CausalFlip: A Benchmark for LLM Causal Judgment Beyond Semantic Matching",
+    "abstract": "As large language models (LLMs) witness increasing deployment in complex, high-stakes decision-making scenarios, it becomes imperative to ground their reasoning in causality rather than spurious correlations. However, strong performance on traditional reasoning benchmarks does not guarantee true causal reasoning ability of LLMs, as high accuracy may still arise from memorizing semantic patterns instead of analyzing the underlying true causal structures. To bridge this critical gap, we propose a new causal reasoning benchmark, CausalFlip, designed to encourage the development of new LLM paradigm or training algorithms that ground LLM reasoning in causality rather than semantic correlation. CausalFlip consists of causal judgment questions built over event triples that could form different confounder, chain, and collider relations. Based on this, for each event triple, we construct pairs of semantically similar questions that reuse the same events but yield opposite causal answers, where models that rely heavily on semantic matching are systematically driven toward incorrect predictions. To further probe models' reliance on semantic patterns, we introduce a noisy-prefix evaluation that prepends causally irrelevant text before intermediate causal reasoning steps without altering the underlying causal relations or the logic of the reasoning process. We evaluate LLMs under multiple training paradigms, including answer-only training, explicit Chain-of-Thought (CoT) supervision, and a proposed internalized causal reasoning approach that aims to mitigate explicit reliance on correlation in the reasoning process. Our results show that explicit CoT can still be misled by spurious semantic correlations, where internalizing reasoning steps yields substantially improved causal grounding, suggesting that it is promising to better elicit the latent causal reasoning capabilities of base LLMs. The code and benchmark is available at https://github.com/Yuzhe-W/CausalFlip. CCS Concepts • Computing methodologies → Natural language processing; Causal reasoning and diagnostics.",
+    "published_date": "2026-02-23",
+    "doi": null,
+    "keywords": [
+      "Large Language Models",
+      "Causal Reasoning",
+      "Benchmarks",
+      "Datasets"
+    ]
+  },
+  "people": [
+    {
+      "name": "Yuzhe Wang",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Yaochen Zhu",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Jundong Li",
+      "author_order": 3,
+      "type": "author",
+      "orcid": null
+    }
+  ],
+  "organizations": [],
+  "projects": [],
+  "countries": [],
+  "topics": [
+    {
+      "topic_id": 0,
+      "name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": true,
+      "keywords": [
+        {
+          "word": "reasoning",
+          "score": 0.0319656244795898
+        },
+        {
+          "word": "model",
+          "score": 0.025039909838376718
+        },
+        {
+          "word": "models",
+          "score": 0.024228572174565817
+        },
+        {
+          "word": "ai",
+          "score": 0.01837611345015368
+        },
+        {
+          "word": "human",
+          "score": 0.017766476059663843
+        },
+        {
+          "word": "performance",
+          "score": 0.017149961456744963
+        },
+        {
+          "word": "learning",
+          "score": 0.01589499856231439
+        },
+        {
+          "word": "based",
+          "score": 0.015739287341013593
+        },
+        {
+          "word": "causal",
+          "score": 0.013286241643272804
+        },
+        {
+          "word": "llm",
+          "score": 0.013286241643272804
+        }
+      ]
+    }
+  ],
+  "acknowledgements": [],
+  "similar_papers": [
+    {
+      "paper_id": "paper02",
+      "similarity_score": 0.5453762412071228,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    },
+    {
+      "paper_id": "paper10",
+      "similarity_score": 0.5234242081642151,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    },
+    {
+      "paper_id": "paper21",
+      "similarity_score": 0.5439873337745667,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    },
+    {
+      "paper_id": "paper25",
+      "similarity_score": 0.5116398930549622,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    },
+    {
+      "paper_id": "paper29",
+      "similarity_score": 0.5222616195678711,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    }
+  ]
+}

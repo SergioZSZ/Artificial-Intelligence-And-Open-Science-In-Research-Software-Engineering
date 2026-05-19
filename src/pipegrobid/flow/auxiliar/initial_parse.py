@@ -179,3 +179,21 @@ def parse_acknowledgements(root):
 
     return acknowledgements
     
+    
+#parseo de kas keywords en el nodo keywords
+def parse_keywords(root) :
+    keywords = []
+
+    terms = root.findall(
+        ".//tei:profileDesc/tei:textClass/tei:keywords/tei:term",
+        NS
+    )
+
+    for term in terms:
+        keyword = " ".join("".join(term.itertext()).split())
+        keyword = keyword.lstrip("•").strip()
+
+        if keyword:
+            keywords.append(keyword)
+
+    return list(dict.fromkeys(keywords))

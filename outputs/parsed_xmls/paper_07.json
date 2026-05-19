@@ -4,7 +4,8 @@
     "title": "LATENT INTROSPECTION: MODELS CAN DETECT PRIOR CONCEPT INJECTIONS",
     "abstract": "We uncover a latent capacity for introspection in a Qwen 32B model, demonstrating that the model can detect when concepts have been injected into its earlier context and identify which concept was injected. While the model denies injection in sampled outputs, logit lens analysis reveals clear detection signals in the residual stream, which are attenuated in the final layers. Furthermore, prompting the model with accurate information about AI introspection mechanisms can dramatically strengthen this effect: the sensitivity to injection increases massively (0.3% → 39.2%) with only a 0.6% increase in false positives. Also, mutual information between nine injected and recovered concepts rises from 0.62 bits to 1.05 bits, ruling out generic noise explanations. Our results demonstrate models can have a surprising capacity for introspection and steering awareness that is easy to overlook, with consequences for latent reasoning and safety.",
     "published_date": "2026-02-23",
-    "doi": null
+    "doi": null,
+    "keywords": []
   },
   "people": [
     {

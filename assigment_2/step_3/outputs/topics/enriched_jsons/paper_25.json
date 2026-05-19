@@ -1,0 +1,122 @@
+{
+  "paper": {
+    "local_id": "paper25",
+    "title": "COLD-STEER: STEERING LARGE LANGUAGE MODELS VIA IN-CONTEXT ONE-STEP LEARNING DYNAMICS",
+    "abstract": "Activation steering methods enable inference-time control of large language model (LLM) behavior without retraining, but current approaches face a fundamental trade-off: sample-efficient methods suboptimally capture steering signals from labeled examples, while methods that better extract these signals require hundreds to thousands of examples. We introduce COLD-Steer 1 , a training-free framework that steers LLM activations by approximating the representational changes that would result from gradient descent on in-context examples. Our key insight is that the effect of fine-tuning on a small set of examples can be efficiently approximated at inference time without actual parameter updates. We formalize this through two complementary approaches: (i) a unit kernel approximation method that updates the activations directly using gradients with respect to them, normalized across examples, and (ii) a finite-difference approximation requiring only two forward passes regardless of example count. Experiments across a variety of steering tasks and benchmarks demonstrate that COLD-Steer achieves upto 95% steering effectiveness while using 50 times fewer samples compared to the best baseline. COLD-Steer facilitates accommodating diverse perspectives without extensive demonstration data, which we validate through our experiments on pluralistic alignment tasks. Our framework opens new possibilities for adaptive, context-aware model control that can flexibly address varying loss-driven human preferences through principled approximation of learning dynamics rather than specialized training procedures.",
+    "published_date": "2026-03-06",
+    "doi": null,
+    "keywords": []
+  },
+  "people": [
+    {
+      "name": "Kartik Sharma",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Rakshit S Trivedi",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    }
+  ],
+  "organizations": [],
+  "projects": [],
+  "countries": [],
+  "topics": [
+    {
+      "topic_id": 0,
+      "name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false,
+      "keywords": [
+        {
+          "word": "reasoning",
+          "score": 0.0319656244795898
+        },
+        {
+          "word": "model",
+          "score": 0.025039909838376718
+        },
+        {
+          "word": "models",
+          "score": 0.024228572174565817
+        },
+        {
+          "word": "ai",
+          "score": 0.01837611345015368
+        },
+        {
+          "word": "human",
+          "score": 0.017766476059663843
+        },
+        {
+          "word": "performance",
+          "score": 0.017149961456744963
+        },
+        {
+          "word": "learning",
+          "score": 0.01589499856231439
+        },
+        {
+          "word": "based",
+          "score": 0.015739287341013593
+        },
+        {
+          "word": "causal",
+          "score": 0.013286241643272804
+        },
+        {
+          "word": "llm",
+          "score": 0.013286241643272804
+        }
+      ]
+    }
+  ],
+  "acknowledgements": [],
+  "similar_papers": [
+    {
+      "paper_id": "paper02",
+      "similarity_score": 0.5161267518997192,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    },
+    {
+      "paper_id": "paper04",
+      "similarity_score": 0.5116398930549622,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    },
+    {
+      "paper_id": "paper21",
+      "similarity_score": 0.6002785563468933,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    },
+    {
+      "paper_id": "paper24",
+      "similarity_score": 0.5822092890739441,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    },
+    {
+      "paper_id": "paper28",
+      "similarity_score": 0.5044946074485779,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    },
+    {
+      "paper_id": "paper29",
+      "similarity_score": 0.6605961918830872,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    }
+  ]
+}

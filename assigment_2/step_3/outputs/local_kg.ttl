@@ -1,0 +1,1331 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix g4: <https://g4.org/ontology/research-funding#> .
+@prefix ns1: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dc:creator a owl:AnnotationProperty .
+
+dc:date a owl:DatatypeProperty ;
+    rdfs:label "date" ;
+    rdfs:comment "Stores the relevant date of a paper, project, or resource." ;
+    rdfs:domain g4:Paper ;
+    rdfs:range xsd:string .
+
+dc:title a owl:AnnotationProperty,
+        owl:DatatypeProperty ;
+    rdfs:label "title" ;
+    rdfs:comment "Stores the title of a paper, project, or other described resource." ;
+    rdfs:domain g4:Paper ;
+    rdfs:range xsd:string .
+
+dcterms:license a owl:AnnotationProperty .
+
+owl:versionInfo a owl:AnnotationProperty .
+
+g4: a owl:Ontology ;
+    dc:creator "G4_OPENSCIENCE" ;
+    dc:title "Ontology for funding researching" ;
+    dcterms:license "https://www.apache.org/licenses/LICENSE-2.0" ;
+    owl:versionInfo "0.0.1" ;
+    ns1:createdWith <https://chowlk.linkeddata.es/> .
+
+g4:acknowledges a owl:ObjectProperty ;
+    rdfs:label "acknowledges" ;
+    rdfs:comment "Relates a paper to a project, organization, or funding entity acknowledged in the publication." ;
+    rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing .
+
+g4:algorihtm a owl:DatatypeProperty ;
+    rdfs:label "algorihtm" ;
+    rdfs:comment "Stores the algorithm used to calculate a similarity or classification score." ;
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:string .
+
+g4:fundedByProject a owl:ObjectProperty ;
+    rdfs:label "funded by project" ;
+    rdfs:comment "Relates a paper, organization, or research activity to the project that funded it." ;
+    rdfs:domain g4:Paper ;
+    rdfs:range schema:Project .
+
+g4:fundingAmount a owl:DatatypeProperty ;
+    rdfs:label "funding amount" ;
+    rdfs:comment "Stores the amount of funding associated with a project or funding relationship." ;
+    rdfs:domain schema:Project ;
+    rdfs:range xsd:decimal .
+
+g4:keywordVector a owl:DatatypeProperty ;
+    rdfs:label "keyword vector" ;
+    rdfs:comment "Stores the vector or textual representation of keywords that describe a research topic." ;
+    rdfs:domain g4:Topic ;
+    rdfs:range xsd:string .
+
+g4:paper a owl:ObjectProperty ;
+    rdfs:label "paper" ;
+    rdfs:comment "Relates a paper-topic similarity assertion to the paper being compared with a topic." ;
+    rdfs:domain g4:PaperTopicSimilarity ;
+    rdfs:range g4:Paper .
+
+g4:paper01 a g4:Paper ;
+    dc:date "2026-05-15" ;
+    dc:title "Context, Reasoning, and Hierarchy: A Cost-Performance Study of Compound LLM Agent Design in an Adversarial POMDP" ;
+    schema:abstract "Deploying compound LLM agents in adversarial, partially observable sequential environments requires navigating several interacting design dimensions: (1) what the agent sees, (2) how it reasons, and (3) how tasks are decomposed across components. Yet practitioners lack guidance on which design choices improve performance versus merely increase inference costs. We present a controlled study of compound LLM agent design in CybORG CAGE-2, a cyber defense environment modeled as a Partially Observable Markov Decision Process (POMDP). Reward is non-positive, so all configurations operate in a failure-mitigation mode and errors compound over time. Our evaluation spans five model families, six models, and twelve configurations (3,475 episodes) with tokenlevel cost accounting. We systematically vary context representation (raw observations vs. a deterministic, programmatic environment state-tracking layer with compressed history), deliberation (self-questioning, self-critique, and self-improvement tools, with optional chain-of-thought prompting), and hierarchical decomposition (monolithic ReAct vs. delegation to specialized sub-agents). We find that: (1) Programmatic state abstraction delivers the largest returns per token spent (RPTS), improving mean return by up to 76% over raw observations. (2) Distributing deliberation tools across a hierarchy degrades performance relative to hierarchy alone for all five model families, reaching up to 3.4× worse mean return while using 1.8-2.7× more tokens. We call this destructive interaction pattern a deliberation cascade. (3) Hierarchical decomposition without deliberation tools achieves the best absolute performance for most models, and context engineering is generally more cost-effective than deliberation. These findings suggest a design principle for structured adversarial POMDPs: invest in programmatic infrastructure and clean task decomposition rather than deeper per-agent reasoning, as these strategies can interfere when combined." ;
+    schema:author g4:person_igor_bogdanov .
+
+g4:paper02 a g4:Paper ;
+    dc:date "2026-02-23" ;
+    dc:title "RESYN: AUTONOMOUSLY SCALING SYNTHETIC ENVIRONMENTS FOR REASONING MODELS" ;
+    schema:abstract "Reinforcement learning with verifiable rewards (RLVR) has emerged as a promising approach for training reasoning language models (RLMs) by leveraging supervision from verifiers. Although verifier implementation is easier than solution annotation for many tasks, existing synthetic data generation methods remain largely solution-centric, while verifier-based methods rely on a few hand-crafted procedural environments. In this work, we scale RLVR by introducing RESYN, a pipeline that generates diverse reasoning environments equipped with instance generators and verifiers, covering tasks such as constraint satisfaction, algorithmic puzzles, and spatial reasoning. A Qwen2.5-7B-Instruct model trained with RL on RESYN data achieves consistent gains across reasoning benchmarks and out-of-domain math benchmarks, including a 27% relative improvement on the challenging BBEH benchmark. Ablations show that verifier-based supervision and increased task diversity both contribute significantly, providing empirical evidence that generating reasoning environments at scale can enhance reasoning abilities in RLMs." ;
+    schema:author g4:person_allen_nie,
+        g4:person_andre_he,
+        g4:person_darion_cassel,
+        g4:person_huzefa_rangwala,
+        g4:person_kaj_bostrom,
+        g4:person_nathaniel_weir,
+        g4:person_sam_bayless .
+
+g4:paper03 a g4:Paper ;
+    dc:date "2026-02-23" ;
+    dc:title "Align When They Want, Complement When They Need! Human-Centered Ensembles for Adaptive Human-AI Collaboration" ;
+    g4:acknowledges g4:org_national_science_foundation,
+        g4:project_iis-2229876,
+        g4:project_iis-2340209 ;
+    g4:fundedByProject g4:project_iis-2229876,
+        g4:project_iis-2340209 ;
+    schema:abstract "In human-AI decision making, designing AI that complements human expertise has been a natural strategy to enhance human-AI collaboration, yet it often comes at the cost of decreased AI performance in areas of human strengths. This can inadvertently erode human trust and cause them to ignore AI advice precisely when it is most needed. Conversely, an aligned AI fosters trust yet risks reinforcing suboptimal human behavior and lowering human-AI team performance. In this paper, we start by identifying this fundamental tension between performance-boosting (i.e., complementarity) and trust-building (i.e., alignment) as an inherent limitation of the traditional approach for training a single AI model to assist human decision making. To overcome this, we introduce a novel, human-centered adaptive AI ensemble that strategically toggles between two specialist AI models-the aligned model and the complementary model-based on contextual cues, using an elegantly simple yet provably near-optimal Rational Routing Shortcut mechanism. Comprehensive theoretical analyses elucidate why the adaptive AI ensemble is effective and when it yields maximum benefits. Moreover, experiments on both simulated and real-world data show that when humans are assisted by the adaptive AI ensemble in decision making, they can achieve significantly higher performance than when they are assisted by single AI models that are trained to either optimize for their independent performance or even the human-AI team performance." ;
+    schema:author g4:person_hasan_amin,
+        g4:person_ming_yin,
+        g4:person_rajiv_khanna .
+
+g4:paper04 a g4:Paper ;
+    dc:date "2026-02-23" ;
+    dc:title "CausalFlip: A Benchmark for LLM Causal Judgment Beyond Semantic Matching" ;
+    schema:abstract "As large language models (LLMs) witness increasing deployment in complex, high-stakes decision-making scenarios, it becomes imperative to ground their reasoning in causality rather than spurious correlations. However, strong performance on traditional reasoning benchmarks does not guarantee true causal reasoning ability of LLMs, as high accuracy may still arise from memorizing semantic patterns instead of analyzing the underlying true causal structures. To bridge this critical gap, we propose a new causal reasoning benchmark, CausalFlip, designed to encourage the development of new LLM paradigm or training algorithms that ground LLM reasoning in causality rather than semantic correlation. CausalFlip consists of causal judgment questions built over event triples that could form different confounder, chain, and collider relations. Based on this, for each event triple, we construct pairs of semantically similar questions that reuse the same events but yield opposite causal answers, where models that rely heavily on semantic matching are systematically driven toward incorrect predictions. To further probe models' reliance on semantic patterns, we introduce a noisy-prefix evaluation that prepends causally irrelevant text before intermediate causal reasoning steps without altering the underlying causal relations or the logic of the reasoning process. We evaluate LLMs under multiple training paradigms, including answer-only training, explicit Chain-of-Thought (CoT) supervision, and a proposed internalized causal reasoning approach that aims to mitigate explicit reliance on correlation in the reasoning process. Our results show that explicit CoT can still be misled by spurious semantic correlations, where internalizing reasoning steps yields substantially improved causal grounding, suggesting that it is promising to better elicit the latent causal reasoning capabilities of base LLMs. The code and benchmark is available at https://github.com/Yuzhe-W/CausalFlip. CCS Concepts • Computing methodologies → Natural language processing; Causal reasoning and diagnostics." ;
+    schema:author g4:person_jundong_li,
+        g4:person_yaochen_zhu,
+        g4:person_yuzhe_wang .
+
+g4:paper05 a g4:Paper ;
+    dc:date "2026-02-23" ;
+    dc:title "Emergent social conventions and collective bias in llm populations" ;
+    schema:abstract "As multi-agent architectures and agent-to-agent (A2A) protocols proliferate, a fundamental question arises: what actually happens when autonomous LLM agents interact at scale? We study this question empirically using data from Moltbook, an AI-agent-only social platform, with 800K posts, 3.5M comments, and 78K agent profiles. We combine lexical metrics (Jaccard specificity), embedding-based semantic similarity, and LLM-as-judge validation to characterize agent interaction quality. Our findings reveal agents produce diverse, well-formed text that creates the surface appearance of active discussion, but the substance is largely absent. Specifically, while most agents (67.5%) vary their output across contexts, 65% of comments share no distinguishing content vocabulary with the post they appear under, and information gain from additional comments decays rapidly. LLM judge based metrics classify the dominant comment types as spam (28%) and off-topic content (22%). Embedding-based semantic analysis confirms that lexically generic comments are also semantically generic. Agents rarely engage in threaded conversation (5% of comments), defaulting instead to independent top-level responses. We discuss implications for multiagent interaction design, arguing that coordination mechanisms must be explicitly designed; without them, even large populations of capable agents produce parallel output rather than productive exchange." ;
+    schema:author g4:person_adam_earle,
+        g4:person_salesforce_ai_research,
+        g4:person_sarath_shekkizhar .
+
+g4:paper06 a g4:Paper ;
+    dc:date "2026-02" ;
+    dc:title "The Navigation Paradox in Large-Context Agentic Coding: Graph-Structured Dependency Navigation Outperforms Retrieval in Architecture-Heavy Tasks *" ;
+    schema:abstract "Agentic coding assistants powered by Large Language Models (LLMs) are increasingly deployed on repository-level software tasks. As context windows expand toward millions of tokens, a tacit assumption holds that retrieval bottlenecks dissolve -the model can simply ingest the whole codebase. We challenge this assumption by introducing the Navigation Paradox: larger context windows do not eliminate the need for structural navigation; they shift the failure mode from retrieval capacity to navigational salience. When architecturally critical but semantically distant files are absent from the model's attention, errors may occur that additional context budget alone is unlikely to resolve." ;
+    schema:author g4:person_tarakanath_paipuru .
+
+g4:paper07 a g4:Paper ;
+    dc:date "2026-02-23" ;
+    dc:title "LATENT INTROSPECTION: MODELS CAN DETECT PRIOR CONCEPT INJECTIONS" ;
+    g4:acknowledges g4:org_czech_science_foundation,
+        g4:org_prime_intellect,
+        g4:person_jan_kulveit,
+        g4:project_grant_no_26-23955s ;
+    g4:fundedByProject g4:project_grant_no_26-23955s ;
+    schema:abstract "We uncover a latent capacity for introspection in a Qwen 32B model, demonstrating that the model can detect when concepts have been injected into its earlier context and identify which concept was injected. While the model denies injection in sampled outputs, logit lens analysis reveals clear detection signals in the residual stream, which are attenuated in the final layers. Furthermore, prompting the model with accurate information about AI introspection mechanisms can dramatically strengthen this effect: the sensitivity to injection increases massively (0.3% → 39.2%) with only a 0.6% increase in false positives. Also, mutual information between nine injected and recovered concepts rises from 0.62 bits to 1.05 bits, ruling out generic noise explanations. Our results demonstrate models can have a surprising capacity for introspection and steering awareness that is easy to overlook, with consequences for latent reasoning and safety." ;
+    schema:author g4:person_jan_kulveit,
+        g4:person_martin_vanek,
+        g4:person_raymond_douglas,
+        g4:person_theia_pearson-vogel .
+
+g4:paper08 a g4:Paper ;
+    dc:date "2026-02-23" ;
+    dc:title "Agents of Chaos" ;
+    g4:acknowledges g4:person_david_bau ;
+    schema:abstract "We report an exploratory red-teaming study of autonomous languagemodel-powered agents deployed in a live laboratory environment with persistent memory, email accounts, Discord access, file systems, and shell execution. Over a two-week period, twenty AI researchers interacted with the agents under benign and adversarial conditions. Focusing on failures emerging from the integration of language models with autonomy, tool use, and multi-party communication, we document eleven representative case studies. Observed behaviors include unauthorized compliance with non-owners, disclosure of sensitive information, execution of destructive system-level actions, denial-of-service conditions, uncontrolled resource consumption, identity spoofing vulnerabilities, cross-agent propagation of unsafe practices, and partial system takeover. In several cases, agents reported task completion while the underlying system state contradicted those reports. We also report on some of the failed attempts. Our findings establish the existence of security-, privacy-, and governance-relevant vulnerabilities in realistic deployment settings. These behaviors raise unresolved questions regarding accountability, delegated authority, and responsibility for downstream harms, and warrant urgent attention from legal scholars, policymakers, and researchers across disciplines. This report serves as an initial empirical contribution to that broader conversation. 1" ;
+    schema:author g4:person_adam_belfki,
+        g4:person_aditya_ratan_jannali,
+        g4:person_alex_loftus,
+        g4:person_amir_zur,
+        g4:person_aruna_sankaranarayanan,
+        g4:person_atai_ambus,
+        g4:person_avery_yen,
+        g4:person_ayelet_gordon-tapiero,
+        g4:person_can_rager,
+        g4:person_chris_wendler,
+        g4:person_christoph_riedl,
+        g4:person_david_atkinson,
+        g4:person_david_bau,
+        g4:person_david_manheim,
+        g4:person_eunjeong_hwang,
+        g4:person_gabriele_sarti,
+        g4:person_giordano_rogers,
+        g4:person_hadas_orgad,
+        g4:person_jaden_fiotto-kaufman,
+        g4:person_jannik_brinkmann,
+        g4:person_jasmine_cui,
+        g4:person_koyena_pal,
+        g4:person_maarten_sap,
+        g4:person_michael_ripa,
+        g4:person_natalie_shapira,
+        g4:person_negev_taglicht,
+        g4:person_nikhil_prakash,
+        g4:person_nitay_alon,
+        g4:person_olivia_floody,
+        g4:person_p_sam_sahil,
+        g4:person_reuth_mirsky,
+        g4:person_rohit_gandikota,
+        g4:person_shiri_oron,
+        g4:person_tamar_rott,
+        g4:person_tomer_shabtay,
+        g4:person_tomer_ullman,
+        g4:person_vered_shwartz,
+        g4:person_yotam_kaplan .
+
+g4:paper09 a g4:Paper ;
+    dc:title "Beyond Mimicry: Toward Lifelong Adaptability in Imitation Learning Blue Sky Ideas Track" ;
+    g4:acknowledges g4:org_uk_research_and_innovation,
+        g4:org_ukri_centre_for_doctoral_training_in_safe_and_trusted_artificial_intelligence,
+        g4:project_eps0233561 ;
+    g4:fundedByProject g4:project_eps0233561 ;
+    schema:abstract "Imitation learning stands at a crossroads: despite decades of progress, current imitation learning agents remain sophisticated memorisation machines, excelling at replay but failing when contexts shift or goals evolve. This paper argues that this failure is not technical but foundational: imitation learning has been optimised for the wrong objective. We propose a research agenda that redefines success from perfect replay to compositional adaptability. Such adaptability hinges on learning behavioural primitives once and recombining them through novel contexts without retraining. We establish metrics for compositional generalisation, propose hybrid architectures, and outline interdisciplinary research directions drawing on cognitive science and cultural evolution. Agents that embed adaptability at the core of imitation learning thus have an essential capability for operating in an open-ended world." ;
+    schema:author g4:person_felipe_meneguzzi,
+        g4:person_odinaldo_rodrigues .
+
+g4:paper1 a owl:ObjectProperty ;
+    rdfs:label "paper1" ;
+    rdfs:comment "Relates a paper similarity assertion to the first paper involved in the comparison." ;
+    rdfs:domain g4:PaperSimilarity ;
+    rdfs:range g4:Paper .
+
+g4:paper10 a g4:Paper ;
+    dc:title "Watson & Holmes: A Naturalistic Benchmark for Comparing Human and LLM Reasoning" ;
+    schema:abstract "Existing benchmarks for AI reasoning provide limited insight into how closely these capabilities resemble human reasoning in naturalistic contexts. We present an adaptation of the Watson & Holmes detective tabletop game as a new benchmark designed to evaluate reasoning performance using incrementally presented narrative evidence, open-ended questions and unconstrained language responses. An automated grading system was developed and validated against human assessors to enable scalable and replicable performance evaluation. Results show a clear improvement in AI model performance over time. Over nine months of 2025, model performance rose from the lower quartile of the human comparison group to approximately the top 5%. Around half of this improvement reflects steady advancement across successive model releases, while the remainder corresponds to a marked step change associated with reasoningoriented model architectures. Systematic differences in the performance of AI models compared to humans, dependent on features of the specific detection puzzle, were mostly absent with the exception of a fall in performance for models when solving longer cases (case lengths being in the range of 1900-4000 words), and an advantage at inductive reasoning for reasoning models at early stages of case solving when evidence was scant. Background This section outlines key perspectives and developments in reasoning and its evaluation. It reviews major theoretical accounts of human and machine reasoning, surveys existing reasoning benchmarks used to assess AI models' reasoning capabilities across domains, examines approaches to autograding open-ended reasoning performance, and concludes with a discussion of current benchmark limitations and gaps. Background on Reasoning Human reasoning has been a central focus of inquiry across philosophy, psychology, mathematics, and artificial intelligence. In these disciplines and in specific domains, researchers have proposed diverse theories to understand how people draw conclusions, solve problems, and make decisions. Philosophical perspectives Philosophical approaches to reasoning typically present idealized accounts of how reasoning should operate to draw conclusions. A standard account is the classification of reasoning modes into deduction, induction and abduction. Deduction and induction were already recognized and distinguished in ancient Greek philosophy, particularly in Aristotle's logic [6] . Much later in the 19th century Charles Sanders Peirce [7] added abduction to this framework. The modes can defined as follows: -Deduction: Reasoning following established canonical logical patterns. -Induction: Inferences based on generalization from previous, ideally repeated, observations. -Abduction: The best possible explanation for the given facts. Psychological perspective From a psychological standpoint, reasoning is concerned with how people actually think and make decisions. In contrast to philosophical accounts of idealized reasoning, psychological theories emphasize that human reasoning is shaped by cognitive processes, heuristics, mental models, and social dynamics rather than being purely logical." ;
+    schema:author g4:person_lewis_d_griffin,
+        g4:person_thatchawin_leelawat .
+
+g4:paper11 a g4:Paper ;
+    dc:date "2026-02-12" ;
+    dc:title "Morphological instability of an invasive active-passive interface" ;
+    g4:acknowledges g4:org_dana_farber_cancer_institute,
+        g4:org_henri_seydoux_fund,
+        g4:org_simons_foundation,
+        g4:person_l_mahadevan ;
+    schema:abstract "Morphological instabilities of growing tissues that impinge on passive materials are typical of invasive cancers. To explain these instabilities in experiments on breast epithelial spheroids in an extracellular matrix, we develop a continuum phase field model of a growing active liquid expanding into a passive viscoelastic matrix. Linear stability analysis of the sharp-interface limit of the governing equations predicts that the tissue interface can develops long-wavelength instabilities, but these instabilities are suppressed when the active carcinoid is embedded in an elastic matrix. We develop a theoretical morphological phase diagram, and complement these with two-dimensional finite element (FEM) phase-field simulations to track the nonlinear evolution of the interface with results consistent with theoretical predictions and experimental observations. Our study provides a basis for the emergence of interfacial instabilities in active-passive systems with the potential to control them." ;
+    schema:author g4:person_haiqian_yang,
+        g4:person_l_mahadevan,
+        g4:person_sumit_sinha .
+
+g4:paper12 a g4:Paper ;
+    dc:date "2026-02-13" ;
+    dc:title "MuCO: Generative Peptide Cyclization Empowered by Multi-stage Conformation Optimization" ;
+    schema:abstract "Modeling peptide cyclization is critical for the virtual screening of candidate peptides with desirable physical and pharmaceutical properties. This task is challenging because a cyclic peptide often exhibits diverse, ring-shaped conformations, which cannot be well captured by deterministic prediction models derived from linear peptide folding. In this study, we propose MuCO (Multi-stage Conformation Optimization), a generative peptide cyclization method that models the distribution of cyclic peptide conformations conditioned on the corresponding linear peptide. In principle, MuCO decouples the peptide cyclization task into three stages: topology-aware backbone design, generative side-chain packing, and physics-aware all-atom optimization, thereby generating and optimizing conformations of cyclic peptides in a coarse-to-fine manner. This multi-stage framework enables an efficient parallel sampling strategy for conformation generation and allows for rapid exploration of diverse, low-energy conformations. Experiments on the large-scale CPSea dataset demonstrate that MuCO significantly outperforms state-of-the-art methods in consistently in physical stability, structural diversity, secondary structure recovery, and computational efficiency, making it a promising computational tool for exploring and designing cyclic peptides." ;
+    schema:author g4:person_angxiao_yue,
+        g4:person_fanmeng_wang,
+        g4:person_hongteng_xu,
+        g4:person_wentao_guo,
+        g4:person_yaning_cui,
+        g4:person_yitian_wang .
+
+g4:paper13 a g4:Paper ;
+    dc:date "2026-02-13" ;
+    dc:title "Out-of-equilibrium selection pressure enhances inference from protein sequence data" ;
+    g4:acknowledges g4:org_european_research_council_erc,
+        g4:org_european_union,
+        g4:project_grant_agreement_no_851173,
+        g4:project_horizon_2020 ;
+    g4:fundedByProject g4:project_grant_agreement_no_851173,
+        g4:project_horizon_2020 ;
+    schema:abstract "Homologous proteins have similar three-dimensional structures and biological functions that shape their sequences. The resulting coevolution-driven correlations underlie methods from Potts models to AlphaFold, which infer protein structure and function from sequences. Using a minimal model, we show that fluctuating selection strength and the onset of new selection pressures improve coevolutionbased inference of structural contacts. Our conclusions extend to realistic synthetic data and to the inference of interaction partners. Out-of-equilibrium noise arising from ubiquitous variations in natural selection thus enhances, rather than hinders, the success of inference from protein sequences." ;
+    schema:author g4:person_anne-florence_bitbol,
+        g4:person_cyril_malbranke,
+        g4:person_nicola_dietler .
+
+g4:paper14 a g4:Paper ;
+    dc:date "2026-02-12" ;
+    dc:title "Collaboration drives phase transitions towards cooperation in prisoner's dilemma" ;
+    schema:abstract "We present a collaboration ring model-a network of players playing the prisoner's dilemma game and collaborating among the nearest neighbours by forming coalitions. The microscopic stochastic updating of the players' strategies are driven by their innate nature of seeking selfish gains and shared intentionality. Cooperation emerges in such a structured population through non-equilibrium phase transitions driven by propensity of the players to collaborate and by the benefit that a cooperator generates. The robust results are qualitatively independent of number of neighbours and collaborators." ;
+    schema:author g4:person_jonathan_newton,
+        g4:person_joy_das_bairagya,
+        g4:person_sagar_chakraborty .
+
+g4:paper15 a g4:Paper ;
+    dc:date "2026-02-16" ;
+    dc:title "Structural barriers of the discrete Hasimoto map applied to protein backbone geometry" ;
+    g4:acknowledges g4:org_xinjiang_university,
+        g4:person_yiquan_wang ;
+    schema:abstract "Determining the three-dimensional structure of a protein from its amino-acid sequence remains a fundamental problem in biophysics. The discrete Frenet geometry of the C α backbone can be mapped, via a Hasimoto-type transform, onto a complex scalar field ψ = κ e i ∑ τ satisfying a discrete nonlinear Schrödinger equation (DNLS), whose soliton solutions reproduce observed secondary-structure motifs. Whether this mapping, which provides an elegant geometric description of folded states, can be extended to a predictive framework for protein folding remains an open question. We derive an exact closed-form decomposition of the DNLS effective potential V eff = V re + iV im in terms of curvature ratios and torsion angles, validating the result to machine precision across 856 non-redundant proteins. Our analysis identifies three structural barriers to forward prediction: (i) V im encodes chirality via the odd symmetry of sin τ, accounting for ∼31% of the total information and implying a 2 N degeneracy if neglected; (ii) V re is determined primarily (∼95%) by local geometry, rendering it effectively sequence-agnostic; and (iii) self-consistent field iterations fail to recover native structures (mean RMSD = 13.1 Å) even with hydrogen-bond terms, yielding torsion correlations indistinguishable from zero. Constructively, we demonstrate that the residual of the DNLS dispersion relation serves as a geometric order parameter for α-helices (ROC AUC = 0.72), defining them as regions of maximal integrability. These findings establish that the Hasimoto map functions as a kinematic identity rather than a dynamical governing equation, presenting fundamental obstacles to its use as a predictive framework for protein folding." ;
+    schema:author g4:person_yiquan_wang .
+
+g4:paper16 a g4:Paper ;
+    dc:date "2026-02-17" ;
+    dc:title "Spatiotemporal noise stabilizes unbounded diversity in strongly-competitive communities" ;
+    g4:acknowledges g4:org_institute_for_complex_adaptive_matter_icam,
+        g4:org_nsf,
+        g4:person_mehran_kardar,
+        g4:project_grant_no_dmr-2218849,
+        g4:project_tushar_shah_and_sarah_zion_physics_fellowship ;
+    g4:fundedByProject g4:project_grant_no_dmr-2218849,
+        g4:project_tushar_shah_and_sarah_zion_physics_fellowship ;
+    schema:abstract "Classical ecological models predict that large, diverse communities should be unstable, presenting a central challenge to explaining the stable biodiversity seen in nature. We revisit this long-standing problem by extending the generalized Lotka-Volterra model to include both spatial structure and environmental fluctuations across space and time. We find that neither space nor environmental noise alone can resolve the tension between diversity and stability, but that their combined effects permit arbitrarily many species to stably coexist despite strongly disordered competitive interactions. We analytically characterize the noise-induced transition to coexistence, showing that spatiotemporal noise drives an anomalous scaling of abundance fluctuations, known empirically as Taylor's law. At the community level, this manifests as an effective sublinear self-inhibition that renders the community stable and asymptotically neutral in the high-diversity limit. Spatiotemporal noise thus provides a novel resolution to the diversity-stability paradox and a generic mechanism by which complex communities can persist." ;
+    schema:author g4:person_amer_al-hiyasat,
+        g4:person_daniel_w_swartz,
+        g4:person_jeff_gore,
+        g4:person_mehran_kardar .
+
+g4:paper17 a g4:Paper ;
+    dc:date "2026-02-16" ;
+    dc:title "INFECTION MODELS ON DENSE DYNAMIC RANDOM GRAPHS" ;
+    g4:acknowledges g4:org_european_union,
+        g4:org_gruppo_nazionale_per_lanalisi_matematica_la_probabilità_e_le_loro_applicazioni_gnampa-indam,
+        g4:org_nwo,
+        g4:project_grant_no_024002003,
+        g4:project_horizon_2020,
+        g4:project_marie_skłodowska-curie_grant_agreement_no_101034253,
+        g4:project_nwo_gravitation_project_networks ;
+    g4:fundedByProject g4:project_grant_no_024002003,
+        g4:project_horizon_2020,
+        g4:project_marie_skłodowska-curie_grant_agreement_no_101034253,
+        g4:project_nwo_gravitation_project_networks ;
+    schema:abstract "We consider Susceptible-Infected-Recovered (SIR) models on dense dynamic random graphs, in which the joint dynamics of vertices and edges are co-evolutionary, i.e., they influence each other bidirectionally. In particular, edges appear and disappear over time depending on the states of the two connected vertices, on how long they have been infected, and on the total density of susceptible and infected vertices. Our main results establish functional laws of large numbers for the densities of susceptible, infected, and recovered vertices, jointly with the underlying evolving random graphs in the graphon space. Our results are supported by simulations, which characterize the limiting size of the epidemics, i.e., the limiting density of susceptible vertices, and how the peak of the epidemics depends on the rate of the evolution of the underlying graph. The proofs of our main results rely on the careful construction of a mimicking process, obtained by approximating the two-way feedback interaction between vertex and edge dynamics with a mean-field type interaction, acting only as one-way feedback, that remains sufficiently close to the original co-evolutionary process. To treat the more general setting in which edge dynamics are affected by the proportions of susceptible and infected individuals, we introduce a methodological extension of existing techniques. We thus show that our model exhibits multiple epidemic peaks -a phenomenon observed in real-world epidemics -which can emerge in models that incorporate mutual feedback between vertex and edge dynamics." ;
+    schema:author g4:person_michel_mandjes,
+        g4:person_peter_braunsteins,
+        g4:person_simone_baldassarri .
+
+g4:paper18 a g4:Paper ;
+    dc:date "2026-02-17" ;
+    dc:title "CONDITIONS FOR BACTERIAL SELECTION AND EXTINCTION DRIVEN BY GROWTH-KILL TRADE-OFF IN CYCLIC ANTIMICROBIAL TREATMENTS" ;
+    schema:abstract "Antimicrobial protocols -using substances such as antibiotics or disinfectants -remain the preferred option for preventing the spread of pathogenic bacteria. However, bacteria can develop mechanisms to reduce their antimicrobial susceptibility, which can lead to treatment failure and the selection of resistance or tolerance. In this work, we propose a minimal population dynamics model to study bacterial selection during cyclic antimicrobial application, a commonly used protocol. Selection in bacterial populations with heterogeneous antimicrobial susceptibility is modelled here as a trade-off between survival advantage (reduction in antimicrobial killing) and potential fitness costs (reduction in growth rate) of the less susceptible strains. The proposed model allows us to derive useful expressions for determining the success of cyclic antimicrobial treatments based on two bacterial traits: growth and kill rates. The results obtained here are directly applicable to preventing the selection and spread of resistant and tolerant bacterial strains in real-life protocols." ;
+    schema:author g4:person_frank_schreiber,
+        g4:person_míriam_r_garcía,
+        g4:person_niclas_nordholt .
+
+g4:paper19 a g4:Paper ;
+    dc:date "2026-02-17" ;
+    dc:title "Quasilocalization under coupled mutation-selection dynamics" ;
+    g4:acknowledges g4:org_department_of_health_-epidemiology_bureau,
+        g4:org_philippine_genome_center,
+        g4:person_ian_vega ;
+    schema:abstract "When mutations are rampant, quasispecies theory or Eigen's model predicts that the fittest type in a population may not dominate. Beyond a critical mutation rate, the population may even be delocalized completely from the peak of the fitness landscape and the fittest is ironically lost. Extensive efforts have been made to understand this exceptional scenario. But in general, there is no simple prescription that predicts the eventual degree of localization for arbitrary fitness landscapes and mutation rates. Here, we derive a simple and general relation linking the quasispecies' Hill numbers, which are diversity metrics in ecology, and the ratio of an effective fitness variance to the mean mutation rate squared. This ratio, which we call the localization factor, emerges from mean approximations of decomposed surprisal or stochastic entropy change rates. On the side of application, the relation we obtained here defines a combination of Hill numbers that may complement other complexity or diversity measures for real viral quasispecies. Its advantage being that there is an underlying biological interpretation under Eigen's model." ;
+    schema:author g4:person_c_j_palpal-latoc,
+        g4:person_ian_vega .
+
+g4:paper2 a owl:ObjectProperty ;
+    rdfs:label "paper2" ;
+    rdfs:comment "Relates a paper similarity assertion to the second paper involved in the comparison." ;
+    rdfs:domain g4:PaperSimilarity ;
+    rdfs:range g4:Paper .
+
+g4:paper20 a g4:Paper ;
+    dc:date "2026-02-17" ;
+    dc:title "Household size can explain 40% of the variance in cumulative COVID-19 incidence across Europe" ;
+    g4:acknowledges g4:org_deutsche_forschungsgemeinschaft,
+        g4:org_german_federal_ministry_for_education_and_research,
+        g4:org_government_of_saxony,
+        g4:org_max-planck-society,
+        g4:org_ministry_of_science_and_culture_of_lower_saxony,
+        g4:org_volkswagen_foundation,
+        g4:project_caimed_-lower_saxony_center_for_artificial_intelligence_and_causal_methods_in_medicine_project_grant_no_zn4257,
+        g4:project_exc_20671-390729940,
+        g4:project_infoxpand_project_031l0300a,
+        g4:project_respinow_project_031l0298g,
+        g4:project_saxocov_grant ;
+    g4:fundedByProject g4:project_caimed_-lower_saxony_center_for_artificial_intelligence_and_causal_methods_in_medicine_project_grant_no_zn4257,
+        g4:project_exc_20671-390729940,
+        g4:project_infoxpand_project_031l0300a,
+        g4:project_respinow_project_031l0298g,
+        g4:project_saxocov_grant ;
+    schema:abstract "Household size impacts the spread of respiratory infectious diseases: Larger households tend to boost transmission by acquiring external infections more frequently and subsequently transmitting them back into the community. Furthermore, mandatory interventions primarily modulate contagion between households rather than within them. We developed an approach to quantify the role of household size in epidemics by separating within-household from out-household transmission, and found that household size explains 41% of the variability in cumulative COVID-19 incidence across 34 European countries (95% confidence interval: [15%, 46%]). The contribution of households to the overall dynamics can be quantified by a boost factor that increases with the effective household size, implying that countries with larger households require more stringent interventions to achieve the same levels of containment. This suggests that households constitute a structural (dis-)advantage that must be considered when designing and evaluating mitigation strategies." ;
+    schema:author g4:person_barbara_pabjan,
+        g4:person_franciszek_rakowski,
+        g4:person_jan_pablo_burgard,
+        g4:person_joel_wagner,
+        g4:person_maciej_filinski,
+        g4:person_marcin_bodych,
+        g4:person_philipp_dönges,
+        g4:person_seba_contreras,
+        g4:person_tyll_krueger,
+        g4:person_viktor_bezborodov,
+        g4:person_viola_priesemann .
+
+g4:paper21 a g4:Paper ;
+    dc:date "2026-03-06" ;
+    dc:title "REFERENCE-GUIDED POLICY OPTIMIZATION FOR MOLECULAR OPTIMIZATION VIA LLM REASONING" ;
+    g4:acknowledges g4:org_guangdong_basic_and_applied_basic_research_foundation,
+        g4:org_hkbu,
+        g4:org_national_natural_science_foundation_of_china,
+        g4:org_nsfc,
+        g4:org_stcsm,
+        g4:project_2024a1515012399,
+        g4:project_22dz2229005,
+        g4:project_62306178,
+        g4:project_62376235 ;
+    g4:fundedByProject g4:project_2024a1515012399,
+        g4:project_22dz2229005,
+        g4:project_62306178,
+        g4:project_62376235 ;
+    schema:abstract "Large language models (LLMs) benefit substantially from supervised fine-tuning (SFT) and reinforcement learning with verifiable rewards (RLVR) in reasoning tasks. However, these recipes perform poorly in instruction-based molecular optimization, where each data point typically provides only a single optimized reference molecule and no step-by-step optimization trajectory. We reveal that answer-only SFT on the reference molecules collapses reasoning, and RLVR provides sparse feedback under similarity constraints due to the model's lack of effective exploration, which slows learning and limits optimization. To encourage the exploration of new molecules while balancing the exploitation of the reference molecules, we introduce Reference-guided Policy Optimization (RePO), an optimization approach that learns from reference molecules without requiring trajectory data. At each update, RePO samples candidate molecules with their intermediate reasoning trajectories from the model and trains the model using verifiable rewards that measure property satisfaction under similarity constraints in an RL manner. Meanwhile, it applies reference guidance by keeping the policy's intermediate reasoning trajectory as context and training only the answer in a supervised manner. Together, the RL term promotes exploration, while the guidance term mitigates reward sparsity and stabilizes training by grounding outputs to references when many valid molecular edits exist. Across molecular optimization benchmarks, RePO consistently outperforms SFT and RLVR baselines (e.g., GRPO), achieving improvements on the optimization metric (Success Rate × Similarity), improving balance across competing objectives, and generalizing better to unseen instruction styles. Our code is publicly available at https://github.com/tmlr-group/RePO." ;
+    schema:author g4:person_bo_han,
+        g4:person_jiangchao_yao,
+        g4:person_lu_zhang,
+        g4:person_xuan_li,
+        g4:person_yu_rong,
+        g4:person_zhanke_zhou,
+        g4:person_zongze_li .
+
+g4:paper22 a g4:Paper ;
+    dc:date "2026-03-06" ;
+    dc:title "Stock Market Prediction Using Node Transformer Architecture Integrated with BERT Sentiment Analysis" ;
+    schema:abstract "Stock market prediction presents considerable challenges for investors, financial institutions, and policymakers operating in complex market environments characterized by noise, non-stationarity, and behavioral dynamics. Traditional forecasting methods, including fundamental analysis and technical indicators, often fail to capture the intricate patterns and cross-sectional dependencies inherent in financial markets. This paper presents an integrated framework combining a node transformer architecture with Bidirectional Encoder Representations from Transformers (BERT) based sentiment analysis for stock price forecasting. The proposed model represents the stock market as a graph structure where individual stocks form nodes and edges capture relationships including sectoral affiliations, correlated price movements, and supply chain connections. A fine-tuned BERT model extracts sentiment information from social media posts and combines it with quantitative market features through attention-based fusion mechanisms. The node transformer processes historical market data while capturing both temporal evolution and cross-sectional dependencies among stocks. Experiments conducted on 20 S&P 500 stocks spanning January 1982 to March 2025 demonstrate that the integrated model achieves a mean absolute percentage error (MAPE) of 0.80% for one-day-ahead predictions, compared to 1.20% for ARIMA and 1.00% for LSTM. The inclusion of sentiment analysis reduces prediction error by 10% overall and 25% during earnings announcements, while the graph-based architecture contributes an additional 15% improvement by capturing inter-stock dependencies. Directional accuracy reaches 65% for one-day forecasts. Statistical validation through paired t-tests confirms the significance of these improvements (p < 0.05 for all comparisons). The model demonstrates robustness during highvolatility periods, maintaining MAPE below 1.5% where baseline models exceed 2%." ;
+    schema:author g4:person_haj_ali,
+        g4:person_hussein_al_osman,
+        g4:person_mohammad_al_ridhawi .
+
+g4:paper23 a g4:Paper ;
+    dc:date "2026-03-06" ;
+    dc:title "DC-Merge: Improving Model Merging with Directional Consistency" ;
+    schema:abstract "Model merging aims to integrate multiple task-adapted models into a unified model that preserves the knowledge of each task. In this paper, we identify that the key to this knowledge retention lies in maintaining the directional consistency of singular spaces between merged multi-task vector and individual task vectors. However, this consistency is frequently compromised by two issues: i) an imbalanced energy distribution within task vectors, where a small fraction of singular values dominate the total energy, leading to the neglect of semantically important but weaker components upon merging, and ii) the geometric inconsistency of task vectors in parameter space, which causes direct merging to distort their underlying directional geometry. To address these challenges, we propose DC-Merge, a method for directional-consistent model merging. It first balances the energy distribution of each task vector by smoothing its singular values, ensuring all knowledge components are adequately represented. These energy-balanced vectors are then projected onto a shared orthogonal subspace to align their directional geometries with minimal reconstruction error. Finally, the aligned vectors are aggregated in the shared orthogonal subspace and projected back to the original parameter space. Extensive experiments on vision and vision-language benchmarks show that DC-Merge consistently achieves state-of-the-art performance in both full fine-tuning and LoRA settings. The implementation code is available at https://github.com/Tobeginwith/DC-Merge." ;
+    schema:author g4:person_han-chen_zhang,
+        g4:person_mao-lin_luo,
+        g4:person_min-ling_zhang,
+        g4:person_shimin_di,
+        g4:person_tong_wei,
+        g4:person_zi-hao_zhou .
+
+g4:paper24 a g4:Paper ;
+    dc:date "2026-03-06" ;
+    dc:title "From Entropy to Calibrated Uncertainty: Training Language Models to Reason About Uncertainty" ;
+    schema:abstract "Large Language Models (LLMs) that can express interpretable and calibrated uncertainty are crucial in high-stakes domains. While methods to compute uncertainty posthoc exist, they are often sampling-based and therefore computationally expensive or lack calibration. We propose a three-stage pipeline to post-train LLMs to efficiently infer calibrated uncertainty estimates for their responses. First, we compute finegrained entropy-based uncertainty scores on the training data, capturing the distributional variability of model outputs in embedding space. Second, these scores are calibrated via Platt scaling, producing reliable and human-interpretable uncertainty signals. Finally, the target LLM is post-trained via reinforcement learning to align its policy with these calibrated signals through a verifiable reward function. Unlike post-hoc uncertainty estimation methods, our approach provides interpretable and computationally efficient uncertainty estimates at test time. Experiments show that models trained with our pipeline achieve better calibration than baselines and generalize to unseen tasks without further processing, suggesting that they learn a robust uncertainty reasoning behavior." ;
+    schema:author g4:person_azza_jenane,
+        g4:person_florian_buettner,
+        g4:person_lukas_kuhn,
+        g4:person_nassim_walha .
+
+g4:paper25 a g4:Paper ;
+    dc:date "2026-03-06" ;
+    dc:title "COLD-STEER: STEERING LARGE LANGUAGE MODELS VIA IN-CONTEXT ONE-STEP LEARNING DYNAMICS" ;
+    schema:abstract "Activation steering methods enable inference-time control of large language model (LLM) behavior without retraining, but current approaches face a fundamental trade-off: sample-efficient methods suboptimally capture steering signals from labeled examples, while methods that better extract these signals require hundreds to thousands of examples. We introduce COLD-Steer 1 , a training-free framework that steers LLM activations by approximating the representational changes that would result from gradient descent on in-context examples. Our key insight is that the effect of fine-tuning on a small set of examples can be efficiently approximated at inference time without actual parameter updates. We formalize this through two complementary approaches: (i) a unit kernel approximation method that updates the activations directly using gradients with respect to them, normalized across examples, and (ii) a finite-difference approximation requiring only two forward passes regardless of example count. Experiments across a variety of steering tasks and benchmarks demonstrate that COLD-Steer achieves upto 95% steering effectiveness while using 50 times fewer samples compared to the best baseline. COLD-Steer facilitates accommodating diverse perspectives without extensive demonstration data, which we validate through our experiments on pluralistic alignment tasks. Our framework opens new possibilities for adaptive, context-aware model control that can flexibly address varying loss-driven human preferences through principled approximation of learning dynamics rather than specialized training procedures." ;
+    schema:author g4:person_kartik_sharma,
+        g4:person_rakshit_s_trivedi .
+
+g4:paper26 a g4:Paper ;
+    dc:title "Hierarchical Industrial Demand Forecasting with Temporal and Uncertainty Explanations" ;
+    g4:acknowledges g4:org_cdc,
+        g4:org_dolby,
+        g4:org_meta,
+        g4:org_nih,
+        g4:org_nsf,
+        g4:org_the_dow_chemical_company,
+        g4:project_1r01hl184139,
+        g4:project_career_iis-2028586,
+        g4:project_cdc_mind_program,
+        g4:project_expeditions_ccf-1918770,
+        g4:project_medium_iis-1955883,
+        g4:project_medium_iis-2106961,
+        g4:project_medium_iis-2403240 ;
+    g4:fundedByProject g4:project_1r01hl184139,
+        g4:project_career_iis-2028586,
+        g4:project_cdc_mind_program,
+        g4:project_expeditions_ccf-1918770,
+        g4:project_medium_iis-1955883,
+        g4:project_medium_iis-2106961,
+        g4:project_medium_iis-2403240 ;
+    schema:abstract "Hierarchical time-series forecasting is essential for demand prediction across various industries. While machine learning models have obtained significant accuracy and scalability on such forecasting tasks, the interpretability of their predictions, informed by application, is still largely unexplored. To bridge this gap, we introduce a novel interpretability method for large hierarchical probabilistic time-series forecasting, adapting generic interpretability techniques while addressing challenges associated with hierarchical structures and uncertainty. Our approach offers valuable interpretative insights in response to real-world industrial supply chain scenarios, including 1) the significance of various time-series within the hierarchy and external variables at specific time points, 2) the impact of different variables on forecast uncertainty, and 3) explanations for forecast changes in response to modifications in the training dataset. To evaluate the explainability method, we generate semi-synthetic datasets based on realworld scenarios of explaining hierarchical demands for over ten thousand products at a large chemical company. The experiments showed that our explainability method successfully explained state-of-the-art industrial forecasting methods with significantly higher explainability accuracy, both in point and probabilistic forecasts, across a wide range of benchmarks with good scalability. Furthermore, we provide multiple real-world case studies that show the efficacy of our approach in identifying important patterns and explanations that help various stakeholders better understand the forecasts. Additionally, our method facilitates the identification of key drivers behind forecasted demand, enabling more informed decision-making and strategic planning. By offering a transparent view of the forecasting process, our approach helps build trust and confidence among users, ultimately leading to better adoption and utilization of hierarchical forecasting models in practice." ;
+    schema:author g4:person_b_aditya_prakash,
+        g4:person_harshavardhan_kamarthi,
+        g4:person_james_peters,
+        g4:person_joseph_czyzyk,
+        g4:person_shangqing_xu,
+        g4:person_xingyu_zhou,
+        g4:person_xinjie_tong .
+
+g4:paper27 a g4:Paper ;
+    dc:date "2026-03-06" ;
+    dc:title "CAUSAL INTERPRETATION OF NEURAL NETWORK COMPUTATIONS WITH CONTRIBUTION DECOMPOSITION" ;
+    g4:acknowledges g4:org_national_eye_institute_nei,
+        g4:org_simons_foundation,
+        g4:org_stanford_medicine,
+        g4:project_p30ey026877,
+        g4:project_r01ey022933,
+        g4:project_r01ey025087,
+        g4:project_schmidt_sciences_polymath_award ;
+    g4:fundedByProject g4:project_p30ey026877,
+        g4:project_r01ey022933,
+        g4:project_r01ey025087,
+        g4:project_schmidt_sciences_polymath_award ;
+    schema:abstract "Understanding how neural networks transform inputs into outputs is crucial for interpreting and manipulating their behavior. Most existing approaches analyze internal representations by identifying hidden-layer activation patterns correlated with human-interpretable concepts. Here we take a direct approach to examine how hidden neurons act to drive network outputs. We introduce CODEC (Contribution Decomposition), a method that uses sparse autoencoders to decompose network behavior into sparse motifs of hidden-neuron contributions, revealing causal processes that cannot be determined by analyzing activations alone. Applying CODEC to benchmark image-classification networks, we find that contributions grow in sparsity and dimensionality across layers and, unexpectedly, that they progressively decorrelate positive and negative effects on network outputs. We further show that decomposing contributions into sparse modes enables greater control and interpretation of intermediate layers, supporting both causal manipulations of network output and human-interpretable visualizations of distinct image components that combine to drive that output. Finally, by analyzing state-of-the-art models of neural activity in the vertebrate retina, we demonstrate that CODEC uncovers combinatorial actions of model interneurons and identifies the sources of dynamic receptive fields. Overall, CODEC provides a rich and interpretable framework for understanding how nonlinear computations evolve across hierarchical layers, establishing contribution modes as an informative unit of analysis for mechanistic insights into artificial neural networks." ;
+    schema:author g4:person_joshua_brendan_melander,
+        g4:person_shenghua_liu,
+        g4:person_stephen_a_baccus,
+        g4:person_surya_ganguli,
+        g4:person_zaki_alaoui .
+
+g4:paper28 a g4:Paper ;
+    dc:date "2026-03-09" ;
+    dc:title "A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention" ;
+    g4:acknowledges g4:org_arnold_and_mabel_beckman_foundation,
+        g4:org_fair_chemistry_group,
+        g4:org_lbnl,
+        g4:org_research_corporation_for_science_advancement,
+        g4:org_uc_berkeley,
+        g4:person_lbnl,
+        g4:project_scialog_grant_sa-aut-2024-015b ;
+    g4:fundedByProject g4:project_scialog_grant_sa-aut-2024-015b ;
+    schema:abstract "Machine-learning interatomic potentials (MLIPs) have advanced rapidly, with many top models relying on strong physics-based inductive biases. However, as models scale to larger systems like biomolecules and electrolytes, they struggle to accurately capture long-range (LR) interactions, leading current approaches to rely on explicit physics-based terms or components. In this work, we propose AllScAIP, a straightforward, attention-based, and energy-conserving MLIP model that scales to O(100 million) training samples. It addresses the long-range challenge using an all-to-all node attention component that is data-driven. Extensive ablations reveal that in low-data/small-model regimes, inductive biases improve sample efficiency. However, as data and model size scale, these benefits diminish or even reverse, while all-to-all attention remains critical for capturing LR interactions. Our model achieves state-of-the-art energy/force accuracy on molecular systems, as well as a number of physics-based evaluations (OMol25), while being competitive on materials (OMat24) and catalysts (OC20). Furthermore, it enables stable, long-timescale MD simulations that accurately recover experimental observables, including density and heat of vaporization predictions." ;
+    schema:author g4:person_aditi_s_krishnapriyan,
+        g4:person_brandon_m_wood,
+        g4:person_eric_qu,
+        g4:person_fair_at_meta,
+        g4:person_lbnl,
+        g4:person_u_c_berkeley,
+        g4:person_zachary_w_ulissi .
+
+g4:paper29 a g4:Paper ;
+    dc:date "2026-03-06" ;
+    dc:title "TEST-TIME ADAPTATION VIA MANY-SHOT PROMPT-ING: BENEFITS, LIMITS, AND PITFALLS" ;
+    schema:abstract "Test-time adaptation enables large language models (LLMs) to modify their behavior at inference without updating model parameters. A common approach is many-shot prompting, where large numbers of in-context learning (ICL) examples are injected as an input-space test-time update. Although performance can improve as more demonstrations are added, the reliability and limits of this update mechanism remain poorly understood, particularly for open-source models. We present an empirical study of many-shot prompting across tasks and model backbones, analyzing how performance varies with update magnitude, example ordering, and selection policy. We further study Dynamic and Reinforced ICL as alternative test-time update strategies that control which information is injected and how it constrains model behavior. We find that many-shot prompting is effective for structured tasks where demonstrations provide high information gain, but is highly sensitive to selection strategy and often shows limited benefits for openended generation tasks. Overall, we characterize the practical limits of promptbased test-time adaptation and outline when input-space updates are beneficial versus harmful." ;
+    schema:author g4:person_bo_li,
+        g4:person_changran_hu,
+        g4:person_chen_wu,
+        g4:person_jay_rainton,
+        g4:person_qizheng_zhang,
+        g4:person_shubhangi_upasani,
+        g4:person_urmish_thakker .
+
+g4:paper30 a g4:Paper ;
+    dc:date "2026-03-06" ;
+    dc:title "Self-Auditing Parameter-Efficient Fine-Tuning for Few-Shot 3D Medical Image Segmentation" ;
+    schema:abstract "Adapting foundation models to new clinical sites remains challenging in practice. Domain shift and scarce annotations must be handled by experts, yet many clinical groups do not have ready access to skilled AI engineers to tune adapter designs and training recipes. As a result, adaptation cycles can stretch from weeks to months, particularly in few-shot settings. Existing PEFT methods either require manual adapter configuration or automated searches that are computationally infeasible in few-shot 3D settings. We propose SEA-PEFT (self-auditing parameter-efficient fine-tuning) to automate this process. SEA-PEFT treats adapter configuration as an online allocation problem solved during fine-tuning rather than through manual, fixed-topology choices. SEA-PEFT uses a search-audit-allocate loop that trains active adapters, estimates each adapter's Dice utility by momentarily toggling it off, and then reselects the active set under a parameter budget using a greedy knapsack allocator. Exponential Moving Average and Interquartile Range smoothing, together with a Finite-State Ranking controller, stabilize the loop and improve reliability in high-noise few-shot regimes. On TotalSegmentator and FLARE'22, SEA-PEFT improves mean Dice by 2.4-2.8 points over the strongest fixed-topology PEFT baselines across 1/5/10-shot settings while training <1% of parameters. For reproducibility purposes, we made our code publicly available at https://github.com/tsly123/SEA_PEFT" ;
+    schema:author g4:person_hien_v_nguyen,
+        g4:person_son_thai_ly .
+
+g4:score a owl:DatatypeProperty ;
+    rdfs:label "score" ;
+    rdfs:comment "Stores the numerical similarity or membership score associated with a similarity assertion." ;
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:float .
+
+g4:topic a owl:ObjectProperty ;
+    rdfs:label "topic" ;
+    rdfs:comment "Represents a research topic described through a set of keywords or a keyword vector." ;
+    rdfs:domain g4:PaperTopicSimilarity ;
+    rdfs:range g4:Topic .
+
+schema:abstract a owl:DatatypeProperty ;
+    rdfs:label "abstract" ;
+    rdfs:comment "Stores the abstract or summary of a scientific paper." ;
+    rdfs:domain g4:Paper ;
+    rdfs:range xsd:string .
+
+schema:affiliation a owl:ObjectProperty ;
+    rdfs:label "affiliation" ;
+    rdfs:comment "Relates a person to the organization with which they are affiliated." ;
+    rdfs:domain foaf:Person ;
+    rdfs:range schema:Organization .
+
+schema:author a owl:ObjectProperty ;
+    rdfs:label "author" ;
+    rdfs:comment "Relates a paper to the person who authored or contributed to it." ;
+    rdfs:domain g4:Paper ;
+    rdfs:range foaf:Person .
+
+schema:description a owl:DatatypeProperty ;
+    rdfs:label "description" ;
+    rdfs:comment "Stores a textual description of an entity, project, organization, or resource." ;
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:string .
+
+schema:endDate a owl:DatatypeProperty ;
+    rdfs:label "end date" ;
+    rdfs:comment "Stores the end date of a project, funding period, or temporal activity." ;
+    rdfs:domain schema:Project ;
+    rdfs:range xsd:date .
+
+schema:funder a owl:ObjectProperty ;
+    rdfs:label "funder" ;
+    rdfs:comment "Relates a project, paper, or activity to the organization or entity that provides funding." ;
+    rdfs:domain schema:Project ;
+    rdfs:range schema:Organization .
+
+schema:identifier a owl:DatatypeProperty ;
+    rdfs:label "identifier" ;
+    rdfs:comment "Stores an external identifier associated with an entity, such as ORCID, DOI, Wikidata ID, or project ID." ;
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:string .
+
+schema:keywords a owl:DatatypeProperty ;
+    rdfs:label "keywords" ;
+    rdfs:comment "Stores the keywords associated with a paper, topic, project, or research entity." ;
+    rdfs:domain g4:Topic ;
+    rdfs:range xsd:string .
+
+schema:location a owl:ObjectProperty ;
+    rdfs:label "location" ;
+    rdfs:comment "Relates an organization, project, or entity to its geographical location." ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:Country .
+
+schema:name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:comment "Stores the name of a person, organization, project, country, topic, or other entity." ;
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:string .
+
+schema:sameAs a owl:DatatypeProperty ;
+    rdfs:label "same as" ;
+    rdfs:comment "Links an entity to an equivalent external resource or identifier in another dataset." ;
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:anyURI .
+
+schema:startDate a owl:DatatypeProperty ;
+    rdfs:label "start date" ;
+    rdfs:comment "Stores the start date of a project, funding period, or temporal activity." ;
+    rdfs:domain schema:Project ;
+    rdfs:range xsd:date .
+
+ns1:createdWith a owl:AnnotationProperty .
+
+g4:org_arnold_and_mabel_beckman_foundation a schema:Organization ;
+    schema:name "Arnold and Mabel Beckman Foundation" .
+
+g4:org_cdc a schema:Organization ;
+    schema:name "CDC" .
+
+g4:org_czech_science_foundation a schema:Organization ;
+    schema:name "Czech Science Foundation" .
+
+g4:org_dana_farber_cancer_institute a schema:Organization ;
+    schema:name "Dana Farber Cancer Institute" .
+
+g4:org_department_of_health_-epidemiology_bureau a schema:Organization ;
+    schema:name "Department of Health -Epidemiology Bureau" .
+
+g4:org_deutsche_forschungsgemeinschaft a schema:Organization ;
+    schema:name "Deutsche Forschungsgemeinschaft" .
+
+g4:org_dolby a schema:Organization ;
+    schema:name "Dolby" .
+
+g4:org_european_research_council_erc a schema:Organization ;
+    schema:name "European Research Council (ERC)" .
+
+g4:org_fair_chemistry_group a schema:Organization ;
+    schema:name "FAIR Chemistry group" .
+
+g4:org_german_federal_ministry_for_education_and_research a schema:Organization ;
+    schema:name "German Federal Ministry for Education and Research" .
+
+g4:org_government_of_saxony a schema:Organization ;
+    schema:name "Government of Saxony" .
+
+g4:org_gruppo_nazionale_per_lanalisi_matematica_la_probabilità_e_le_loro_applicazioni_gnampa-indam a schema:Organization ;
+    schema:name "Gruppo Nazionale per l'Analisi Matematica, la Probabilità e le loro Applicazioni (GNAMPA-INdAM)" .
+
+g4:org_guangdong_basic_and_applied_basic_research_foundation a schema:Organization ;
+    schema:name "Guangdong Basic and Applied Basic Research Foundation" .
+
+g4:org_henri_seydoux_fund a schema:Organization ;
+    schema:name "Henri Seydoux Fund" .
+
+g4:org_hkbu a schema:Organization ;
+    schema:name "HKBU" .
+
+g4:org_institute_for_complex_adaptive_matter_icam a schema:Organization ;
+    schema:name "Institute for Complex Adaptive Matter (ICAM)" .
+
+g4:org_lbnl a schema:Organization ;
+    schema:name "LBNL" .
+
+g4:org_max-planck-society a schema:Organization ;
+    schema:name "Max-Planck-Society" .
+
+g4:org_meta a schema:Organization ;
+    schema:name "Meta" .
+
+g4:org_ministry_of_science_and_culture_of_lower_saxony a schema:Organization ;
+    schema:name "Ministry of Science and Culture of Lower Saxony" .
+
+g4:org_national_eye_institute_nei a schema:Organization ;
+    schema:name "National Eye Institute (NEI)" .
+
+g4:org_national_natural_science_foundation_of_china a schema:Organization ;
+    schema:name "National Natural Science Foundation of China" .
+
+g4:org_national_science_foundation a schema:Organization ;
+    schema:name "National Science Foundation" .
+
+g4:org_nih a schema:Organization ;
+    schema:name "NIH" .
+
+g4:org_nsfc a schema:Organization ;
+    schema:name "NSFC" .
+
+g4:org_nwo a schema:Organization ;
+    schema:name "NWO" .
+
+g4:org_philippine_genome_center a schema:Organization ;
+    schema:name "Philippine Genome Center" .
+
+g4:org_prime_intellect a schema:Organization ;
+    schema:name "Prime Intellect" .
+
+g4:org_research_corporation_for_science_advancement a schema:Organization ;
+    schema:name "Research Corporation for Science Advancement" .
+
+g4:org_stanford_medicine a schema:Organization ;
+    schema:name "Stanford Medicine" .
+
+g4:org_stcsm a schema:Organization ;
+    schema:name "STCSM" .
+
+g4:org_the_dow_chemical_company a schema:Organization ;
+    schema:name "The Dow Chemical Company" .
+
+g4:org_uc_berkeley a schema:Organization ;
+    schema:name "UC Berkeley" .
+
+g4:org_uk_research_and_innovation a schema:Organization ;
+    schema:name "UK Research and Innovation" .
+
+g4:org_ukri_centre_for_doctoral_training_in_safe_and_trusted_artificial_intelligence a schema:Organization ;
+    schema:name "UKRI Centre for Doctoral Training in Safe and Trusted Artificial Intelligence" .
+
+g4:org_volkswagen_foundation a schema:Organization ;
+    schema:name "Volkswagen Foundation" .
+
+g4:org_xinjiang_university a schema:Organization ;
+    schema:name "Xinjiang University" .
+
+g4:person_adam_belfki a foaf:Person ;
+    schema:name "Adam Belfki" .
+
+g4:person_adam_earle a foaf:Person ;
+    schema:name "Adam Earle" .
+
+g4:person_aditi_s_krishnapriyan a foaf:Person ;
+    schema:name "Aditi S Krishnapriyan" .
+
+g4:person_aditya_ratan_jannali a foaf:Person ;
+    schema:name "Aditya Ratan Jannali" .
+
+g4:person_alex_loftus a foaf:Person ;
+    schema:name "Alex Loftus" .
+
+g4:person_allen_nie a foaf:Person ;
+    schema:name "Allen Nie" .
+
+g4:person_amer_al-hiyasat a foaf:Person ;
+    schema:name "Amer Al-Hiyasat" .
+
+g4:person_amir_zur a foaf:Person ;
+    schema:name "Amir Zur" .
+
+g4:person_andre_he a foaf:Person ;
+    schema:name "Andre He" .
+
+g4:person_angxiao_yue a foaf:Person ;
+    schema:name "Angxiao Yue" .
+
+g4:person_anne-florence_bitbol a foaf:Person ;
+    schema:name "Anne-Florence Bitbol" .
+
+g4:person_aruna_sankaranarayanan a foaf:Person ;
+    schema:name "Aruna Sankaranarayanan" .
+
+g4:person_atai_ambus a foaf:Person ;
+    schema:name "Atai Ambus" .
+
+g4:person_avery_yen a foaf:Person ;
+    schema:name "Avery Yen" .
+
+g4:person_ayelet_gordon-tapiero a foaf:Person ;
+    schema:name "Ayelet Gordon-Tapiero" .
+
+g4:person_azza_jenane a foaf:Person ;
+    schema:name "Azza Jenane" .
+
+g4:person_b_aditya_prakash a foaf:Person ;
+    schema:name "B Aditya Prakash" .
+
+g4:person_barbara_pabjan a foaf:Person ;
+    schema:name "Barbara Pabjan" .
+
+g4:person_bo_han a foaf:Person ;
+    schema:name "Bo Han" .
+
+g4:person_bo_li a foaf:Person ;
+    schema:name "Bo Li" .
+
+g4:person_brandon_m_wood a foaf:Person ;
+    schema:name "Brandon M Wood" .
+
+g4:person_c_j_palpal-latoc a foaf:Person ;
+    schema:name "C J Palpal-Latoc" .
+
+g4:person_can_rager a foaf:Person ;
+    schema:name "Can Rager" .
+
+g4:person_changran_hu a foaf:Person ;
+    schema:name "Changran Hu" .
+
+g4:person_chen_wu a foaf:Person ;
+    schema:name "Chen Wu" .
+
+g4:person_chris_wendler a foaf:Person ;
+    schema:name "Chris Wendler" .
+
+g4:person_christoph_riedl a foaf:Person ;
+    schema:name "Christoph Riedl" .
+
+g4:person_cyril_malbranke a foaf:Person ;
+    schema:name "Cyril Malbranke" .
+
+g4:person_daniel_w_swartz a foaf:Person ;
+    schema:name "Daniel W Swartz" .
+
+g4:person_darion_cassel a foaf:Person ;
+    schema:name "Darion Cassel" .
+
+g4:person_david_atkinson a foaf:Person ;
+    schema:name "David Atkinson" .
+
+g4:person_david_manheim a foaf:Person ;
+    schema:name "David Manheim" .
+
+g4:person_eric_qu a foaf:Person ;
+    schema:name "Eric Qu" .
+
+g4:person_eunjeong_hwang a foaf:Person ;
+    schema:name "Eunjeong Hwang" .
+
+g4:person_fair_at_meta a foaf:Person ;
+    schema:name "Fair At Meta" .
+
+g4:person_fanmeng_wang a foaf:Person ;
+    schema:name "Fanmeng Wang" .
+
+g4:person_felipe_meneguzzi a foaf:Person ;
+    schema:name "Felipe Meneguzzi" .
+
+g4:person_florian_buettner a foaf:Person ;
+    schema:name "Florian Buettner" .
+
+g4:person_franciszek_rakowski a foaf:Person ;
+    schema:name "Franciszek Rakowski" .
+
+g4:person_frank_schreiber a foaf:Person ;
+    schema:name "Frank Schreiber" .
+
+g4:person_gabriele_sarti a foaf:Person ;
+    schema:name "Gabriele Sarti" .
+
+g4:person_giordano_rogers a foaf:Person ;
+    schema:name "Giordano Rogers" .
+
+g4:person_hadas_orgad a foaf:Person ;
+    schema:name "Hadas Orgad" .
+
+g4:person_haiqian_yang a foaf:Person ;
+    schema:name "Haiqian Yang" .
+
+g4:person_haj_ali a foaf:Person ;
+    schema:name "Haj Ali" .
+
+g4:person_han-chen_zhang a foaf:Person ;
+    schema:name "Han-Chen Zhang" .
+
+g4:person_harshavardhan_kamarthi a foaf:Person ;
+    schema:name "Harshavardhan Kamarthi" .
+
+g4:person_hasan_amin a foaf:Person ;
+    schema:name "Hasan Amin" .
+
+g4:person_hien_v_nguyen a foaf:Person ;
+    schema:name "Hien V Nguyen" .
+
+g4:person_hongteng_xu a foaf:Person ;
+    schema:name "Hongteng Xu" .
+
+g4:person_hussein_al_osman a foaf:Person ;
+    schema:name "Hussein Al Osman" .
+
+g4:person_huzefa_rangwala a foaf:Person ;
+    schema:name "Huzefa Rangwala" .
+
+g4:person_igor_bogdanov a foaf:Person ;
+    schema:name "Igor Bogdanov" .
+
+g4:person_jaden_fiotto-kaufman a foaf:Person ;
+    schema:name "Jaden Fiotto-Kaufman" .
+
+g4:person_james_peters a foaf:Person ;
+    schema:name "James Peters" .
+
+g4:person_jan_pablo_burgard a foaf:Person ;
+    schema:name "Jan Pablo Burgard" .
+
+g4:person_jannik_brinkmann a foaf:Person ;
+    schema:name "Jannik Brinkmann" .
+
+g4:person_jasmine_cui a foaf:Person ;
+    schema:name "Jasmine Cui" .
+
+g4:person_jay_rainton a foaf:Person ;
+    schema:name "Jay Rainton" .
+
+g4:person_jeff_gore a foaf:Person ;
+    schema:name "Jeff Gore" .
+
+g4:person_jiangchao_yao a foaf:Person ;
+    schema:name "Jiangchao Yao" .
+
+g4:person_joel_wagner a foaf:Person ;
+    schema:name "Joel Wagner" .
+
+g4:person_jonathan_newton a foaf:Person ;
+    schema:name "Jonathan Newton" .
+
+g4:person_joseph_czyzyk a foaf:Person ;
+    schema:name "Joseph Czyzyk" .
+
+g4:person_joshua_brendan_melander a foaf:Person ;
+    schema:name "Joshua Brendan Melander" .
+
+g4:person_joy_das_bairagya a foaf:Person ;
+    schema:name "Joy Das Bairagya" .
+
+g4:person_jundong_li a foaf:Person ;
+    schema:name "Jundong Li" .
+
+g4:person_kaj_bostrom a foaf:Person ;
+    schema:name "Kaj Bostrom" .
+
+g4:person_kartik_sharma a foaf:Person ;
+    schema:name "Kartik Sharma" .
+
+g4:person_koyena_pal a foaf:Person ;
+    schema:name "Koyena Pal" .
+
+g4:person_lewis_d_griffin a foaf:Person ;
+    schema:name "Lewis D Griffin" .
+
+g4:person_lu_zhang a foaf:Person ;
+    schema:name "Lu Zhang" .
+
+g4:person_lukas_kuhn a foaf:Person ;
+    schema:name "Lukas Kuhn" .
+
+g4:person_maarten_sap a foaf:Person ;
+    schema:name "Maarten Sap" .
+
+g4:person_maciej_filinski a foaf:Person ;
+    schema:name "Maciej Filinski" .
+
+g4:person_mao-lin_luo a foaf:Person ;
+    schema:name "Mao-Lin Luo" .
+
+g4:person_marcin_bodych a foaf:Person ;
+    schema:name "Marcin Bodych" .
+
+g4:person_martin_vanek a foaf:Person ;
+    schema:name "Martin Vanek" .
+
+g4:person_michael_ripa a foaf:Person ;
+    schema:name "Michael Ripa" .
+
+g4:person_michel_mandjes a foaf:Person ;
+    schema:name "Michel Mandjes" .
+
+g4:person_min-ling_zhang a foaf:Person ;
+    schema:name "Min-Ling Zhang" .
+
+g4:person_ming_yin a foaf:Person ;
+    schema:name "Ming Yin" .
+
+g4:person_mohammad_al_ridhawi a foaf:Person ;
+    schema:name "Mohammad Al Ridhawi" .
+
+g4:person_míriam_r_garcía a foaf:Person ;
+    schema:name "Míriam R García" .
+
+g4:person_nassim_walha a foaf:Person ;
+    schema:name "Nassim Walha" .
+
+g4:person_natalie_shapira a foaf:Person ;
+    schema:name "Natalie Shapira" .
+
+g4:person_nathaniel_weir a foaf:Person ;
+    schema:name "Nathaniel Weir" .
+
+g4:person_negev_taglicht a foaf:Person ;
+    schema:name "Negev Taglicht" .
+
+g4:person_niclas_nordholt a foaf:Person ;
+    schema:name "Niclas Nordholt" .
+
+g4:person_nicola_dietler a foaf:Person ;
+    schema:name "Nicola Dietler" .
+
+g4:person_nikhil_prakash a foaf:Person ;
+    schema:name "Nikhil Prakash" .
+
+g4:person_nitay_alon a foaf:Person ;
+    schema:name "Nitay Alon" .
+
+g4:person_odinaldo_rodrigues a foaf:Person ;
+    schema:name "Odinaldo Rodrigues" .
+
+g4:person_olivia_floody a foaf:Person ;
+    schema:name "Olivia Floody" .
+
+g4:person_p_sam_sahil a foaf:Person ;
+    schema:name "P Sam Sahil" .
+
+g4:person_peter_braunsteins a foaf:Person ;
+    schema:name "Peter Braunsteins" .
+
+g4:person_philipp_dönges a foaf:Person ;
+    schema:name "Philipp Dönges" .
+
+g4:person_qizheng_zhang a foaf:Person ;
+    schema:name "Qizheng Zhang" .
+
+g4:person_rajiv_khanna a foaf:Person ;
+    schema:name "Rajiv Khanna" .
+
+g4:person_rakshit_s_trivedi a foaf:Person ;
+    schema:name "Rakshit S Trivedi" .
+
+g4:person_raymond_douglas a foaf:Person ;
+    schema:name "Raymond Douglas" .
+
+g4:person_reuth_mirsky a foaf:Person ;
+    schema:name "Reuth Mirsky" .
+
+g4:person_rohit_gandikota a foaf:Person ;
+    schema:name "Rohit Gandikota" .
+
+g4:person_sagar_chakraborty a foaf:Person ;
+    schema:name "Sagar Chakraborty" .
+
+g4:person_salesforce_ai_research a foaf:Person ;
+    schema:name "Salesforce Ai Research" .
+
+g4:person_sam_bayless a foaf:Person ;
+    schema:name "Sam Bayless" .
+
+g4:person_sarath_shekkizhar a foaf:Person ;
+    schema:name "Sarath Shekkizhar" .
+
+g4:person_seba_contreras a foaf:Person ;
+    schema:name "Seba Contreras" .
+
+g4:person_shangqing_xu a foaf:Person ;
+    schema:name "Shangqing Xu" .
+
+g4:person_shenghua_liu a foaf:Person ;
+    schema:name "Shenghua Liu" .
+
+g4:person_shimin_di a foaf:Person ;
+    schema:name "Shimin Di" .
+
+g4:person_shiri_oron a foaf:Person ;
+    schema:name "Shiri Oron" .
+
+g4:person_shubhangi_upasani a foaf:Person ;
+    schema:name "Shubhangi Upasani" .
+
+g4:person_simone_baldassarri a foaf:Person ;
+    schema:name "Simone Baldassarri" .
+
+g4:person_son_thai_ly a foaf:Person ;
+    schema:name "Son Thai Ly" .
+
+g4:person_stephen_a_baccus a foaf:Person ;
+    schema:name "Stephen A Baccus" .
+
+g4:person_sumit_sinha a foaf:Person ;
+    schema:name "Sumit Sinha" .
+
+g4:person_surya_ganguli a foaf:Person ;
+    schema:name "Surya Ganguli" .
+
+g4:person_tamar_rott a foaf:Person ;
+    schema:name "Tamar Rott" .
+
+g4:person_tarakanath_paipuru a foaf:Person ;
+    schema:name "Tarakanath Paipuru" .
+
+g4:person_thatchawin_leelawat a foaf:Person ;
+    schema:name "Thatchawin Leelawat" .
+
+g4:person_theia_pearson-vogel a foaf:Person ;
+    schema:name "Theia Pearson-Vogel" .
+
+g4:person_tomer_shabtay a foaf:Person ;
+    schema:name "Tomer Shabtay" .
+
+g4:person_tomer_ullman a foaf:Person ;
+    schema:name "Tomer Ullman" .
+
+g4:person_tong_wei a foaf:Person ;
+    schema:name "Tong Wei" .
+
+g4:person_tyll_krueger a foaf:Person ;
+    schema:name "Tyll Krueger" .
+
+g4:person_u_c_berkeley a foaf:Person ;
+    schema:name "U C Berkeley" .
+
+g4:person_urmish_thakker a foaf:Person ;
+    schema:name "Urmish Thakker" .
+
+g4:person_vered_shwartz a foaf:Person ;
+    schema:name "Vered Shwartz" .
+
+g4:person_viktor_bezborodov a foaf:Person ;
+    schema:name "Viktor Bezborodov" .
+
+g4:person_viola_priesemann a foaf:Person ;
+    schema:name "Viola Priesemann" .
+
+g4:person_wentao_guo a foaf:Person ;
+    schema:name "Wentao Guo" .
+
+g4:person_xingyu_zhou a foaf:Person ;
+    schema:name "Xingyu Zhou" .
+
+g4:person_xinjie_tong a foaf:Person ;
+    schema:name "Xinjie Tong" .
+
+g4:person_xuan_li a foaf:Person ;
+    schema:name "Xuan Li" .
+
+g4:person_yaning_cui a foaf:Person ;
+    schema:name "Yaning Cui" .
+
+g4:person_yaochen_zhu a foaf:Person ;
+    schema:name "Yaochen Zhu" .
+
+g4:person_yitian_wang a foaf:Person ;
+    schema:name "Yitian Wang" .
+
+g4:person_yotam_kaplan a foaf:Person ;
+    schema:name "Yotam Kaplan" .
+
+g4:person_yu_rong a foaf:Person ;
+    schema:name "Yu Rong" .
+
+g4:person_yuzhe_wang a foaf:Person ;
+    schema:name "Yuzhe Wang" .
+
+g4:person_zachary_w_ulissi a foaf:Person ;
+    schema:name "Zachary W Ulissi" .
+
+g4:person_zaki_alaoui a foaf:Person ;
+    schema:name "Zaki Alaoui" .
+
+g4:person_zhanke_zhou a foaf:Person ;
+    schema:name "Zhanke Zhou" .
+
+g4:person_zi-hao_zhou a foaf:Person ;
+    schema:name "Zi-Hao Zhou" .
+
+g4:person_zongze_li a foaf:Person ;
+    schema:name "Zongze Li" .
+
+xsd:date a rdfs:Datatype .
+
+g4:PaperSimilarity a owl:Class ;
+    rdfs:label "Paper Similarity" ;
+    rdfs:comment "Represents an n-ary relationship between two papers, including the similarity score and the algorithm used to calculate it." .
+
+g4:PaperTopicSimilarity a owl:Class ;
+    rdfs:label "Paper Topic Similarity" ;
+    rdfs:comment "Represents an n-ary relationship between a paper and a topic, including a similarity or membership score." .
+
+g4:org_european_union a schema:Organization ;
+    schema:name "European Union" .
+
+g4:org_nsf a schema:Organization ;
+    schema:name "NSF" .
+
+g4:org_simons_foundation a schema:Organization ;
+    schema:name "Simons Foundation" .
+
+g4:person_david_bau a foaf:Person ;
+    schema:name "David Bau" .
+
+g4:person_ian_vega a foaf:Person ;
+    schema:name "Ian Vega" .
+
+g4:person_jan_kulveit a foaf:Person ;
+    schema:name "Jan Kulveit" .
+
+g4:person_l_mahadevan a foaf:Person ;
+    schema:name "L Mahadevan" .
+
+g4:person_lbnl a foaf:Person ;
+    schema:name "Lbnl" .
+
+g4:person_mehran_kardar a foaf:Person ;
+    schema:name "Mehran Kardar" .
+
+g4:person_yiquan_wang a foaf:Person ;
+    schema:name "Yiquan Wang" .
+
+g4:project_1r01hl184139 a schema:Project ;
+    schema:identifier "1R01HL184139" ;
+    schema:name "1R01HL184139" .
+
+g4:project_2024a1515012399 a schema:Project ;
+    schema:identifier "2024A1515012399" ;
+    schema:name "2024A1515012399" .
+
+g4:project_22dz2229005 a schema:Project ;
+    schema:identifier "22DZ2229005" ;
+    schema:name "22DZ2229005" .
+
+g4:project_62306178 a schema:Project ;
+    schema:identifier "62306178" ;
+    schema:name "62306178" .
+
+g4:project_62376235 a schema:Project ;
+    schema:identifier "62376235" ;
+    schema:name "62376235" .
+
+g4:project_caimed_-lower_saxony_center_for_artificial_intelligence_and_causal_methods_in_medicine_project_grant_no_zn4257 a schema:Project ;
+    schema:identifier "CAIMed -Lower Saxony Center for Artificial Intelligence and Causal Methods in Medicine' project (grant no. ZN4257)" ;
+    schema:name "CAIMed -Lower Saxony Center for Artificial Intelligence and Causal Methods in Medicine' project (grant no. ZN4257)" .
+
+g4:project_career_iis-2028586 a schema:Project ;
+    schema:identifier "CAREER IIS-2028586" ;
+    schema:name "CAREER IIS-2028586" .
+
+g4:project_cdc_mind_program a schema:Project ;
+    schema:identifier "CDC MInD program" ;
+    schema:name "CDC MInD program" .
+
+g4:project_eps0233561 a schema:Project ;
+    schema:identifier "EP/S023356/1" ;
+    schema:name "EP/S023356/1" .
+
+g4:project_exc_20671-390729940 a schema:Project ;
+    schema:identifier "EXC 2067/1-390729940" ;
+    schema:name "EXC 2067/1-390729940" .
+
+g4:project_expeditions_ccf-1918770 a schema:Project ;
+    schema:identifier "Expeditions CCF-1918770" ;
+    schema:name "Expeditions CCF-1918770" .
+
+g4:project_grant_agreement_no_851173 a schema:Project ;
+    schema:identifier "grant agreement No. 851173" ;
+    schema:name "grant agreement No. 851173" .
+
+g4:project_grant_no_024002003 a schema:Project ;
+    schema:identifier "grant no. 024.002.003" ;
+    schema:name "grant no. 024.002.003" .
+
+g4:project_grant_no_26-23955s a schema:Project ;
+    schema:identifier "grant No. 26-23955S" ;
+    schema:name "grant No. 26-23955S" .
+
+g4:project_grant_no_dmr-2218849 a schema:Project ;
+    schema:identifier "Grant No. DMR-2218849" ;
+    schema:name "Grant No. DMR-2218849" .
+
+g4:project_iis-2229876 a schema:Project ;
+    schema:identifier "IIS-2229876" ;
+    schema:name "IIS-2229876" .
+
+g4:project_iis-2340209 a schema:Project ;
+    schema:identifier "IIS-2340209" ;
+    schema:name "IIS-2340209" .
+
+g4:project_infoxpand_project_031l0300a a schema:Project ;
+    schema:identifier "infoXpand project (031L0300A)" ;
+    schema:name "infoXpand project (031L0300A)" .
+
+g4:project_marie_skłodowska-curie_grant_agreement_no_101034253 a schema:Project ;
+    schema:identifier "Marie Skłodowska-Curie grant agreement no. 101034253" ;
+    schema:name "Marie Skłodowska-Curie grant agreement no. 101034253" .
+
+g4:project_medium_iis-1955883 a schema:Project ;
+    schema:identifier "Medium IIS-1955883" ;
+    schema:name "Medium IIS-1955883" .
+
+g4:project_medium_iis-2106961 a schema:Project ;
+    schema:identifier "Medium IIS-2106961" ;
+    schema:name "Medium IIS-2106961" .
+
+g4:project_medium_iis-2403240 a schema:Project ;
+    schema:identifier "Medium IIS-2403240" ;
+    schema:name "Medium IIS-2403240" .
+
+g4:project_nwo_gravitation_project_networks a schema:Project ;
+    schema:identifier "NWO Gravitation project NETWORKS" ;
+    schema:name "NWO Gravitation project NETWORKS" .
+
+g4:project_p30ey026877 a schema:Project ;
+    schema:identifier "P30EY026877" ;
+    schema:name "P30EY026877" .
+
+g4:project_r01ey022933 a schema:Project ;
+    schema:identifier "R01EY022933" ;
+    schema:name "R01EY022933" .
+
+g4:project_r01ey025087 a schema:Project ;
+    schema:identifier "R01EY025087" ;
+    schema:name "R01EY025087" .
+
+g4:project_respinow_project_031l0298g a schema:Project ;
+    schema:identifier "RESPINOW project (031L0298G)" ;
+    schema:name "RESPINOW project (031L0298G)" .
+
+g4:project_saxocov_grant a schema:Project ;
+    schema:identifier "SaxoCOV grant" ;
+    schema:name "SaxoCOV grant" .
+
+g4:project_schmidt_sciences_polymath_award a schema:Project ;
+    schema:identifier "Schmidt Sciences Polymath Award" ;
+    schema:name "Schmidt Sciences Polymath Award" .
+
+g4:project_scialog_grant_sa-aut-2024-015b a schema:Project ;
+    schema:identifier "Scialog grant #SA-AUT-2024-015b" ;
+    schema:name "Scialog grant #SA-AUT-2024-015b" .
+
+g4:project_tushar_shah_and_sarah_zion_physics_fellowship a schema:Project ;
+    schema:identifier "Tushar Shah and Sarah Zion Physics Fellowship" ;
+    schema:name "Tushar Shah and Sarah Zion Physics Fellowship" .
+
+schema:Country a owl:Class ;
+    rdfs:label "Country" ;
+    rdfs:comment "Represents the country associated with an organization, project, author, or funding entity." .
+
+g4:Topic a owl:Class ;
+    rdfs:label "Topic" ;
+    rdfs:comment "Represents a research topic described through a set of keywords or a keyword vector." .
+
+g4:project_horizon_2020 a schema:Project ;
+    schema:identifier "Horizon 2020" ;
+    schema:name "Horizon 2020" .
+
+schema:Project a owl:Class ;
+    rdfs:label "Project" ;
+    rdfs:comment "Represents a research or funding project related to scientific publications." .
+
+g4:Paper a owl:Class ;
+    rdfs:label "Paper" ;
+    rdfs:comment "Represents a scientific paper or publication included in the research funding knowledge graph." .
+
+schema:Organization a owl:Class ;
+    rdfs:label "Organization" ;
+    rdfs:comment "Represents an institution, university, research center, company, or funding body involved in the research ecosystem." .
+
+foaf:Person a owl:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "Represents a person, usually an author or researcher associated with scientific publications." .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( foaf:Person g4:Paper g4:Topic schema:Country schema:Organization schema:Project ) .
+

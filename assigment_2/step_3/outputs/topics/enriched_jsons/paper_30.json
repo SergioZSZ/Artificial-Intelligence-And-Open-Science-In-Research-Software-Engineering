@@ -1,0 +1,85 @@
+{
+  "paper": {
+    "local_id": "paper30",
+    "title": "Self-Auditing Parameter-Efficient Fine-Tuning for Few-Shot 3D Medical Image Segmentation",
+    "abstract": "Adapting foundation models to new clinical sites remains challenging in practice. Domain shift and scarce annotations must be handled by experts, yet many clinical groups do not have ready access to skilled AI engineers to tune adapter designs and training recipes. As a result, adaptation cycles can stretch from weeks to months, particularly in few-shot settings. Existing PEFT methods either require manual adapter configuration or automated searches that are computationally infeasible in few-shot 3D settings. We propose SEA-PEFT (self-auditing parameter-efficient fine-tuning) to automate this process. SEA-PEFT treats adapter configuration as an online allocation problem solved during fine-tuning rather than through manual, fixed-topology choices. SEA-PEFT uses a search-audit-allocate loop that trains active adapters, estimates each adapter's Dice utility by momentarily toggling it off, and then reselects the active set under a parameter budget using a greedy knapsack allocator. Exponential Moving Average and Interquartile Range smoothing, together with a Finite-State Ranking controller, stabilize the loop and improve reliability in high-noise few-shot regimes. On TotalSegmentator and FLARE'22, SEA-PEFT improves mean Dice by 2.4-2.8 points over the strongest fixed-topology PEFT baselines across 1/5/10-shot settings while training <1% of parameters. For reproducibility purposes, we made our code publicly available at https://github.com/tsly123/SEA_PEFT",
+    "published_date": "2026-03-06",
+    "doi": null,
+    "keywords": [
+      "Parameter-efficient fine-tuning",
+      "Medical image 3D segmentation",
+      "Few-shot learning",
+      "Foundation models",
+      "Adapter selection"
+    ]
+  },
+  "people": [
+    {
+      "name": "Son Thai Ly",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Hien V Nguyen",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    }
+  ],
+  "organizations": [],
+  "projects": [],
+  "countries": [],
+  "topics": [
+    {
+      "topic_id": 0,
+      "name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false,
+      "keywords": [
+        {
+          "word": "reasoning",
+          "score": 0.0319656244795898
+        },
+        {
+          "word": "model",
+          "score": 0.025039909838376718
+        },
+        {
+          "word": "models",
+          "score": 0.024228572174565817
+        },
+        {
+          "word": "ai",
+          "score": 0.01837611345015368
+        },
+        {
+          "word": "human",
+          "score": 0.017766476059663843
+        },
+        {
+          "word": "performance",
+          "score": 0.017149961456744963
+        },
+        {
+          "word": "learning",
+          "score": 0.01589499856231439
+        },
+        {
+          "word": "based",
+          "score": 0.015739287341013593
+        },
+        {
+          "word": "causal",
+          "score": 0.013286241643272804
+        },
+        {
+          "word": "llm",
+          "score": 0.013286241643272804
+        }
+      ]
+    }
+  ],
+  "acknowledgements": [],
+  "similar_papers": []
+}

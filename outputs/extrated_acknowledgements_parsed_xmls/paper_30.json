@@ -4,7 +4,14 @@
     "title": "Self-Auditing Parameter-Efficient Fine-Tuning for Few-Shot 3D Medical Image Segmentation",
     "abstract": "Adapting foundation models to new clinical sites remains challenging in practice. Domain shift and scarce annotations must be handled by experts, yet many clinical groups do not have ready access to skilled AI engineers to tune adapter designs and training recipes. As a result, adaptation cycles can stretch from weeks to months, particularly in few-shot settings. Existing PEFT methods either require manual adapter configuration or automated searches that are computationally infeasible in few-shot 3D settings. We propose SEA-PEFT (self-auditing parameter-efficient fine-tuning) to automate this process. SEA-PEFT treats adapter configuration as an online allocation problem solved during fine-tuning rather than through manual, fixed-topology choices. SEA-PEFT uses a search-audit-allocate loop that trains active adapters, estimates each adapter's Dice utility by momentarily toggling it off, and then reselects the active set under a parameter budget using a greedy knapsack allocator. Exponential Moving Average and Interquartile Range smoothing, together with a Finite-State Ranking controller, stabilize the loop and improve reliability in high-noise few-shot regimes. On TotalSegmentator and FLARE'22, SEA-PEFT improves mean Dice by 2.4-2.8 points over the strongest fixed-topology PEFT baselines across 1/5/10-shot settings while training <1% of parameters. For reproducibility purposes, we made our code publicly available at https://github.com/tsly123/SEA_PEFT",
     "published_date": "2026-03-06",
-    "doi": null
+    "doi": null,
+    "keywords": [
+      "Parameter-efficient fine-tuning",
+      "Medical image 3D segmentation",
+      "Few-shot learning",
+      "Foundation models",
+      "Adapter selection"
+    ]
   },
   "people": [
     {

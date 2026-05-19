@@ -1,0 +1,152 @@
+{
+  "paper": {
+    "local_id": "paper02",
+    "title": "RESYN: AUTONOMOUSLY SCALING SYNTHETIC ENVIRONMENTS FOR REASONING MODELS",
+    "abstract": "Reinforcement learning with verifiable rewards (RLVR) has emerged as a promising approach for training reasoning language models (RLMs) by leveraging supervision from verifiers. Although verifier implementation is easier than solution annotation for many tasks, existing synthetic data generation methods remain largely solution-centric, while verifier-based methods rely on a few hand-crafted procedural environments. In this work, we scale RLVR by introducing RESYN, a pipeline that generates diverse reasoning environments equipped with instance generators and verifiers, covering tasks such as constraint satisfaction, algorithmic puzzles, and spatial reasoning. A Qwen2.5-7B-Instruct model trained with RL on RESYN data achieves consistent gains across reasoning benchmarks and out-of-domain math benchmarks, including a 27% relative improvement on the challenging BBEH benchmark. Ablations show that verifier-based supervision and increased task diversity both contribute significantly, providing empirical evidence that generating reasoning environments at scale can enhance reasoning abilities in RLMs.",
+    "published_date": "2026-02-23",
+    "doi": null,
+    "keywords": []
+  },
+  "people": [
+    {
+      "name": "Andre He",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Nathaniel Weir",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Kaj Bostrom",
+      "author_order": 3,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Allen Nie",
+      "author_order": 4,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Darion Cassel",
+      "author_order": 5,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Sam Bayless",
+      "author_order": 6,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Huzefa Rangwala",
+      "author_order": 7,
+      "type": "author",
+      "orcid": null
+    }
+  ],
+  "organizations": [],
+  "projects": [],
+  "countries": [],
+  "topics": [
+    {
+      "topic_id": 0,
+      "name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false,
+      "keywords": [
+        {
+          "word": "reasoning",
+          "score": 0.0319656244795898
+        },
+        {
+          "word": "model",
+          "score": 0.025039909838376718
+        },
+        {
+          "word": "models",
+          "score": 0.024228572174565817
+        },
+        {
+          "word": "ai",
+          "score": 0.01837611345015368
+        },
+        {
+          "word": "human",
+          "score": 0.017766476059663843
+        },
+        {
+          "word": "performance",
+          "score": 0.017149961456744963
+        },
+        {
+          "word": "learning",
+          "score": 0.01589499856231439
+        },
+        {
+          "word": "based",
+          "score": 0.015739287341013593
+        },
+        {
+          "word": "causal",
+          "score": 0.013286241643272804
+        },
+        {
+          "word": "llm",
+          "score": 0.013286241643272804
+        }
+      ]
+    }
+  ],
+  "acknowledgements": [],
+  "similar_papers": [
+    {
+      "paper_id": "paper04",
+      "similarity_score": 0.5453762412071228,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    },
+    {
+      "paper_id": "paper10",
+      "similarity_score": 0.568034291267395,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    },
+    {
+      "paper_id": "paper21",
+      "similarity_score": 0.6886314153671265,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    },
+    {
+      "paper_id": "paper24",
+      "similarity_score": 0.5003077387809753,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    },
+    {
+      "paper_id": "paper25",
+      "similarity_score": 0.5161267518997192,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    },
+    {
+      "paper_id": "paper29",
+      "similarity_score": 0.5457679033279419,
+      "source_topic_id": 0,
+      "target_topic_id": 0,
+      "same_topic": true
+    }
+  ]
+}

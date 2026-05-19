@@ -1,0 +1,31 @@
+paper_id  Topic                                                Name  Probability  Representative_document
+ paper01      0                         0_reasoning_model_models_ai     1.000000                     True
+ paper02      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper03      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper04      0                         0_reasoning_model_models_ai     1.000000                     True
+ paper05      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper06      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper07      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper08      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper09      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper10      0                         0_reasoning_model_models_ai     1.000000                     True
+ paper11      2 2_peptide_protein_instabilities_peptide cyclization     0.255878                     True
+ paper12      2 2_peptide_protein_instabilities_peptide cyclization     1.000000                     True
+ paper13      2 2_peptide_protein_instabilities_peptide cyclization     0.329777                    False
+ paper14      1        1_dynamics_antimicrobial_household_selection     0.541265                    False
+ paper15      2 2_peptide_protein_instabilities_peptide cyclization     1.000000                     True
+ paper16      1        1_dynamics_antimicrobial_household_selection     0.590778                    False
+ paper17      1        1_dynamics_antimicrobial_household_selection     1.000000                     True
+ paper18      1        1_dynamics_antimicrobial_household_selection     0.635032                     True
+ paper19      1        1_dynamics_antimicrobial_household_selection     1.000000                     True
+ paper20      1        1_dynamics_antimicrobial_household_selection     0.917678                    False
+ paper21      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper22      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper23      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper24      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper25      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper26      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper27      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper28      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper29      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper30      0                         0_reasoning_model_models_ai     1.000000                    False

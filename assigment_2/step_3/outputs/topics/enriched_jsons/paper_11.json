@@ -1,0 +1,119 @@
+{
+  "paper": {
+    "local_id": "paper11",
+    "title": "Morphological instability of an invasive active-passive interface",
+    "abstract": "Morphological instabilities of growing tissues that impinge on passive materials are typical of invasive cancers. To explain these instabilities in experiments on breast epithelial spheroids in an extracellular matrix, we develop a continuum phase field model of a growing active liquid expanding into a passive viscoelastic matrix. Linear stability analysis of the sharp-interface limit of the governing equations predicts that the tissue interface can develops long-wavelength instabilities, but these instabilities are suppressed when the active carcinoid is embedded in an elastic matrix. We develop a theoretical morphological phase diagram, and complement these with two-dimensional finite element (FEM) phase-field simulations to track the nonlinear evolution of the interface with results consistent with theoretical predictions and experimental observations. Our study provides a basis for the emergence of interfacial instabilities in active-passive systems with the potential to control them.",
+    "published_date": "2026-02-12",
+    "doi": null,
+    "keywords": []
+  },
+  "people": [
+    {
+      "name": "Sumit Sinha",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "Haiqian Yang",
+      "author_order": 2,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "L Mahadevan",
+      "author_order": 3,
+      "type": "author",
+      "orcid": null
+    },
+    {
+      "name": "C.Z. Zhang",
+      "author_order": null,
+      "type": "acknowledged_person",
+      "orcid": null
+    }
+  ],
+  "organizations": [
+    {
+      "name": "Dana Farber Cancer Institute",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "Simons Foundation",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "Henri Seydoux Fund",
+      "type": "acknowledged_organization"
+    }
+  ],
+  "projects": [],
+  "countries": [],
+  "topics": [
+    {
+      "topic_id": 2,
+      "name": "2_peptide_protein_instabilities_peptide cyclization",
+      "probability": 0.25587837191050156,
+      "representative_document": true,
+      "keywords": [
+        {
+          "word": "peptide",
+          "score": 0.05120127513800536
+        },
+        {
+          "word": "protein",
+          "score": 0.04581992976538924
+        },
+        {
+          "word": "instabilities",
+          "score": 0.03456325437949816
+        },
+        {
+          "word": "peptide cyclization",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "muco",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "interface",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "passive",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "conformations",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "cyclization",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "field",
+          "score": 0.027650603503598527
+        }
+      ]
+    }
+  ],
+  "acknowledgements": [
+    {
+      "text": "Acknowledgements: SS acknowledges the funding support from Dana Farber Cancer Institute (Prof. C.Z. Zhang), and LM thanks the Simons Foundation and the Henri Seydoux Fund for partial financial support. Code Availability: The custom FEniCS code has been hosted on GitHub at the following LINK.",
+      "needs_llm_extraction": true
+    }
+  ],
+  "authors_mentions": [
+    {
+      "author_name": "Sumit Sinha",
+      "mention": "SS"
+    },
+    {
+      "author_name": "L Mahadevan",
+      "mention": "LM"
+    }
+  ],
+  "similar_papers": []
+}

@@ -4,7 +4,8 @@
     "title": "TEST-TIME ADAPTATION VIA MANY-SHOT PROMPT-ING: BENEFITS, LIMITS, AND PITFALLS",
     "abstract": "Test-time adaptation enables large language models (LLMs) to modify their behavior at inference without updating model parameters. A common approach is many-shot prompting, where large numbers of in-context learning (ICL) examples are injected as an input-space test-time update. Although performance can improve as more demonstrations are added, the reliability and limits of this update mechanism remain poorly understood, particularly for open-source models. We present an empirical study of many-shot prompting across tasks and model backbones, analyzing how performance varies with update magnitude, example ordering, and selection policy. We further study Dynamic and Reinforced ICL as alternative test-time update strategies that control which information is injected and how it constrains model behavior. We find that many-shot prompting is effective for structured tasks where demonstrations provide high information gain, but is highly sensitive to selection strategy and often shows limited benefits for openended generation tasks. Overall, we characterize the practical limits of promptbased test-time adaptation and outline when input-space updates are beneficial versus harmful.",
     "published_date": "2026-03-06",
-    "doi": null
+    "doi": null,
+    "keywords": []
   },
   "people": [
     {

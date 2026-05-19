@@ -4,7 +4,14 @@
     "title": "Context, Reasoning, and Hierarchy: A Cost-Performance Study of Compound LLM Agent Design in an Adversarial POMDP",
     "abstract": "Deploying compound LLM agents in adversarial, partially observable sequential environments requires navigating several interacting design dimensions: (1) what the agent sees, (2) how it reasons, and (3) how tasks are decomposed across components. Yet practitioners lack guidance on which design choices improve performance versus merely increase inference costs. We present a controlled study of compound LLM agent design in CybORG CAGE-2, a cyber defense environment modeled as a Partially Observable Markov Decision Process (POMDP). Reward is non-positive, so all configurations operate in a failure-mitigation mode and errors compound over time. Our evaluation spans five model families, six models, and twelve configurations (3,475 episodes) with tokenlevel cost accounting. We systematically vary context representation (raw observations vs. a deterministic, programmatic environment state-tracking layer with compressed history), deliberation (self-questioning, self-critique, and self-improvement tools, with optional chain-of-thought prompting), and hierarchical decomposition (monolithic ReAct vs. delegation to specialized sub-agents). We find that: (1) Programmatic state abstraction delivers the largest returns per token spent (RPTS), improving mean return by up to 76% over raw observations. (2) Distributing deliberation tools across a hierarchy degrades performance relative to hierarchy alone for all five model families, reaching up to 3.4× worse mean return while using 1.8-2.7× more tokens. We call this destructive interaction pattern a deliberation cascade. (3) Hierarchical decomposition without deliberation tools achieves the best absolute performance for most models, and context engineering is generally more cost-effective than deliberation. These findings suggest a design principle for structured adversarial POMDPs: invest in programmatic infrastructure and clean task decomposition rather than deeper per-agent reasoning, as these strategies can interfere when combined.",
     "published_date": "2026-05-15",
-    "doi": null
+    "doi": null,
+    "keywords": [
+      "Computing methodologies → Artificial intelligence",
+      "Partiallyobservable Markov decision processes",
+      "Multi-agent systems",
+      "Intelligent agents",
+      "Security and privacy → Network security compound AI systems, LLM agents, hierarchical agent architectures, tool-augmented language models, context engineering, inferencetime scaling, token efficiency, cost-performance trade-offs, adversarial POMDP, autonomous cyber defense, catastrophic failures"
+    ]
   },
   "people": [
     {

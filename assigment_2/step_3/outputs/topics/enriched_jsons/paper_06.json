@@ -1,0 +1,73 @@
+{
+  "paper": {
+    "local_id": "paper06",
+    "title": "The Navigation Paradox in Large-Context Agentic Coding: Graph-Structured Dependency Navigation Outperforms Retrieval in Architecture-Heavy Tasks *",
+    "abstract": "Agentic coding assistants powered by Large Language Models (LLMs) are increasingly deployed on repository-level software tasks. As context windows expand toward millions of tokens, a tacit assumption holds that retrieval bottlenecks dissolve -the model can simply ingest the whole codebase. We challenge this assumption by introducing the Navigation Paradox: larger context windows do not eliminate the need for structural navigation; they shift the failure mode from retrieval capacity to navigational salience. When architecturally critical but semantically distant files are absent from the model's attention, errors may occur that additional context budget alone is unlikely to resolve.",
+    "published_date": "2026-02",
+    "doi": null,
+    "keywords": []
+  },
+  "people": [
+    {
+      "name": "Tarakanath Paipuru",
+      "author_order": 1,
+      "type": "author",
+      "orcid": null
+    }
+  ],
+  "organizations": [],
+  "projects": [],
+  "countries": [],
+  "topics": [
+    {
+      "topic_id": 0,
+      "name": "0_reasoning_model_models_ai",
+      "probability": 1.0,
+      "representative_document": false,
+      "keywords": [
+        {
+          "word": "reasoning",
+          "score": 0.0319656244795898
+        },
+        {
+          "word": "model",
+          "score": 0.025039909838376718
+        },
+        {
+          "word": "models",
+          "score": 0.024228572174565817
+        },
+        {
+          "word": "ai",
+          "score": 0.01837611345015368
+        },
+        {
+          "word": "human",
+          "score": 0.017766476059663843
+        },
+        {
+          "word": "performance",
+          "score": 0.017149961456744963
+        },
+        {
+          "word": "learning",
+          "score": 0.01589499856231439
+        },
+        {
+          "word": "based",
+          "score": 0.015739287341013593
+        },
+        {
+          "word": "causal",
+          "score": 0.013286241643272804
+        },
+        {
+          "word": "llm",
+          "score": 0.013286241643272804
+        }
+      ]
+    }
+  ],
+  "acknowledgements": [],
+  "similar_papers": []
+}
