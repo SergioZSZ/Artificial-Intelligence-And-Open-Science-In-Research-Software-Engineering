@@ -1,168 +1,86 @@
-# NER Evaluation — Acknowledgements
+# Evaluación de Modelos NER — Acknowledgements
 
-Evaluation and selection of a Named Entity Recognition (NER) model for the
-**Acknowledgements** component of Deliverable 2.
+## 1. Resumen
 
-This folder contains a self-contained sub-project: it has its own Poetry
-environment, isolated from the rest of the repository. Its purpose is to
-compare four NER models against a manually annotated gold standard and to
-justify, with precision/recall/F1 metrics, which model is used downstream to
-extract entities from the acknowledgements of the 30-paper corpus.
-
-For the full reasoning, the comparative results, and the qualitative error
-analysis, see `reports/ner_evaluation_report.md`. This README covers only how
-to set up and run the code.
+Este proyecto evalúa 4 modelos de NER para extraer personas (PER), organizaciones (ORG) y códigos de proyecto (PROJ) de los agradecimientos de 30 papers académicos. Comparamos modelos clásicos y LLMs contra un gold standard de 8 papers anotados a mano. **El ganador es `groq/llama-3.3-70b-versatile` con un F1 de 0.9489.**
 
 ---
 
-## 1. What is evaluated
+## 2. Modelos evaluados
 
-Four models, each representing a distinct approach to NER, are evaluated over
-8 manually annotated acknowledgements:
-
-| Script | Model | Approach |
+| Modelo | Enfoque | ¿Detecta proyectos? |
 |---|---|---|
-| `01_predict_jean_baptiste.py` | `Jean-Baptiste/roberta-large-ner-english` | Classical NER baseline (RoBERTa token classification) |
-| `02_predict_kalawinka.py` | `kalawinka/flair-ner-acknowledgments` | NER specialized in scientific acknowledgements (Flair) |
-| `03_predict_groq.py` | `groq/llama-3.3-70b-versatile` | LLM via the Groq API |
-| `04_predict_hf_inference.py` | `Qwen/Qwen2.5-7B-Instruct` | LLM via HuggingFace Inference Providers |
-
-The three target entity categories are **PER** (persons), **ORG**
-(organizations), and **PROJ** (alphanumeric grant/award identifiers).
+| Jean-Baptiste/roberta-large-ner-english | NER clásico (baseline). El que enseña el profesor. | No (no tiene etiqueta para códigos) |
+| kalawinka/flair-ner-acknowledgments | NER especializado en agradecimientos científicos (Flair). | Sí |
+| groq/llama-3.3-70b-versatile | LLM grande vía API de Groq. | Sí |
+| Qwen/Qwen2.5-7B-Instruct | LLM pequeño de familia distinta (Qwen), vía HuggingFace. | Sí |
 
 ---
 
-## 2. Requirements
+## 3. Requisitos
 
-- Python (managed via [Poetry](https://python-poetry.org/))
-- A Groq API key — needed by `03_predict_groq.py`
-- A HuggingFace token — needed by `04_predict_hf_inference.py`
+- Python 3.11+ con Poetry
+- Una clave de Groq (https://console.groq.com) — necesaria para el modelo 03
+- Un token de HuggingFace (https://huggingface.co/settings/tokens) — necesario para el 04
 
-The two dedicated NER models (`01`, `02`) run locally and do not need any API
-key.
+Los modelos 01 y 02 se ejecutan localmente sin API key.
 
 ---
 
-## 3. Setup
-
-Install dependencies into the isolated Poetry environment:
+## 4. Cómo ejecutar
 
 ```bash
+# 1. Instalar dependencias
 poetry install
-```
 
-Create a `.env` file in this folder with your credentials. An
-`.env.example` is provided as a template:
-
-```bash
+# 2. Configurar claves (nunca commits .env, solo .env.example)
 cp .env.example .env
-```
+# Editar .env y poner GROQ_API_KEY y HF_TOKEN
 
-Then edit `.env` and fill in:
-
-```
-GROQ_API_KEY=your_groq_api_key_here
-HF_TOKEN=your_huggingface_token_here
-```
-
-> **Note:** `.env` is listed in `.gitignore` and must never be committed.
-> Only `.env.example` (with no real keys) is versioned.
-
----
-
-## 4. How to run
-
-The scripts are designed to be run **in numbered order**. Scripts `01`–`04`
-each produce one predictions file in `predictions/`. Script `05` reads all
-four predictions files plus the gold standard and produces the evaluation
-report. `05` therefore requires `01`–`04` to have been run first.
-
-```bash
+# 3. Ejecutar las predicciones (en cualquier orden, 01-04)
 poetry run python scripts/01_predict_jean_baptiste.py
 poetry run python scripts/02_predict_kalawinka.py
 poetry run python scripts/03_predict_groq.py
 poetry run python scripts/04_predict_hf_inference.py
+
+# 4. Evaluar (necesita los 4 anteriores)
 poetry run python scripts/05_evaluate.py
 ```
 
-Scripts `01`–`04` are independent of each other and may be run in any order
-among themselves, or re-run individually. Only `05` depends on the others.
+---
+
+## 5. Entradas y salidas
+
+- **Gold standard:** `corpus/gold_standard.json` en la raíz del repo (8 papers anotados a mano con PER/ORG/PROJ).
+- **Predicciones:** `predictions/jean_baptiste.json`, `kalawinka.json`, `groq.json`, `hf_inference.json`.
+- **Informes:** `reports/evaluation_report.json` (métricas por modelo y por paper) y `evaluation_report.md` (tabla resumen).
+- **Informe narrativo:** `reports/ner_evaluation_report.md` (explicación completa, escrito a mano).
 
 ---
 
-## 5. Inputs and outputs
+## 6. Decisiones técnicas clave
 
-**Input — gold standard.** All scripts read the gold standard from
-`corpus/gold_standard.json` at the repository root. The path is resolved
-relative to the script location in `utils.py`, so the scripts must be run
-from within this sub-project. The gold standard and its annotation
-conventions (`corpus/ANNOTATION_GUIDELINES.md`) are the ground truth against
-which models are scored.
+- **Prompt compartido.** Los dos LLMs (Groq y Qwen) usan el mismo prompt. Así la diferencia entre ellos se debe al modelo, no al prompt.
+- **Comparación por texto.** Las predicciones se comparan con el gold standard como listas de texto (no por posición en el documento). Solo normalizamos espacios y guiones inconsistentes: no pasamos a minúsculas ni quitamos puntuación para no romper códigos de proyecto.
+- **Métricas micro-promediadas.** Sumamos todos los aciertos y fallos de los 8 papers y calculamos precisión/recall/F1 sobre el total. Cada entidad pesa igual.
+- **LLMs con temperature=0.** Para que las respuestas sean lo más deterministas posible.
 
-**Outputs — predictions.** Scripts `01`–`04` write one file each:
-
-```
-predictions/jean_baptiste.json
-predictions/kalawinka.json
-predictions/groq.json
-predictions/hf_inference.json
-```
-
-**Outputs — evaluation.** Script `05` writes:
-
-```
-reports/evaluation_report.json   machine-readable: per-model, per-category,
-                                 per-paper TP/FP/FN entities and metrics
-reports/evaluation_report.md     human-readable summary of the metrics
-```
-
-The narrative report `reports/ner_evaluation_report.md` is written by hand and
-is not regenerated by the scripts.
+El informe narrativo (`reports/ner_evaluation_report.md`) explica estas decisiones con más detalle.
 
 ---
 
-## 6. Folder structure
+## 7. Estructura de carpetas
 
 ```
 ner_evaluation/
-├── scripts/
-│   ├── utils.py                  shared module: paths, gold loading,
-│   │                             entity normalization, output formatting
-│   ├── prompt_ner.py             shared prompt for the two LLMs
-│   │                             (system prompt + one-shot example)
-│   ├── 01_predict_jean_baptiste.py
-│   ├── 02_predict_kalawinka.py
-│   ├── 03_predict_groq.py
-│   ├── 04_predict_hf_inference.py
-│   └── 05_evaluate.py
-├── predictions/                  model outputs (one JSON per model)
-├── reports/                      evaluation_report.json / .md (generated)
-│                                 ner_evaluation_report.md (narrative, manual)
-├── docs/                         declaracion_uso_ia.md
-├── pyproject.toml                isolated Poetry environment
+├── scripts/           Código de los 4 modelos + evaluación + utilidades
+├── predictions/       Salidas de cada modelo (JSON)
+├── reports/           Informe de métricas (generado) + informe narrativo (manual)
+├── docs/              Declaración de uso de IA
+├── pyproject.toml     Dependencias (entorno aislado del resto del repo)
 ├── poetry.lock
-├── .env                          API keys (gitignored, NOT versioned)
-├── .env.example
+├── .env               Claves (no versionado)
+├── .env.example       Plantilla para .env
 ├── .gitignore
 └── README.md
 ```
-
----
-
-## 7. Key design decisions
-
-- **Shared prompt for both LLMs.** `03_predict_groq.py` and
-  `04_predict_hf_inference.py` use the exact same prompt (`prompt_ner.py`).
-  This isolates the model as the variable: the LLM-vs-LLM comparison measures
-  the model, not the prompt.
-- **Light normalization for matching.** `utils.py:normalize_entity` only
-  strips whitespace, collapses multiple spaces, and normalizes hyphens where
-  spacing is inconsistent. It deliberately does not lowercase or strip
-  punctuation, so grant codes and legitimate hyphenated terms are preserved.
-- **Micro-averaged metrics.** TP/FP/FN are summed across the 8 documents
-  before computing precision/recall/F1, so every entity contributes equally.
-- **LLM parameters.** Both LLMs run with `temperature=0` and JSON-mode output
-  for maximum determinism and machine-parseable responses.
-
-See `reports/ner_evaluation_report.md` for the full justification of these
-decisions and the selected model.
