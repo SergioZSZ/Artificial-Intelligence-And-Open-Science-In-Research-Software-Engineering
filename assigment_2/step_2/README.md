@@ -9,3 +9,7 @@ Este Step consta de 3 pasos fundamentales para el proyecto:
 3. La extracción de las entidades reconocidas mediante el LLM acordado en el estudio (``llama-3.3-70b-versatile``) obteniendo personas (evitando duplicados de cualquier tipo), organizaciones y proyectos de dichos acknowledgements.
 
 
+Con este Step podemos nutrir nuestro grafo de conocimiento con estas partes de nuestra ontología:
+
+
+![Ontología NER](/images/ontologia-ner.png)

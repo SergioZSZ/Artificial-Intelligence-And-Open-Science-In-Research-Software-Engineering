@@ -19,7 +19,7 @@ Con esta información se genera el fichero ``/assigment_2/step_3/outputs/topics/
 ## Replicación 
 1. Se debe haber ejecutado el step_2 completo y tener el `HF_TOKEN` guardado en el .env de dicho step
 2. ejecutar desde el directorio `/assigment_2/step_3/topic_modeling` el mandato `poetry run python ./scripts/topic_modeling.py`
-3. *hacer script para enriquecer a partri de los outputs*
+3. ejecutar desde el mismo directorio `poetry run python ./scripts/enrich_jsons.py`
 
 
 

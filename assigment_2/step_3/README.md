@@ -1,4 +1,4 @@
-## Step 3, Topic Modeling, generación y enriquecimiento del KG
+## Step 3, Topic Modeling, similarities de papers y generación y enriquecimiento del KG
 
 Este Step consta de tres pasos fundamentales para el proyecto:
 
@@ -9,6 +9,15 @@ Embedding: Vector numérico que representa significado que sirve Comparar simili
 2. Creación del KG local a partir de la ontología formada y los datos obtenidos en los anteriores pasos.
 
 3. Enriquecimiento del KG local a partir de los KG públicos declarados en las fuentes (`/assigment_2/step_1/docs/fuentes.md`)
+
+
+Con este Step podemos nutrir nuestro grafo de conocimiento con estas partes de nuestra ontología:
+
+
+![Ontología NER-TOPICS](/images/ontologia-ner-topics.png)
+
+
+
 
 
 ## Problemas encontrados
