@@ -16,6 +16,7 @@ nav:
       - Knowledge Graph: fase_2/knowledge_graph.md
       - Stack Docker y workflow: fase_2/stack_workflow_app.md
       - Backend y frontend: fase_2/backend_frontend.md
+      - Limitaciones: fase_2/limitaciones.md
 
 theme:
   name: readthedocs

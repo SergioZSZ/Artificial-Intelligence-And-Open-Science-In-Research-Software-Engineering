@@ -44,7 +44,6 @@ poetry run python enrich_online.py
 
 ## Limitaciones conocidas
 
-- OpenAIRE no cubre proyectos de agencias no europeas y por tanto quedan sin enriquecer.
 - ORCID no permite buscar por iniciales ni pseudónimos y por tanto esas personas quedan sin datos.
 - Wikidata no tiene país para organizaciones supranacionales como la UE y por tanto quedan sin país en el grafo.
 - Algunos perfiles de ORCID están desactualizados y por tanto la afiliación puede quedar como "null".

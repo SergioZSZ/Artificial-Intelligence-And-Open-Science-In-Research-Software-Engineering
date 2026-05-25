@@ -12,6 +12,8 @@ La generacion usa `rdflib` y parte de los JSONs enriquecidos de `assigment_2/ste
 
 ## Entidades modeladas
 
+![Ontologia completa del KG](../images/completa.png)
+
 - Papers con titulo, abstract, fecha e identificador.
 - Personas, separando autores y personas reconocidas en acknowledgements.
 - Organizaciones con nombre, identificador, descripcion y pais cuando existe.

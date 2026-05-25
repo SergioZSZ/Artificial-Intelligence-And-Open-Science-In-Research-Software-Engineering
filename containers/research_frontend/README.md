@@ -66,3 +66,7 @@ poetry run pytest -q
 ```
 
 Los tests mockean el cliente HTTP para no depender de Fuseki ni de `research_api` levantados.
+
+## Declaracion de uso de IA
+
+Se uso IA generativa para generar y estructurar el frontend Streamlit siguiendo la guia de los autores. Cada pantalla, flujo de navegacion, estado vacio e integracion con la API fue revisado, probado y evaluado durante el desarrollo.

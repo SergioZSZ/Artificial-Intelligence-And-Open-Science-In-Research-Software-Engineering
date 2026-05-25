@@ -122,3 +122,7 @@ Comando recomendado:
 cd containers/research_api/app
 python -m pytest tests -q
 ```
+
+## Declaracion de uso de IA
+
+Se uso IA generativa como apoyo para estructurar las queries SPARQL, los schemas Pydantic y los endpoints necesarios para conectar Fuseki con el frontend. El resultado fue revisado, probado con mocks y validado durante la integracion con la app.

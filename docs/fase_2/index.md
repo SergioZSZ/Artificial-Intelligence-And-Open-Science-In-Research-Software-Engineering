@@ -15,6 +15,7 @@ Documentación de esta fase:
 - [Knowledge Graph](knowledge_graph.md)
 - [Stack Docker y workflow](stack_workflow_app.md)
 - [Backend y frontend](backend_frontend.md)
+- [Limitaciones](limitaciones.md)
 
 Fuentes principales en el repositorio:
 

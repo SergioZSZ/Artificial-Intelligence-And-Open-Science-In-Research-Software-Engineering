@@ -20,6 +20,8 @@ Con este Step podemos nutrir nuestro grafo de conocimiento con estas partes de n
 ## Problemas encontrados
 1. Alguna fecha de los papers no venía con formato Date, por lo que se modificó la ontología para que su tipo sea string en vez de date
 
+2. La extracción de entidades usando Llama tiene un límite de tokens diario. Por lo que el workflow actualmente se puede ejecutar entre 1 y 2 veces diarias.
+
 
 
 

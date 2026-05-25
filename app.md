@@ -136,4 +136,5 @@ La navegacion cruzada es parte de la app: Funding, Topics y Projects llevan a Pa
 
 - Hay instancias o relaciones con datos no disponibles si no se encontraron entidades reconocibles o enriquecimiento externo.
 - La financiacion por pais/organizacion se muestra como importe conocido asociado, no como reparto contable exacto.
-- No siempre se dispone de moneda, ORCID, afiliacion o pais para todas las entidades.
+- Los JSONs enriquecidos pueden traer `currency`, pero la API y el frontend aun no muestran la moneda asociada al importe; se deja como mejora para futuras versiones.
+- No siempre se dispone de ORCID, afiliacion, pais o importe para todas las entidades.

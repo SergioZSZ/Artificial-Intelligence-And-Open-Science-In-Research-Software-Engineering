@@ -1,14 +1,4 @@
-## Limitaciones
-
-## FASE 1: PipeGrobid
-
-- El programa depende de que GROBID este correctamente ejecutandose.
-- Algunos enlaces pueden no procesarse de forma limpia del PDF al XML TEI. GROBID puede concatenar fragmentos adicionales cercanos al enlace por la forma en que reconstruye el texto del PDF.
-- El preprocesamiento de abstracts elimina numeros, lo que puede suponer perdida de informacion en ciertos contextos. En esta fase se usa unicamente para conteo de palabras y visualizacion.
-- El pipeline solo procesa archivos `.pdf` ubicados en `pdfs/`.
-- Si no hay PDFs o XMLs en las carpetas esperadas, la ejecucion se detiene con aviso.
-
-## FASE 2: Knowledge Graph
+# Limitaciones de la FASE 2
 
 - La calidad del KG depende de la calidad de los XMLs generados por GROBID y de los acknowledgements disponibles en cada paper.
 - Algunos papers no tienen acknowledgements o no contienen entidades reconocibles, por lo que quedan con menos relaciones.

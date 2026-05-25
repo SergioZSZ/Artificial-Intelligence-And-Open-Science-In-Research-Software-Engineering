@@ -136,9 +136,25 @@ generated_files/             salidas visuales y TXT
 outputs/                     salidas usadas por el stack/workflow
 ```
 
+## Declaracion de uso de IA
+
+Se uso IA generativa como apoyo en distintas partes del proyecto, siempre bajo supervision y validacion de los autores:
+
+- Parseo XML: ayuda para localizar nodos TEI relevantes y para generar/entender el codigo inicial de extraccion.
+- Evaluacion NER: los LLMs Groq y Qwen fueron objeto de estudio; tambien se uso IA conversacional para apoyar scripts, informe y documentacion. El gold standard fue anotado manualmente.
+- Extraccion NER: ayuda para revisar y estructurar scripts relacionados con la extraccion de personas, organizaciones y proyectos.
+- Topic modeling: ayuda para entender BERTopic, HDBSCAN, UMAP y la generacion de similitudes entre papers.
+- Enriquecimiento online: apoyo en expresiones regulares, limpieza de identificadores y navegacion de respuestas JSON de APIs externas.
+- Generacion del KG local: apoyo para estructurar `build_kg_from_jsons()` y comprobar la incorporacion de clases, propiedades y relaciones.
+- Backend `research_api`: apoyo para estructurar queries SPARQL, schemas y endpoints necesarios para conectar Fuseki con el frontend.
+- Frontend Streamlit: se uso IA generativa para generar la app siguiendo la guia de los autores, revisando, probando y evaluando cada parte generada.
+
 ## Limitaciones
 
 - GROBID debe estar levantado para generar XMLs.
 - Algunos enlaces extraidos desde PDFs pueden traer fragmentos adicionales por como GROBID reconstruye el texto.
 - La financiacion de la app se muestra como importe conocido asociado, no como reparto contable exacto.
-- No todos los papers o entidades tienen ORCID, pais, afiliacion, moneda o importe disponible.
+- Los JSONs enriquecidos pueden traer `currency`, pero la API y el frontend aun no muestran la moneda asociada al importe; se deja como mejora para futuras versiones.
+- No todos los papers o entidades tienen ORCID, pais, afiliacion o importe disponible.
+- ORCID puede devolver perfiles ambiguos si hay varias personas con el mismo nombre.
+- Wikidata no siempre dispone de pais para organizaciones supranacionales.

@@ -42,3 +42,7 @@ La app evita ser un conjunto de tablas aisladas:
 - desde Projects se puede abrir Papers filtrado por proyecto;
 - desde Paper detail se puede abrir Similarities;
 - desde Similarities se puede abrir el detalle de un paper similar.
+
+## Declaracion de uso de IA
+
+En `research_api` se uso IA generativa como apoyo para estructurar queries SPARQL, schemas y endpoints necesarios para conectar Fuseki con el frontend. En `research_frontend` se uso IA generativa para generar y organizar la app Streamlit siguiendo la guia de los autores. Cada parte fue revisada, probada y evaluada durante el desarrollo.
