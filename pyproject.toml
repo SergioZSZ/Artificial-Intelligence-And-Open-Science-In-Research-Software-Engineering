@@ -3,7 +3,11 @@ name = "pipegrobid"
 version = "1.4.0"
 description = "Data Extraction using GROBID"
 authors = [
-    {name = "SergioZSZ",email = "s.zaballosh@gmail.com"}
+    {name = "SergioZSZ",email = "s.zaballosh@gmail.com"},
+    {name = "NanoPerez807",email = "fernando.perezalo@alumnos.upm.es"},
+    {name = "ghit2025",email = "carlos.sainz@alumnos.upm.es"},
+    {name = "Abielmenda",email = "alberto.aragon.calvo@alumnos.upm.es"}
+
 ]
 license = {text = "Apache-2.0"}
 readme = "README.md"

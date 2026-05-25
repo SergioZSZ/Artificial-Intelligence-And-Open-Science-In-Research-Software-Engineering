@@ -9,7 +9,6 @@ nav:
       - Uso: USO.md
       - Validaciones: VALIDACION.md
       - Limitaciones: LIMITACIONES.md
-      - Changelog: CHANGELOG.md
   - FASE 2 - Knowledge Graph:
       - Inicio: fase_2/index.md
       - Caso de uso y ontologia: fase_2/caso_uso_ontologia.md
