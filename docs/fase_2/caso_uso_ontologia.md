@@ -23,7 +23,7 @@ La aplicacion busca analizar la relacion entre publicaciones cientificas, autore
 
 La ontologia esta definida en `assigment_2/step_1/ontology/ontology.ttl`. Modela papers, personas, organizaciones, proyectos, paises, topics, similitudes y relaciones de financiacion.
 
-![Ontologia base del Step 1](../images/ontologia-step1.svg)
+![Ontologia base del Step 1](../images/ontologia.png)
 
 Relaciones principales:
 
