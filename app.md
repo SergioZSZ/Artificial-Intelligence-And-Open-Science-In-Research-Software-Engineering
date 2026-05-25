@@ -1,19 +1,19 @@
-# App Knowledge Graph de financiacion cientifica
+# Research Funding Knowledge Graph (RFKG) + PipeGrobid
 
 ## Objetivo
 
-Esta app convierte papers PDF en un Knowledge Graph RDF para analizar financiacion cientifica. El caso de uso principal es responder que paises, organismos y proyectos financian papers, que topics cubren esos papers y que publicaciones son similares entre si.
+RFKG es la aplicacion completa para analizar financiacion cientifica mediante un Knowledge Graph RDF. PipeGrobid es igual de importante dentro del sistema: actua como motor de procesamiento documental, convierte PDFs en XML TEI con GROBID y proporciona la base sobre la que se construyen las entidades, topics, proyectos y relaciones del KG.
 
 La aplicacion no es un visor generico de grafos. Esta orientada a preguntas de dominio: distribucion geografica de financiacion, ranking de organismos financiadores, grants/proyectos, papers asociados, topics, autores, acknowledgements y similitudes por paper.
 
 ## Flujo completo
 
 ```text
-PDFs -> GROBID -> XML TEI -> extraccion Python -> entidades/proyectos/topics -> RDF/TTL -> Fuseki -> research_api -> Streamlit
+PipeGrobid -> KG RDF/TTL -> Fuseki -> research_api -> Streamlit
 ```
 
 1. Los PDFs se colocan en `pdfs/`.
-2. GROBID genera XML TEI en `xmls/`.
+2. PipeGrobid usa GROBID para generar XML TEI en `xmls/`.
 3. PipeGrobid y los scripts de `assigment_2` extraen acknowledgements, entidades, proyectos, topics y similitudes.
 4. `gen_local_kg` construye el KG RDF local.
 5. Fuseki carga el TTL y expone SPARQL.

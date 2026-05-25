@@ -1,14 +1,16 @@
-# FASE 2: Aplicacion sobre Knowledge Graph
+# FASE 2: Research Funding Knowledge Graph (RFKG)
 
-La FASE 2 amplía PipeGrobid con una aplicacion basada en Knowledge Graph para analizar financiacion cientifica. A partir de PDFs procesados con GROBID se extraen metadatos, autores, acknowledgements, entidades, proyectos, topics y similitudes. El resultado se modela como RDF, se carga en Fuseki y se consulta desde una API y un frontend Streamlit.
+RFKG es la aplicacion basada en Knowledge Graph que analiza financiacion cientifica a partir de papers procesados por PipeGrobid. PipeGrobid sigue siendo una pieza esencial: convierte PDFs en XML TEI con GROBID y proporciona la base documental sobre la que la fase semantica extrae metadatos, autores, acknowledgements, entidades, proyectos, topics y similitudes.
+
+El resultado se modela como RDF, se carga en Fuseki y se consulta desde `research_api` y un frontend Streamlit.
 
 Flujo general:
 
 ```text
-PDFs -> GROBID -> XML TEI -> extraccion -> NER/enriquecimiento -> topics -> KG RDF -> Fuseki -> research_api -> Streamlit
+PipeGrobid -> NER/enriquecimiento -> topics -> KG RDF -> Fuseki -> research_api -> Streamlit
 ```
 
-Documentación de esta fase:
+Documentacion de esta fase:
 
 - [Caso de uso y ontologia](caso_uso_ontologia.md)
 - [Pipeline de datos](pipeline_datos.md)

@@ -1,0 +1,616 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      }
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Research Funding Knowledge Graph (RFKG) + PipeGrobid",
+      "description": "Research Object for RFKG + PipeGrobid. RFKG is an application for analysing scientific funding through a Knowledge Graph, and PipeGrobid is the document-processing pipeline that transforms PDFs into TEI XML and initial extraction outputs used by the semantic phase.",
+      "license": {
+        "@id": "https://www.apache.org/licenses/LICENSE-2.0"
+      },
+      "identifier": "https://doi.org/10.5281/zenodo.18647861",
+      "url": {
+        "@id": "https://github.com/SergioZSZ/OS-IA-Pipegrobid"
+      },
+      "datePublished": "2026-05-25",
+      "keywords": [
+        "research funding",
+        "knowledge graph",
+        "SPARQL",
+        "Fuseki",
+        "Streamlit",
+        "GROBID",
+        "TEI XML",
+        "n8n",
+        "FastAPI",
+        "open science"
+      ],
+      "author": [
+        {
+          "@id": "https://orcid.org/0009-0000-3795-2767"
+        },
+        {
+          "@id": "https://github.com/NanoPerez807"
+        },
+        {
+          "@id": "https://github.com/ghit2025"
+        },
+        {
+          "@id": "https://github.com/Abielmenda"
+        }
+      ],
+      "creator": [
+        {
+          "@id": "https://orcid.org/0009-0000-3795-2767"
+        },
+        {
+          "@id": "https://github.com/NanoPerez807"
+        },
+        {
+          "@id": "https://github.com/ghit2025"
+        },
+        {
+          "@id": "https://github.com/Abielmenda"
+        }
+      ],
+      "mainEntity": {
+        "@id": "#rfkg-application"
+      },
+      "mentions": [
+        {
+          "@id": "#pipegrobid-software"
+        },
+        {
+          "@id": "#local-kg"
+        },
+        {
+          "@id": "#n8n-workflow"
+        },
+        {
+          "@id": "#research-api"
+        },
+        {
+          "@id": "#research-frontend"
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "#rfkg-application"
+        },
+        {
+          "@id": "#pipegrobid-software"
+        },
+        {
+          "@id": "#local-kg"
+        },
+        {
+          "@id": "#research-api"
+        },
+        {
+          "@id": "#research-frontend"
+        },
+        {
+          "@id": "#n8n-workflow"
+        }
+      ],
+      "subjectOf": [
+        {
+          "@id": "../README.md"
+        },
+        {
+          "@id": "../app.md"
+        },
+        {
+          "@id": "https://pipegrobid-software.readthedocs.io/es/latest/"
+        }
+      ]
+    },
+    {
+      "@id": "https://orcid.org/0009-0000-3795-2767",
+      "@type": "Person",
+      "name": "Sergio Zaballos Herrera",
+      "email": "s.zaballosh@gmail.com",
+      "affiliation": {
+        "name": "Escuela Técnica Superior de Ingenieros Informáticos, Universidad Politécnica de Madrid",
+        "@type": "Organization"
+      }
+    },
+    {
+      "@id": "https://github.com/NanoPerez807",
+      "@type": "Person",
+      "name": "Fernando Pérez Alonso-Castrillo",
+      "email": "fernando.perezalo@alumnos.upm.es",
+      "affiliation": {
+        "name": "Escuela Técnica Superior de Ingenieros Informáticos, Universidad Politécnica de Madrid",
+        "@type": "Organization"
+      }
+    },
+    {
+      "@id": "https://github.com/ghit2025",
+      "@type": "Person",
+      "name": "Carlos Sainz Sueiro",
+      "email": "carlos.sainz@alumnos.upm.es",
+      "affiliation": {
+        "name": "Escuela Técnica Superior de Ingenieros Informáticos, Universidad Politécnica de Madrid",
+        "@type": "Organization"
+      }
+    },
+    {
+      "@id": "https://github.com/Abielmenda",
+      "@type": "Person",
+      "name": "Alberto Aragón Calvo",
+      "email": "alberto.aragon.calvo@alumnos.upm.es",
+      "affiliation": {
+        "name": "Escuela Técnica Superior de Ingenieros Informáticos, Universidad Politécnica de Madrid",
+        "@type": "Organization"
+      }
+    },
+    {
+      "@id": "https://pipegrobid-software.readthedocs.io/es/latest/",
+      "@type": "CreativeWork",
+      "name": "ReadTheDocs documentation",
+      "description": "Published documentation for RFKG + PipeGrobid."
+    },
+    {
+      "@id": "https://github.com/SergioZSZ/OS-IA-Pipegrobid",
+      "@type": "CreativeWork",
+      "name": "Project source repository",
+      "url": "https://github.com/SergioZSZ/OS-IA-Pipegrobid"
+    },
+    {
+      "@id": "https://www.apache.org/licenses/LICENSE-2.0",
+      "@type": "CreativeWork",
+      "name": "Apache License 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "@id": "https://w3id.org/ro/crate/1.1",
+      "@type": "CreativeWork",
+      "name": "RO-Crate 1.1 specification"
+    },
+    {
+      "@id": "#rfkg-application",
+      "@type": [
+        "SoftwareApplication",
+        "CreativeWork"
+      ],
+      "name": "Research Funding Knowledge Graph (RFKG)",
+      "description": "Application for exploring scientific funding evidence from papers through a RDF Knowledge Graph, Fuseki, a FastAPI backend and a Streamlit frontend.",
+      "applicationCategory": "Research software",
+      "operatingSystem": "Cross-platform",
+      "isBasedOn": [
+        {
+          "@id": "#pipegrobid-software"
+        },
+        {
+          "@id": "#local-kg"
+        },
+        {
+          "@id": "#n8n-workflow"
+        }
+      ],
+      "softwareRequirements": [
+        {
+          "@id": "#research-api"
+        },
+        {
+          "@id": "#research-frontend"
+        },
+        {
+          "@id": "#fuseki-service"
+        },
+        {
+          "@id": "#n8n-service"
+        }
+      ],
+      "subjectOf": [
+        {
+          "@id": "../app.md"
+        },
+        {
+          "@id": "../docs/fase_2/index.md"
+        },
+        {
+          "@id": "../containers/research_api/API_RESEARCH_API.md"
+        },
+        {
+          "@id": "../containers/research_frontend/README.md"
+        }
+      ]
+    },
+    {
+      "@id": "#pipegrobid-software",
+      "@type": "SoftwareSourceCode",
+      "name": "PipeGrobid",
+      "description": "Python pipeline that uses GROBID to transform scientific PDFs into TEI XML and generate initial extraction outputs.",
+      "programmingLanguage": "Python",
+      "codeRepository": {
+        "@id": "https://github.com/SergioZSZ/OS-IA-Pipegrobid"
+      },
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/src/pipegrobid/",
+      "license": {
+        "@id": "https://www.apache.org/licenses/LICENSE-2.0"
+      },
+      "softwareVersion": "1.4.0",
+      "softwareRequirements": {
+        "@id": "#grobid-software"
+      },
+      "runtimePlatform": "Python and Docker",
+      "subjectOf": [
+        {
+          "@id": "../README.md"
+        },
+        {
+          "@id": "../docs/index.md"
+        },
+        {
+          "@id": "../codemeta.json"
+        },
+        {
+          "@id": "../CITATION.cff"
+        }
+      ]
+    },
+    {
+      "@id": "#research-api",
+      "@type": "SoftwareSourceCode",
+      "name": "research_api",
+      "description": "FastAPI backend that queries the RDF Knowledge Graph in Fuseki with SPARQL and exposes domain endpoints for RFKG.",
+      "programmingLanguage": "Python",
+      "codeRepository": {
+        "@id": "https://github.com/SergioZSZ/OS-IA-Pipegrobid"
+      },
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/containers/research_api/app/",
+      "license": {
+        "@id": "https://www.apache.org/licenses/LICENSE-2.0"
+      },
+      "softwareRequirements": {
+        "@id": "#fuseki-service"
+      },
+      "subjectOf": {
+        "@id": "../containers/research_api/API_RESEARCH_API.md"
+      }
+    },
+    {
+      "@id": "#research-frontend",
+      "@type": "SoftwareSourceCode",
+      "name": "research_frontend",
+      "description": "Streamlit frontend for exploring funding countries, organizations, papers, projects, topics, acknowledgements, ORCID data and paper similarities.",
+      "programmingLanguage": "Python",
+      "codeRepository": {
+        "@id": "https://github.com/SergioZSZ/OS-IA-Pipegrobid"
+      },
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/containers/research_frontend/",
+      "license": {
+        "@id": "https://www.apache.org/licenses/LICENSE-2.0"
+      },
+      "softwareRequirements": {
+        "@id": "#research-api"
+      },
+      "subjectOf": {
+        "@id": "../containers/research_frontend/README.md"
+      }
+    },
+    {
+      "@id": "#grobid-software",
+      "@type": "SoftwareApplication",
+      "name": "GROBID",
+      "description": "Software for converting scientific PDFs into structured TEI XML.",
+      "url": "https://github.com/kermitt2/grobid"
+    },
+    {
+      "@id": "#fuseki-service",
+      "@type": "SoftwareApplication",
+      "name": "Apache Jena Fuseki",
+      "description": "SPARQL server used to publish and query the RFKG RDF dataset.",
+      "url": "https://jena.apache.org/documentation/fuseki2/"
+    },
+    {
+      "@id": "#n8n-service",
+      "@type": "SoftwareApplication",
+      "name": "n8n",
+      "description": "Workflow automation service used to orchestrate the RFKG pipeline.",
+      "url": "https://n8n.io/"
+    },
+    {
+      "@id": "#streamlit-framework",
+      "@type": "SoftwareApplication",
+      "name": "Streamlit",
+      "description": "Python framework used by the RFKG frontend.",
+      "url": "https://streamlit.io/"
+    },
+    {
+      "@id": "#fastapi-framework",
+      "@type": "SoftwareApplication",
+      "name": "FastAPI",
+      "description": "Python framework used by research_api.",
+      "url": "https://fastapi.tiangolo.com/"
+    },
+    {
+      "@id": "../README.md",
+      "@type": "File",
+      "name": "Project README",
+      "description": "Main project overview and execution guide.",
+      "encodingFormat": "text/markdown",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/README.md"
+    },
+    {
+      "@id": "../app.md",
+      "@type": "File",
+      "name": "RFKG application guide",
+      "description": "Operational guide for the full RFKG application.",
+      "encodingFormat": "text/markdown",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/app.md"
+    },
+    {
+      "@id": "../docs/index.md",
+      "@type": "File",
+      "name": "ReadTheDocs index",
+      "description": "Documentation entry point for RFKG + PipeGrobid.",
+      "encodingFormat": "text/markdown",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/docs/index.md"
+    },
+    {
+      "@id": "../docs/fase_2/index.md",
+      "@type": "File",
+      "name": "RFKG documentation index",
+      "description": "ReadTheDocs entry point for FASE 2.",
+      "encodingFormat": "text/markdown",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/docs/fase_2/index.md"
+    },
+    {
+      "@id": "../codemeta.json",
+      "@type": "File",
+      "name": "CodeMeta metadata",
+      "description": "Structured software metadata.",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/codemeta.json"
+    },
+    {
+      "@id": "../CITATION.cff",
+      "@type": "File",
+      "name": "Citation metadata",
+      "description": "Citation information for the project.",
+      "encodingFormat": "text/plain",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/CITATION.cff"
+    },
+    {
+      "@id": "../LICENSE",
+      "@type": "File",
+      "name": "License file",
+      "description": "Apache 2.0 license text.",
+      "encodingFormat": "text/plain",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/LICENSE"
+    },
+    {
+      "@id": "../Dockerfile",
+      "@type": "File",
+      "name": "PipeGrobid Dockerfile",
+      "description": "Container definition for the FASE 1 pipeline.",
+      "encodingFormat": "text/plain",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/Dockerfile"
+    },
+    {
+      "@id": "../docker-compose.yml",
+      "@type": "File",
+      "name": "Root Docker Compose file",
+      "description": "Compose file for the root PipeGrobid pipeline.",
+      "encodingFormat": "text/yaml",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/docker-compose.yml"
+    },
+    {
+      "@id": "../containers/docker-compose.yml",
+      "@type": "File",
+      "name": "RFKG Docker Compose file",
+      "description": "Main stack for RFKG, n8n, GROBID, Fuseki, API and frontend.",
+      "encodingFormat": "text/yaml",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/containers/docker-compose.yml"
+    },
+    {
+      "@id": "../containers/workflow/pipegrobid_workflow.json",
+      "@type": "File",
+      "name": "n8n RFKG workflow",
+      "description": "Workflow that orchestrates extraction, enrichment, KG generation and Fuseki loading.",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/containers/workflow/pipegrobid_workflow.json"
+    },
+    {
+      "@id": "../src/pipegrobid/",
+      "@type": "Dataset",
+      "name": "PipeGrobid source code",
+      "description": "Python source code for the document-processing pipeline.",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/src/pipegrobid"
+    },
+    {
+      "@id": "../test/",
+      "@type": "Dataset",
+      "name": "PipeGrobid tests",
+      "description": "Pytest test suite for the document-processing pipeline.",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/test"
+    },
+    {
+      "@id": "../pdfs/",
+      "@type": "Dataset",
+      "name": "Input PDFs",
+      "description": "Directory where scientific PDFs are placed before running the pipeline.",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/pdfs"
+    },
+    {
+      "@id": "../xmls/",
+      "@type": "Dataset",
+      "name": "Generated TEI XML files",
+      "description": "TEI XML files generated from PDFs with GROBID and PipeGrobid.",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/xmls"
+    },
+    {
+      "@id": "../generated_files/",
+      "@type": "Dataset",
+      "name": "PipeGrobid generated files",
+      "description": "Initial visual and text outputs generated by PipeGrobid.",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/generated_files"
+    },
+    {
+      "@id": "../assigment_2/step_1/",
+      "@type": "Dataset",
+      "name": "Step 1 ontology and use case",
+      "description": "Use case, sources and ontology for RFKG.",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/assigment_2/step_1"
+    },
+    {
+      "@id": "../assigment_2/step_2/",
+      "@type": "Dataset",
+      "name": "Step 2 XML and NER",
+      "description": "XML parsing and NER extraction/evaluation for acknowledgements and entities.",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/assigment_2/step_2"
+    },
+    {
+      "@id": "../assigment_2/step_3/",
+      "@type": "Dataset",
+      "name": "Step 3 topics and similarities",
+      "description": "Topic modeling and paper similarity generation.",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/assigment_2/step_3"
+    },
+    {
+      "@id": "../assigment_2/step_4/",
+      "@type": "Dataset",
+      "name": "Step 4 enrichment and local KG",
+      "description": "Online enrichment and local RDF Knowledge Graph generation.",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/assigment_2/step_4"
+    },
+    {
+      "@id": "../assigment_2/step_4/outputs/",
+      "@type": "Dataset",
+      "name": "Generated KG outputs",
+      "description": "Generated outputs for the local KG phase, referenced as a collection.",
+      "contentUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/blob/main/assigment_2/step_4/outputs"
+    },
+    {
+      "@id": "#local-kg",
+      "@type": "Dataset",
+      "name": "Local RFKG RDF Knowledge Graph",
+      "description": "RDF/Turtle Knowledge Graph generated from processed papers, enriched entities, projects, topics and similarity data.",
+      "encodingFormat": "text/turtle",
+      "contentUrl": "../assigment_2/step_4/outputs/local_kg.ttl",
+      "isBasedOn": [
+        {
+          "@id": "../xmls/"
+        },
+        {
+          "@id": "../assigment_2/step_1/"
+        },
+        {
+          "@id": "../assigment_2/step_2/"
+        },
+        {
+          "@id": "../assigment_2/step_3/"
+        },
+        {
+          "@id": "../assigment_2/step_4/"
+        }
+      ]
+    },
+    {
+      "@id": "#phase-1-pipegrobid-execution",
+      "@type": "Action",
+      "name": "PipeGrobid PDF to TEI XML execution",
+      "description": "Runs PipeGrobid with GROBID to transform input PDFs into TEI XML and generated files.",
+      "instrument": {
+        "@id": "#pipegrobid-software"
+      },
+      "object": {
+        "@id": "../pdfs/"
+      },
+      "result": [
+        {
+          "@id": "../xmls/"
+        },
+        {
+          "@id": "../generated_files/"
+        }
+      ],
+      "isBasedOn": [
+        {
+          "@id": "../Dockerfile"
+        },
+        {
+          "@id": "../docker-compose.yml"
+        }
+      ]
+    },
+    {
+      "@id": "#n8n-workflow",
+      "@type": "Action",
+      "name": "RFKG workflow execution",
+      "description": "Runs the FASE 2 workflow: XML preparation, NER, topic modeling, online enrichment, local KG generation and Fuseki loading.",
+      "instrument": [
+        {
+          "@id": "#pipegrobid-software"
+        },
+        {
+          "@id": "#n8n-service"
+        },
+        {
+          "@id": "#grobid-software"
+        }
+      ],
+      "object": [
+        {
+          "@id": "../pdfs/"
+        },
+        {
+          "@id": "../xmls/"
+        }
+      ],
+      "result": [
+        {
+          "@id": "#local-kg"
+        },
+        {
+          "@id": "#rfkg-application"
+        }
+      ],
+      "isBasedOn": [
+        {
+          "@id": "../containers/docker-compose.yml"
+        },
+        {
+          "@id": "../containers/workflow/pipegrobid_workflow.json"
+        }
+      ]
+    },
+    {
+      "@id": "#rfkg-query-and-visualization",
+      "@type": "Action",
+      "name": "RFKG query and visualization",
+      "description": "Publishes the local KG in Fuseki, queries it through research_api and visualizes it in Streamlit.",
+      "instrument": [
+        {
+          "@id": "#fuseki-service"
+        },
+        {
+          "@id": "#research-api"
+        },
+        {
+          "@id": "#research-frontend"
+        }
+      ],
+      "object": {
+        "@id": "#local-kg"
+      },
+      "result": {
+        "@id": "#rfkg-application"
+      }
+    }
+  ]
+}

@@ -30,8 +30,6 @@ graphify-out
 /xmls/*
 !xmls/.gitkeep
 
-/ro-crate.py
-
 # Root generated outputs
 /outputs/
 

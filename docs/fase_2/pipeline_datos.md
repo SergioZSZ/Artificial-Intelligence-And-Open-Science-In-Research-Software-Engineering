@@ -4,7 +4,7 @@
 
 En `assigment_2/step_1` se define el caso de uso, la ontologia y las fuentes externas. Esta fase fija que la app se centre en financiacion cientifica, paises, organismos, proyectos, papers, autores, topics y similitudes.
 
-![Ontologia base del Step 1](../images/ontologia-step1.svg)
+![Ontologia base del Step 1](../images/ontologia.png)
 
 ## Step 2: XML y NER
 

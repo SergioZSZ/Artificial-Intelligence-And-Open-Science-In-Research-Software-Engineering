@@ -3,11 +3,13 @@
 [![GitHub release](https://img.shields.io/github/v/release/SergioZSZ/OS-IA-Pipegrobid?include_prereleases)](https://github.com/SergioZSZ/OS-IA-Pipegrobid/releases)
 [![Project Status: Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
-# PipeGrobid
+# Research Funding Knowledge Graph (RFKG) + PipeGrobid
 
 Mas documentacion en: https://pipegrobid-software.readthedocs.io/es/latest/
 
-PipeGrobid es un proyecto en dos fases. La FASE 1 implementa un pipeline Python para procesar PDFs cientificos con GROBID, generar XML TEI y extraer abstracts, figuras y enlaces. La FASE 2 construye una aplicacion basada en Knowledge Graph para analizar financiacion cientifica con n8n, Fuseki, `research_api` y Streamlit.
+RFKG es una aplicacion para analizar financiacion cientifica a partir de papers procesados como Knowledge Graph. PipeGrobid es el pipeline documental que transforma PDFs en XML TEI con GROBID y genera las salidas iniciales necesarias para alimentar la parte semantica.
+
+El proyecto se organiza en dos fases igualmente importantes: la FASE 1 construye el procesamiento reproducible de documentos cientificos, y la FASE 2 convierte esas extracciones en una app KG con n8n, Fuseki, `research_api` y Streamlit.
 
 ## FASE 1: pipeline PDF -> XML -> salidas
 
@@ -56,14 +58,14 @@ Tests:
 poetry run pytest -v
 ```
 
-## FASE 2: app Knowledge Graph
+## FASE 2: RFKG, app Knowledge Graph
 
-La FASE 2 convierte los papers procesados en un KG RDF para responder preguntas sobre financiacion cientifica: paises financiadores, organismos, proyectos, topics, autores, acknowledgements, ORCID y papers similares.
+La FASE 2 construye RFKG sobre las salidas de PipeGrobid. Convierte los papers procesados en un KG RDF para responder preguntas sobre financiacion cientifica: paises financiadores, organismos, proyectos, topics, autores, acknowledgements, ORCID y papers similares.
 
 Flujo:
 
 ```text
-PDFs -> GROBID -> XML TEI -> entidades/proyectos/topics -> RDF/TTL -> Fuseki -> research_api -> Streamlit
+PipeGrobid -> KG RDF/TTL -> Fuseki -> research_api -> Streamlit
 ```
 
 Stack principal:
@@ -148,7 +150,7 @@ Se uso IA generativa como apoyo en distintas partes del proyecto, siempre bajo s
 - Generacion del KG local: apoyo para estructurar `build_kg_from_jsons()` y comprobar la incorporacion de clases, propiedades y relaciones.
 - Backend `research_api`: apoyo para estructurar queries SPARQL, schemas y endpoints necesarios para conectar Fuseki con el frontend.
 - Frontend Streamlit: se uso IA generativa para generar la app siguiendo la guia de los autores, revisando, probando y evaluando cada parte generada.
-
+- Estructuramiento y uso de ro-crate.py para crear el RO
 ## Limitaciones
 
 - GROBID debe estar levantado para generar XMLs.
