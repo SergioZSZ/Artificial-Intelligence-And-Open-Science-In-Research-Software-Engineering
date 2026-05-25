@@ -1,89 +1,57 @@
-# README PROVISIONAL 
+# Online Enrichment
 
-Coge los JSONs que genera `enrich_jsons.py` del topic_modeling (que ya tienen topics y similarities) y los enriquece con datos de tres fuentes externas:
+Enriquece los JSONs con topics y similarities añadiéndoles datos de tres fuentes externas:
 
-- **OpenAIRE** → datos de proyectos (título, fechas, dinero financiado)
-- **Wikidata** → datos de organizaciones (descripción, país)
-- **ORCID** → datos de personas (identificador único, afiliación)
+- **OpenAIRE** → datos de proyectos: título, fechas y cantidad financiada
+- **Wikidata** → datos de organizaciones: descripción y país
+- **ORCID** → datos de personas: identificador único y afiliación
 
-Los JSONs de entrada están en `outputs/topics/enriched_jsons/` y los resultados se guardan en `outputs/topics/kg_enriched/` (carpeta nueva, no sobreescribe nada).
+Los JSONs de entrada están en `outputs/topics/enriched_jsons/` y los resultados se guardan en `outputs/topics/kg_enriched/`.
 
 ---
 
-## Cómo funciona cada script
+## Scripts
 
 ### openaire.py
 
-Hace una petición HTTP a la API de OpenAIRE con el código del proyecto:
-```
-https://api.openaire.eu/search/projects?grantID=851173&format=json
-```
-OpenAIRE devuelve un JSON del que extraemos título, fechas y cantidad financiada.
-
-Si no encuentra el proyecto devuelve `None` y ese proyecto se queda sin enriquecer. Esto pasa principalmente con proyectos no europeos.
-
----
+Consulta la API REST de OpenAIRE con el código del proyecto y extrae sus datos. Si no lo encuentra devuelve "None".
 
 ### wikidata.py
 
-Consulta Wikidata usando **SPARQL** (el lenguaje de consulta estándar para bases de datos de grafos). Busca la organización por su nombre en inglés y obtiene su país usando la propiedad `P17` (que en Wikidata significa "país").
-
-Wikidata exige identificarse con un `User-Agent` en la cabecera de la petición o devuelve error 403.
-
----
+Consulta Wikidata con SPARQL buscando la organización por nombre en inglés y obteniendo su país.
 
 ### orcid.py
 
-Busca una persona en ORCID en **dos pasos**:
-
-1. Busca por nombre y apellido → obtiene el ORCID ID
-2. Con ese ID pide el perfil completo → obtiene la afiliación
-
-Necesitamos dos llamadas porque la búsqueda solo devuelve el ID, no el perfil completo.
-
-ORCID necesita la cabecera `Accept: application/json` o devuelve XML en vez de JSON.
-
-Solo funciona con nombres completos. Las iniciales (`S.G.`, `CJP`) o pseudónimos (`xlr8harder`) no se pueden buscar.
-
----
+Busca una persona en dos pasos: primero obtiene el ORCID ID por nombre y apellido, luego con ese ID pide el perfil completo para sacar la afiliación.
 
 ### enrich_online.py
 
-Es el script principal. Lee cada JSON de `enriched_jsons/`, llama a los tres scripts anteriores y guarda el resultado en `kg_enriched/`.
+Script principal que coordina todo. Antes de llamar a las APIs hace dos limpiezas:
 
-Hay dos cosas importantes que hace antes de llamar a las APIs:
-
-**1. Limpiar identificadores de proyectos**
-
-El LLM a veces devuelve los códigos con texto de más, por ejemplo `"grant agreement No. 851173"`. Usamos patrones (regex) para extraer solo el código real.
-
-Los nombres de programas que no encajan en ningún patrón y se descartan porque no son códigos reales de proyectos.
-
-**2. Limpiar nombres de organizaciones**
-
-Wikidata tiene registrado el nombre completo sin acrónimo. Por eso quitamos el acrónimo entre paréntesis antes de buscar:
-`"European Research Council (ERC)"` → `"European Research Council"`
+- **Identificadores de proyectos**: el LLM a veces devuelve el código con texto de más (por ejemplo: "grant agreement No. 851173"). Se extrae solo el código real con expresiones regulares. Los nombres de programas como por ejemplo "Horizon 2020" se descartan porque no son códigos de proyectos.
+- **Nombres de organizaciones**: se quita el acrónimo entre paréntesis antes de buscar en Wikidata (por ejemplo "European Research Council (ERC)" pasa a ser "European Research Council").
 
 ---
 
 ## Replicación
 
 ```bash
-# Paso 1: generar los JSONs de entrada (si no existen ya)
-cd assigment_2/step_3/topic_modeling
-poetry run python scripts/enrich_jsons.py
-
-# Paso 2: ejecutar el enriquecimiento online
-cd assigment_2/step_3/online_enrichment/scripts
-python3 enrich_online.py
+cd assigment_2/step_4/online_enrichment/scripts
+poetry run python enrich_online.py
 ```
 
 ---
 
 ## Limitaciones conocidas
 
-- **OpenAIRE** no tiene proyectos de agencias no europeas (ej: NSF americana, Czech Science Foundation). Esos proyectos quedan sin enriquecer.
-- **ORCID** no permite buscar por iniciales ni pseudónimos. Esas personas quedan sin identificador.
-- **Wikidata** devuelve `"Internationality"` para organizaciones supranacionales como la UE. Esos casos quedan sin país en el grafo.
-- Algunas personas tienen el perfil de ORCID desactualizado y su afiliación queda como `null`.
+- OpenAIRE no cubre proyectos de agencias no europeas y por tanto quedan sin enriquecer.
+- ORCID no permite buscar por iniciales ni pseudónimos y por tanto esas personas quedan sin datos.
+- Wikidata no tiene país para organizaciones supranacionales como la UE y por tanto quedan sin país en el grafo.
+- Algunos perfiles de ORCID están desactualizados y por tanto la afiliación puede quedar como "null".
+- ORCID devuelve el primer perfil que coincide con el nombre y apellido buscados por lo que en el caso de que existan varias personas con el mismo nombre, puede que el perfil seleccionado no corresponda al autor real del paper.
 
+---
+
+## Declaración de uso de IA
+
+Se usó IA generativa como apoyo en partes del desarrollo de los scripts, especialmente para resolver dudas técnicas concretas como el uso de expresiones regulares para limpiar identificadores de proyectos y la navegación por las respuestas JSON de las APIs. El resultado fue revisado y validado por el grupo.
