@@ -698,6 +698,7 @@ def render_projects():
         "Financiacion conocida",
         funding_value_for_display(selected_project),
     )
+    st.write("Currency:", selected_project.get("currency") or "No disponible")
 
     st.write("Nombre:", selected_project.get("name") or "Sin nombre")
     st.write("Identifier:", selected_project.get("identifier") or "No disponible")

@@ -20,6 +20,7 @@ Con estas instancias se generan relaciones como:
 - persona-organización mediante `schema:affiliation`
 - paper-entidad reconocida mediante `acknowledges`
 - paper-proyecto mediante `fundedByProject`
+- proyecto-moneda mediante `schema:currency` cuando el enriquecimiento online la proporciona
 - proyecto-organizacion financiadora mediante `schema:funder`, priorizando el `funder` explicito del proyecto
 - organización-país mediante `schema:location`
 - paper-topic y paper-paper usando los scores obtenidos en el topic modeling

@@ -336,6 +336,7 @@ def test_funding_topics_endpoint_returns_country_topic_distribution(monkeypatch)
                     "papers": "12",
                     "funding_amount": "2500000",
                     "funding_amount_count": "1",
+                    "currencies": "EUR",
                 }
             ],
             "raw_response": None,
@@ -360,5 +361,40 @@ def test_funding_topics_endpoint_returns_country_topic_distribution(monkeypatch)
             "papers": 12,
             "funding_amount": 2500000.0,
             "funding_amount_known": True,
+            "currencies": ["EUR"],
         }
     ]
+
+
+def test_projects_endpoint_returns_currency(monkeypatch):
+    # La app de proyectos debe mostrar la moneda extraida desde online_enrichment.
+    def fake_execute_sparql_query(query: str, query_type: str = "SELECT"):
+        assert "?project schema:currency ?currency" in query
+        return {
+            "query_type": query_type,
+            "results": [
+                {
+                    "project_id": "project_erc_example",
+                    "name": "ERC Example",
+                    "identifier": "ERC-123",
+                    "startDate": "2024-01-01",
+                    "endDate": "2026-01-01",
+                    "fundingAmount": "1498210",
+                    "currency": "EUR",
+                    "funders": "European Research Council",
+                    "papers": "paper13",
+                }
+            ],
+            "raw_response": None,
+            "raw_text": None,
+            "status_code": 200,
+        }
+
+    monkeypatch.setattr(kg_client, "execute_sparql_query", fake_execute_sparql_query)
+
+    response = client.get("/kg/projects")
+
+    assert response.status_code == 200
+    assert response.json()[0]["funding_amount"] == 1498210.0
+    assert response.json()[0]["currency"] == "EUR"
+    assert response.json()[0]["funding_amount_known"] is True

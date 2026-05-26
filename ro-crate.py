@@ -16,7 +16,7 @@ REPO_URL = "https://github.com/SergioZSZ/OS-IA-Pipegrobid"
 READTHEDOCS_URL = "https://pipegrobid-software.readthedocs.io/es/latest/"
 LICENSE_URL = "https://www.apache.org/licenses/LICENSE-2.0"
 DOI_URL = "https://doi.org/10.5281/zenodo.18647861"
-CRATE_DIR = Path("pipegrobid-rocrate")
+CRATE_DIR = Path("pipegrobid_RFKG")
 CRATE_METADATA = CRATE_DIR / "ro-crate-metadata.json"
 CRATE_README = CRATE_DIR / "README.md"
 

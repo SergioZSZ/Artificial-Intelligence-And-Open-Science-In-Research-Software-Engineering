@@ -57,6 +57,7 @@ class CountryFunding(BaseModel):
     papers: int = 0
     funding_amount: float | None = None
     funding_amount_known: bool = False
+    currencies: list[str] = Field(default_factory=list)
 
 
 class OrganizationFunding(BaseModel):
@@ -69,6 +70,7 @@ class OrganizationFunding(BaseModel):
     papers: int = 0
     funding_amount: float | None = None
     funding_amount_known: bool = False
+    currencies: list[str] = Field(default_factory=list)
 
 
 class TopicFunding(BaseModel):
@@ -84,6 +86,7 @@ class TopicFunding(BaseModel):
     papers: int = 0
     funding_amount: float | None = None
     funding_amount_known: bool = False
+    currencies: list[str] = Field(default_factory=list)
 
 
 class ProjectItem(BaseModel):
@@ -95,6 +98,7 @@ class ProjectItem(BaseModel):
     start_date: str | None = None
     end_date: str | None = None
     funding_amount: float | None = None
+    currency: str | None = None
     funding_amount_known: bool = False
     funders: list[str] = Field(default_factory=list)
     papers: list[str] = Field(default_factory=list)

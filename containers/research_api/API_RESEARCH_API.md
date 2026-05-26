@@ -95,6 +95,7 @@ Los importes se devuelven como financiacion conocida asociada, no como reparto e
 
 - `funding_amount`: suma de importes conocidos cuando existen; puede ser `null`.
 - `funding_amount_known`: indica si el KG tenia al menos un importe explicito para esa agregacion.
+- `currency` en proyectos y `currencies` en agregados: moneda o monedas detectadas desde el enriquecimiento online.
 
 Las queries de financiacion usan la cadena `paper -> g4:fundedByProject -> schema:Project -> schema:funder -> schema:Organization -> schema:location -> schema:Country`. No usan `g4:acknowledges` para inferir financiadores, porque en acknowledgements puede haber organizaciones mencionadas que no son necesariamente el organismo financiador del proyecto.
 

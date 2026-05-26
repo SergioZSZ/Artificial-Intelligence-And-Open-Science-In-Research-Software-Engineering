@@ -234,6 +234,7 @@ def add_project(g: Graph, project_data: dict) -> URIRef | None:
     start_date = project_data.get("start_date")
     end_date = project_data.get("end_date")
     funding_amount = project_data.get("funding_amount")
+    currency = project_data.get("currency")
 
     if description:
         g.add((project, SCHEMA.description, Literal(description)))
@@ -246,6 +247,9 @@ def add_project(g: Graph, project_data: dict) -> URIRef | None:
 
     if funding_amount not in (None, ""):
         g.add((project, BASE.fundingAmount, Literal(float(funding_amount), datatype=XSD.decimal)))
+
+    if currency:
+        g.add((project, SCHEMA.currency, Literal(currency)))
 
     return project
 

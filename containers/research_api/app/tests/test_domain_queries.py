@@ -4,6 +4,7 @@ from queries.common import normalize_paper_id
 from queries.funding import (
     build_funding_countries_query,
     build_funding_organizations_query,
+    build_projects_query,
     build_funding_topics_query,
 )
 from queries.overview import build_summary_query
@@ -104,6 +105,8 @@ def test_build_funding_topics_query_connects_countries_to_topics():
     assert "?paper g4:fundedByProject ?project" in query
     assert "?paperTopic g4:paper ?paper" in query
     assert "g4:topic ?topic" in query
+    assert "schema:currency ?currency" in query
+    assert "GROUP_CONCAT(DISTINCT ?currency" in query
     assert "GROUP BY ?country ?country_id ?countryName ?topic ?topic_id ?topicName ?keywords" in query
 
 
@@ -116,8 +119,20 @@ def test_funding_queries_track_whether_amount_is_known():
     assert "COUNT(DISTINCT ?amount) AS ?funding_amount_count" in countries_query
     assert "COUNT(DISTINCT ?amount) AS ?funding_amount_count" in organizations_query
     assert "COUNT(DISTINCT ?amount) AS ?funding_amount_count" in topics_query
+    assert "GROUP_CONCAT(DISTINCT ?currency" in countries_query
+    assert "GROUP_CONCAT(DISTINCT ?currency" in organizations_query
+    assert "GROUP_CONCAT(DISTINCT ?currency" in topics_query
     assert "COALESCE(SUM(DISTINCT ?amount), 0)" not in countries_query
     assert "COALESCE(SUM(DISTINCT ?amount), 0)" not in organizations_query
+
+
+def test_build_projects_query_includes_project_currency():
+    # La moneda viene del enriquecimiento online y se guarda como schema:currency del proyecto.
+    query = build_projects_query()
+
+    assert "?project schema:currency ?currency" in query
+    assert "SELECT ?project ?project_id ?name ?identifier ?startDate ?endDate ?fundingAmount ?currency" in query
+    assert "GROUP BY ?project ?project_id ?name ?identifier ?startDate ?endDate ?fundingAmount ?currency" in query
 
 
 def test_build_funding_countries_query_can_filter_by_topic():

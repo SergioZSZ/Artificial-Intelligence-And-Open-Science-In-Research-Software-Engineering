@@ -84,7 +84,7 @@ El workflow usa `grobid` para generar XML, `pipegrobid` para el pipeline inicial
 
 `research_api` es la capa de dominio. Evita que el frontend tenga que escribir SPARQL y transforma respuestas de Fuseki en JSON plano.
 
-La financiacion se interpreta como importes conocidos asociados a proyectos. Cuando no hay importe explicito, la API devuelve `funding_amount: null` y `funding_amount_known: false`, y el frontend lo muestra como `N/D`. Los rankings usan relaciones explicitas `schema:funder` de proyecto, no simples menciones en acknowledgements.
+La financiacion se interpreta como importes conocidos asociados a proyectos. Cuando no hay importe explicito, la API devuelve `funding_amount: null` y `funding_amount_known: false`, y el frontend lo muestra como `N/D`. Cuando el enriquecimiento online aporta moneda, los proyectos devuelven `currency` y los agregados devuelven `currencies`. Los rankings usan relaciones explicitas `schema:funder` de proyecto, no simples menciones en acknowledgements.
 
 Endpoints principales:
 
@@ -136,5 +136,5 @@ La navegacion cruzada es parte de la app: Funding, Topics y Projects llevan a Pa
 
 - Hay instancias o relaciones con datos no disponibles si no se encontraron entidades reconocibles o enriquecimiento externo.
 - La financiacion por pais/organizacion se muestra como importe conocido asociado, no como reparto contable exacto.
-- Los JSONs enriquecidos pueden traer `currency`, pero la API y el frontend aun no muestran la moneda asociada al importe; se deja como mejora para futuras versiones.
+- La moneda se conserva cuando el enriquecimiento online la proporciona, pero los rankings agregados pueden reunir importes en varias monedas y no realizan conversion entre divisas.
 - No siempre se dispone de ORCID, afiliacion, pais o importe para todas las entidades.

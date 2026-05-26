@@ -34,6 +34,16 @@ def funding_value_for_display(record: dict[str, Any]) -> float | str:
     if amount is None:
         return "N/D"
 
+    currency = record.get("currency")
+
+    if currency:
+        return f"{amount} {currency}"
+
+    currencies = record.get("currencies") or []
+
+    if currencies:
+        return f"{amount} ({', '.join(currencies)})"
+
     return amount
 
 
@@ -45,6 +55,8 @@ def funding_records_for_display(records: list[dict[str, Any]]) -> list[dict[str,
         display_record = dict(record)
         display_record.pop("funding_amount_known", None)
         display_record.pop("funding_amount", None)
+        display_record.pop("currency", None)
+        display_record.pop("currencies", None)
         display_record["financiacion conocida asociada"] = funding_value_for_display(record)
         display_records.append(display_record)
 

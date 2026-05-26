@@ -94,6 +94,11 @@ schema:author a owl:ObjectProperty ;
     rdfs:domain my:Paper ;
     rdfs:range foaf:Person .
 
+schema:currency a owl:DatatypeProperty ;
+    rdfs:label "currency" ;
+    rdfs:domain schema:Project ;
+    rdfs:range xsd:string .
+
 schema:description a owl:DatatypeProperty ;
     rdfs:label "description" ;
     rdfs:range xsd:string .

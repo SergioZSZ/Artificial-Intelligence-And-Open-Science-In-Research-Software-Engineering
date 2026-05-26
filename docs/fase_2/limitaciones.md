@@ -8,7 +8,7 @@
 - Wikidata no siempre dispone de pais para organizaciones supranacionales o ambiguas.
 - OpenAIRE no siempre devuelve fechas, financiador o cantidad financiada para todos los proyectos.
 - La financiacion se muestra como importe conocido asociado, no como reparto contable exacto por pais u organizacion.
-- Los JSONs enriquecidos pueden traer `currency`, pero la API y el frontend aun no muestran la moneda asociada al importe; se decidio dejarlo para futuras versiones.
+- La moneda se conserva cuando el enriquecimiento online la proporciona, pero los rankings agregados pueden reunir importes en varias monedas y no realizan conversion entre divisas.
 - No todos los papers o entidades tienen ORCID, pais, afiliacion o importe disponible.
 - Las relaciones proyecto-financiador se infieren de forma conservadora para evitar relaciones all-to-all; esto reduce falsos positivos, pero puede dejar relaciones sin enlazar cuando el dato no es explicito.
 - Fuseki debe tener cargado el TTL actualizado antes de consultar la app.

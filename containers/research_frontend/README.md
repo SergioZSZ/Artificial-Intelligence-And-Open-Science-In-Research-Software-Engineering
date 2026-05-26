@@ -13,6 +13,7 @@ La pantalla principal de la demo es `Funding`, con:
 - navegacion directa hacia `Papers` con los filtros elegidos.
 
 Las tablas de Funding muestran `financiacion conocida asociada`. Si el KG no tiene un importe explicito para esa agregacion, la app muestra `N/D` en lugar de `0`, para no confundir ausencia de dato con financiacion cero.
+Cuando el enriquecimiento online aporta moneda, la app muestra el importe con `currency` en proyectos y con las `currencies` asociadas en rankings agregados.
 Los rankings ocultan filas con cero papers financiados para que el top 5 no se llene con paises u organismos sin evidencia en el KG.
 
 La pantalla `Papers` usa desplegables cargados desde el KG para pais, topic,

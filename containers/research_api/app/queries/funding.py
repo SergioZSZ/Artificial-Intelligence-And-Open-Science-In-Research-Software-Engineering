@@ -11,6 +11,7 @@ SELECT ?country ?country_id ?name
        (COUNT(DISTINCT ?paper) AS ?papers)
        (SUM(DISTINCT ?amount) AS ?funding_amount)
        (COUNT(DISTINCT ?amount) AS ?funding_amount_count)
+       (GROUP_CONCAT(DISTINCT ?currency; separator="|") AS ?currencies)
 WHERE {{
   # Ranking filtrado: pais -> organizacion -> proyecto -> paper -> topic.
   ?country a schema:Country ; schema:name ?name .
@@ -21,6 +22,7 @@ WHERE {{
   ?paper g4:fundedByProject ?project .
   ?paperTopic g4:paper ?paper ; g4:topic g4:topic_{topic_id} .
   OPTIONAL {{ ?project g4:fundingAmount ?amount . }}
+  OPTIONAL {{ ?project schema:currency ?currency . }}
 }}
 GROUP BY ?country ?country_id ?name
 ORDER BY DESC(?papers) ?name
@@ -33,6 +35,7 @@ SELECT ?country ?country_id ?name
        (COUNT(DISTINCT ?paper) AS ?papers)
        (SUM(DISTINCT ?amount) AS ?funding_amount)
        (COUNT(DISTINCT ?amount) AS ?funding_amount_count)
+       (GROUP_CONCAT(DISTINCT ?currency; separator="|") AS ?currencies)
 WHERE {{
   # Cada pais se cuenta aunque todavia no tenga financiacion enlazada.
   ?country a schema:Country ; schema:name ?name .
@@ -44,6 +47,7 @@ WHERE {{
     ?project schema:funder ?org .
     OPTIONAL {{ ?paper g4:fundedByProject ?project . }}
     OPTIONAL {{ ?project g4:fundingAmount ?amount . }}
+    OPTIONAL {{ ?project schema:currency ?currency . }}
   }}
 }}
 GROUP BY ?country ?country_id ?name
@@ -65,6 +69,7 @@ def build_funding_organizations_query(
   ?paper g4:fundedByProject ?project .
   ?paperTopic g4:paper ?paper ; g4:topic g4:topic_{topic_id} .
   OPTIONAL {{ ?project g4:fundingAmount ?amount . }}
+  OPTIONAL {{ ?project schema:currency ?currency . }}
 """
     else:
         topic_filter = """
@@ -73,6 +78,7 @@ def build_funding_organizations_query(
     ?project schema:funder ?organization .
     OPTIONAL { ?paper g4:fundedByProject ?project . }
     OPTIONAL { ?project g4:fundingAmount ?amount . }
+    OPTIONAL { ?project schema:currency ?currency . }
   }
 """
 
@@ -82,6 +88,7 @@ SELECT ?organization ?organization_id ?name ?countryName
        (COUNT(DISTINCT ?paper) AS ?papers)
        (SUM(DISTINCT ?amount) AS ?funding_amount)
        (COUNT(DISTINCT ?amount) AS ?funding_amount_count)
+       (GROUP_CONCAT(DISTINCT ?currency; separator="|") AS ?currencies)
 WHERE {{
   # Organizaciones financiadoras modeladas con schema.org.
   ?organization a schema:Organization ; schema:name ?name .
@@ -110,6 +117,7 @@ SELECT ?country ?country_id ?countryName ?topic ?topic_id ?topicName ?keywords
        (COUNT(DISTINCT ?paper) AS ?papers)
        (SUM(DISTINCT ?amount) AS ?funding_amount)
        (COUNT(DISTINCT ?amount) AS ?funding_amount_count)
+       (GROUP_CONCAT(DISTINCT ?currency; separator="|") AS ?currencies)
 WHERE {
   # Camino del caso de uso: pais -> organizacion -> proyecto -> paper -> topic.
   ?org schema:location ?country .
@@ -126,6 +134,7 @@ WHERE {
   OPTIONAL { ?topic schema:name ?topicName . }
   OPTIONAL { ?topic schema:keywords ?keywords . }
   OPTIONAL { ?project g4:fundingAmount ?amount . }
+  OPTIONAL { ?project schema:currency ?currency . }
 }
 GROUP BY ?country ?country_id ?countryName ?topic ?topic_id ?topicName ?keywords
 ORDER BY ?topic_id DESC(?papers) ?countryName
@@ -135,7 +144,7 @@ ORDER BY ?topic_id DESC(?papers) ?countryName
 def build_projects_query(limit: int = 50, offset: int = 0) -> str:
     """Lista grants/proyectos con financiadores y papers asociados."""
     return f"""
-SELECT ?project ?project_id ?name ?identifier ?startDate ?endDate ?fundingAmount
+SELECT ?project ?project_id ?name ?identifier ?startDate ?endDate ?fundingAmount ?currency
        (GROUP_CONCAT(DISTINCT ?funderName; separator="|") AS ?funders)
        (GROUP_CONCAT(DISTINCT ?paperId; separator="|") AS ?papers)
 WHERE {{
@@ -149,13 +158,14 @@ WHERE {{
   OPTIONAL {{ ?project schema:startDate ?startDate . }}
   OPTIONAL {{ ?project schema:endDate ?endDate . }}
   OPTIONAL {{ ?project g4:fundingAmount ?fundingAmount . }}
+  OPTIONAL {{ ?project schema:currency ?currency . }}
   OPTIONAL {{ ?project schema:funder ?funder . ?funder schema:name ?funderName . }}
   OPTIONAL {{
     ?paper g4:fundedByProject ?project .
     BIND(REPLACE(STR(?paper), "^.*[#/]", "") AS ?paperId)
   }}
 }}
-GROUP BY ?project ?project_id ?name ?identifier ?startDate ?endDate ?fundingAmount
+GROUP BY ?project ?project_id ?name ?identifier ?startDate ?endDate ?fundingAmount ?currency
 ORDER BY ?project_id
 {result_window_clause(limit, offset)}
 """.strip()

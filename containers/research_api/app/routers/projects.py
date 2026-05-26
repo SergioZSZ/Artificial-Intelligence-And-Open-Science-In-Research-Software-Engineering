@@ -35,6 +35,7 @@ def list_projects(
             start_date=row.get("startDate"),
             end_date=row.get("endDate"),
             funding_amount=to_optional_float(row.get("fundingAmount")),
+            currency=row.get("currency"),
             funding_amount_known=row.get("fundingAmount") not in (None, ""),
             funders=split_pipe_values(row.get("funders")),
             papers=split_pipe_values(row.get("papers")),

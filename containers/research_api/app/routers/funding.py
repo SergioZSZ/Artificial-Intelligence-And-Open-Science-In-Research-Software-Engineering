@@ -9,6 +9,7 @@ from routers.common import (
     has_known_amount,
     id_from_uri,
     select_rows,
+    split_pipe_values,
     to_int,
     to_optional_float,
 )
@@ -43,6 +44,7 @@ def funding_by_country(
             papers=to_int(row.get("papers")),
             funding_amount=to_optional_float(row.get("funding_amount")),
             funding_amount_known=has_known_amount(row),
+            currencies=split_pipe_values(row.get("currencies")),
         )
         countries.append(country)
 
@@ -69,6 +71,7 @@ def funding_by_topic():
             papers=to_int(row.get("papers")),
             funding_amount=to_optional_float(row.get("funding_amount")),
             funding_amount_known=has_known_amount(row),
+            currencies=split_pipe_values(row.get("currencies")),
         )
         topic_funding_rows.append(topic_funding)
 
@@ -112,6 +115,7 @@ def funding_by_organization(
             papers=to_int(row.get("papers")),
             funding_amount=to_optional_float(row.get("funding_amount")),
             funding_amount_known=has_known_amount(row),
+            currencies=split_pipe_values(row.get("currencies")),
         )
         organizations.append(organization)
 
