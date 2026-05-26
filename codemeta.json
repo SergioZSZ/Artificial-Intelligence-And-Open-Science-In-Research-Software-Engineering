@@ -60,8 +60,8 @@
         },
     "codeRepository": "https://github.com/SergioZSZ/OS-IA-Pipegrobid",
     "dateCreated": "2026-02-15",
-    "dateModified": "2026-04-27",
-    "datePublished": "2026-04-27",
+    "dateModified": "2026-05-26",
+    "datePublished": "2026-05-26",
     "description": "This software implements an automated pipeline for\n  processing scientific documents using GROBID. \n\n  It extracts structured TEI XML data from research papers\n  and performs analysis including abstract extraction, \n\n  figure counting, link extraction, and keyword cloud\n  generation.\n\n\n  The project follows open science and research software\n  engineering principles, \n\n  including versioning, DOI assignment, structured metadata,\n  and reproducibility practices. \n\n  It is designed as an educational and research-oriented\n  tool for exploring scholarly document processing\n  workflows.",
     "downloadUrl": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/releases",
     "identifier": "https://doi.org/10.5281/zenodo.18647861",
@@ -87,7 +87,7 @@
   "Docker==29.0.1",
   "poetry==2.3.2"
 ],
-    "version": "1.4.0",
+    "version": "1.4.1",
     "developmentStatus": "active",
     "issueTracker": "https://github.com/SergioZSZ/OS-IA-Pipegrobid/issues",
     "@type": "SoftwareSourceCode"

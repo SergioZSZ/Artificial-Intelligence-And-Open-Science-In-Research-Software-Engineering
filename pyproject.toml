@@ -1,6 +1,6 @@
 [project]
 name = "pipegrobid"
-version = "1.4.0"
+version = "1.4.1"
 description = "Data Extraction using GROBID"
 authors = [
     {name = "SergioZSZ",email = "s.zaballosh@gmail.com"},
