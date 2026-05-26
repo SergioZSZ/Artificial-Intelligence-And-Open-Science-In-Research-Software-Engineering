@@ -156,7 +156,6 @@ Se uso IA generativa como apoyo en distintas partes del proyecto, siempre bajo s
 - GROBID debe estar levantado para generar XMLs.
 - Algunos enlaces extraidos desde PDFs pueden traer fragmentos adicionales por como GROBID reconstruye el texto.
 - La financiacion de la app se muestra como importe conocido asociado, no como reparto contable exacto.
-- La moneda (`currency`) se conserva a nivel de proyecto cuando el enriquecimiento online la proporciona; los agregados pueden mezclar varias monedas y se muestran como financiacion conocida asociada, no como conversion contable.
 - No todos los papers o entidades tienen ORCID, pais, afiliacion o importe disponible.
 - ORCID puede devolver perfiles ambiguos si hay varias personas con el mismo nombre.
 - Wikidata no siempre dispone de pais para organizaciones supranacionales.
