@@ -1,13 +1,9 @@
-# This CITATION.cff file was generated with cffinit.
-# Visit https://bit.ly/cffinit to generate yours today!
-
 cff-version: 1.3.3
 title: >-
-  Software para procesamiento de documentos científicos
-  mediante el software GROBID
+  Research Funding Knowledge Graph (RFKG) + PipeGrobid
 message: >-
-  If you use this software, please cite it using the
-  metadata from this file.
+  If you use this software or the generated Research Object, please cite it
+  using the metadata from this file.
 type: software
 authors:
   - given-names: Sergio
@@ -22,42 +18,40 @@ identifiers:
     value: 10.5281/zenodo.18647861
     description: Zenodo DOI of this software release
 repository-code: >-
-  https://github.com/SergioZSZ/Artificial-Intelligence-And-Open-Science-In-Research-Software-Engineering
-abstract: >
-  This software implements an automated pipeline for
-  processing scientific documents using GROBID. 
-
-  It extracts structured TEI XML data from research papers
-  and performs analysis including abstract extraction, 
-
-  figure counting, link extraction, and keyword cloud
-  generation.
-
-
-  The project follows open science and research software
-  engineering principles, 
-
-  including versioning, DOI assignment, structured metadata,
-  and reproducibility practices. 
-
-  It is designed as an educational and research-oriented
-  tool for exploring scholarly document processing
-  workflows.
+  https://github.com/SergioZSZ/OS-IA-Pipegrobid
+abstract: >-
+  Research Funding Knowledge Graph (RFKG) + PipeGrobid is a research software
+  project for processing scientific papers and analysing scientific funding
+  through a Knowledge Graph. PipeGrobid transforms PDFs into TEI XML using
+  GROBID and generates initial extraction outputs. RFKG extends that pipeline
+  with ontology modelling, NER, topic modelling, online enrichment, RDF
+  Knowledge Graph generation, Fuseki SPARQL publication, a FastAPI backend and
+  a Streamlit frontend for exploring funding countries, organizations,
+  projects, topics, acknowledgements, ORCID data and paper similarities.
 keywords:
-  - grobid
-  - tei
-  - xml processing
+  - RFKG
+  - PipeGrobid
+  - GROBID
+  - TEI XML
+  - knowledge graph
+  - research funding
+  - SPARQL
+  - Fuseki
+  - FastAPI
+  - Streamlit
   - open science
-  - research software engineering
 license: Apache-2.0
-version: 1.3.8
-date-released: '2026-02-25'
+version: 1.4.1
+date-released: '2026-05-26'
 preferred-citation:
   type: software
-  title: "Software para procesamiento de documentos científicos mediante el software GROBID"
+  title: >-
+    Research Funding Knowledge Graph (RFKG) + PipeGrobid
   authors:
-    - family-names: "Zaballos Herrera"
-      given-names: "Sergio"
-  doi: "10.5281/zenodo.18647861"
-  year: "2026"
-
+    - given-names: Sergio
+      family-names: Zaballos Herrera
+  doi: 10.5281/zenodo.18647861
+  repository-code: >-
+    https://github.com/SergioZSZ/OS-IA-Pipegrobid
+  version: 1.4.1
+  year: 2026
